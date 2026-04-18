@@ -1,0 +1,22 @@
+# main links links
+main:
+  - title: "Research"
+    url: /research/
+
+  - title: "Publications"
+    url: /publications/ 
+        
+  - title: "Essay"
+    url: /year-archive/
+
+  - title: "Daily Paper"
+    url: /daily-paper/
+
+  - title: "CV"
+    url: /cv/
+
+  - title: "Gallery"
+    url: /portfolio/
+
+
+

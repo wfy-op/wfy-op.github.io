@@ -73,9 +73,22 @@ This work informed my undergraduate thesis on broadband nonlinear frequency conv
 
 ## Memristor-based Reservoir Computing
 
-From 2022 to 2023, I worked on dynamic SrTiO3-based memristors for reservoir-computing tasks (advisor: Prof. Limei Zheng, Shandong University). The project connected device nonlinearity and short-term memory with multimodal recognition pipelines.
+From 2022 to 2023, I worked on dynamic SrTiO3-based memristors for neuromorphic and reservoir-computing tasks (advisor: Prof. Limei Zheng, Shandong University). This work connected device-level physics (ferroelectric switching + ionic dynamics) with algorithm-level behaviors in supervised, unsupervised, and multimodal recognition pipelines.
 
-My contribution focused on data processing, task pipeline implementation, and model/debug workflows for image and audio recognition tasks.
+Representative outcomes from this project include:
+
+- **Linear and symmetric synaptic updates** in FTJ devices (NL = 0.13-0.17, mean single-pulse conductance update about +0.32/-0.36 uS), enabling **96.7%** MNIST accuracy in supervised learning (and **92.1%** when device variations are included).
+- **Strong uniformity and temporal dynamics** in adaptive FTJ synapses, including cycle-to-cycle/device-to-device variation below **1.21%/1.93%**, and PPF/PPD time constants of **69/240 ms** and **66/380 ms**.
+- **Multimodal reservoir computing** with polarity-separated coding (positive pulses for image, negative pulses for speech): when single-modal inputs were heavily corrupted, accuracy dropped to **64.0%** (image) or **62.7%** (audio), while multimodal fusion recovered accuracy to **95.4%**.
+- **Spatio-temporal learning** via BCM-rule-based networks (81 input neurons, 324 synapses), supporting orientation selectivity and motion-direction identification.
+
+My contribution focused on:
+
+- Data preprocessing and pulse-encoding pipelines for image and speech tasks.
+- MATLAB-based RC/ANN workflow implementation, debugging, and robustness evaluation.
+- Result organization/visualization for experiment-to-model comparison and reproducible analysis.
+
+Related papers: [**Adv. Funct. Mater. 2022**](https://doi.org/10.1002/adfm.202202366) and [**Adv. Mater. 2025**](https://doi.org/10.1002/adma.202412006).
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;align-items:start;">
   <figure style="margin:0;">

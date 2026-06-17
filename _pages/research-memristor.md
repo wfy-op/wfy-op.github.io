@@ -15,7 +15,7 @@ author_profile: true
 ## Device Dynamics and Computing Tasks
 
 <div class="research-section__summary" markdown="1">
-From 2022 to 2023, I worked on dynamic SrTiO3-based memristors for neuromorphic and reservoir-computing tasks (advisor: Prof. Limei Zheng, Shandong University). This work connected device-level physics, including ferroelectric switching and ionic dynamics, with algorithm-level behaviors in supervised, unsupervised, and multimodal recognition pipelines.
+From 2022 to 2023, I worked on dynamic SrTiO3-based memristors for neuromorphic and reservoir-computing tasks (advisor: Prof. Limei Zheng, Shandong University). This work connected device-level nonlinear dynamics and short-term memory with algorithm-level behaviors in image, speech, multimodal recognition, and spatio-temporal learning pipelines.
 
 Representative outcomes from this project include:
 
@@ -24,7 +24,26 @@ Representative outcomes from this project include:
 - **Multimodal reservoir computing** with polarity-separated coding for image and speech inputs.
 - **Spatio-temporal learning** via BCM-rule-based networks for orientation selectivity and motion-direction identification.
 
-My contribution focused on data preprocessing and pulse-encoding pipelines, MATLAB-based RC/ANN implementation, debugging, robustness evaluation, and result visualization for reproducible analysis.
+My contribution focused on text and speech data preprocessing, pulse-encoding pipelines, MATLAB-based RC/ANN implementation, debugging, robustness evaluation, and result visualization for reproducible analysis.
+</div>
+</section>
+
+<section class="research-section" markdown="1">
+## Task Pipelines
+
+<div class="highlight-grid">
+  <article class="highlight-card">
+    <h2>Image recognition</h2>
+    <p>Reservoir computing maps compact image matrices into pulse sequences and device-state responses, so only the readout layer needs to be trained for classification.</p>
+  </article>
+  <article class="highlight-card">
+    <h2>Speech processing</h2>
+    <p>Audio waveforms are trimmed, framed, filtered through auditory-inspired channels, masked, and converted into voltage sequences for dynamic device response.</p>
+  </article>
+  <article class="highlight-card">
+    <h2>Multimodal recognition</h2>
+    <p>Image and audio current sequences are combined to test how a dynamic physical reservoir can encode heterogeneous temporal information.</p>
+  </article>
 </div>
 </section>
 
@@ -46,5 +65,5 @@ My contribution focused on data preprocessing and pulse-encoding pipelines, MATL
   </figure>
 </div>
 
-Related papers: [**Adv. Funct. Mater. 2022**](https://doi.org/10.1002/adfm.202202366) and [**Adv. Mater. 2025**](https://doi.org/10.1002/adma.202412006). Related publications are listed on the [Publications]({{ '/publications/' | relative_url }}) page.
+Related papers: [**Materials Futures 2023**](https://doi.org/10.1088/2752-5724/ace3dc) and [**Advanced Materials 2025**](https://doi.org/10.1002/adma.202412006). Related publications are listed on the [Publications]({{ '/publications/' | relative_url }}) page.
 </section>

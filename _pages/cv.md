@@ -9,6 +9,13 @@ redirect_from:
 
 {% include base_path %}
 
+Research Positioning
+======
+
+* Current focus: simulation-guided semiconductor photonic devices, especially GaAs photonic crystal surface-emitting lasers (PCSELs) where electromagnetic design, fabrication tolerance, carrier/thermal effects, and experimental feedback need to be considered together.
+* PhD-oriented research fit: fabrication-aware inverse design, surrogate-assisted automated search, and electro-thermal-optical coupling for PCSELs and nanophotonic cavities.
+* Working style: start from a physical question, build a reliable numerical or data workflow, verify metric provenance, and feed device evidence back into design decisions.
+
 Education
 ======
 * 2021.09 -- 2025.06, B.S. in Physics, Taishan College, Shandong University
@@ -21,11 +28,11 @@ Research Experience
 
 * **GaAs Photonic Crystal Surface-Emitting Laser (PCSEL)**, 2025.08 -- Present
   * *School of Science and Engineering, CUHK(SZ), advised by Prof. Zhaoyu Zhang*
-  * **Simulation**: Built full 3D wave simulation models in Lumerical FDTD and COMSOL Multiphysics for 980 nm GaAs PCSEL; band analysis to identify Γ-point slow-light modes; systematic parameter sweep of lattice constant, air-hole radius, and slab thickness. Designed double quantum-well epitaxial structure achieving stable single-mode lasing (FWHM < 0.2 nm, far-field divergence < 1°).
-  * **Automation**: Developed Claude Code skill system and automated agent pipeline; automated paper collection and literature database; Lumerical–COMSOL co-simulation via Java/Python API; RL optimization loop for device structure. Related workflows being prepared as patent and conference paper.
+  * **Simulation**: Built full 3D wave simulation models in Lumerical FDTD and COMSOL Multiphysics for 980 nm GaAs PCSEL; band analysis to identify Gamma-point slow-light modes; systematic parameter sweep of lattice constant, air-hole radius, slab thickness, active-region placement, and etch-depth constraints. Designed double quantum-well epitaxial structure achieving stable single-mode lasing (FWHM < 0.2 nm, far-field divergence < 1 degree).
+  * **Automation**: Developed pcsel-agent, a Claude Code based skill/agent workflow for PCSEL research; automated paper collection, local paper library construction, target-spec organization, solver execution, and report generation; linked Lumerical and COMSOL through Java/Python APIs; audited RL optimization results through solver-backed metric provenance.
   * **Recent technical outputs**: Built finite-array vs. periodic-unit-cell COMSOL comparison workflows, QW etch-depth EC/HT + SRH risk-gating analyses, backside-DBR TMM screening tools, and a searchable PCSEL literature workspace for evidence-driven device design.
   * **Characterization**: Built photoluminescence setup; optical/electrical pumping; L-I-V, spectral, and beam-profile measurement; correlated device performance with SEM-verified structures.
-  * **Fabrication**: Participated in multiple optical-pump PCSEL tapeouts; ICP etching and recipe tuning; mask layout with KLayout; SEM analysis of etch deviation and overlay accuracy.
+  * **Fabrication**: Participated in multiple optical-pump PCSEL tapeouts; ICP etching and recipe tuning; mask layout and review with KLayout; SEM analysis of etch deviation and overlay accuracy; maintained design-process-characterization correspondence tables.
   * **Project Management**: Assisted supervisor in writing and closing national/provincial research grants; prepared technical proposals, progress reports, and final deliverables.
   * **Technical Documentation**: Co-wrote *PCSELBook* — a ~300,000-character monograph covering PCSEL theory, simulation, and device physics, from Maxwell equations and Bloch modes to semiconductor epitaxy, quantum-well gain, and electro-thermal-optical coupling. See [https://github.com/wfy-op/PCSELbook](https://github.com/wfy-op/PCSELbook).
 
@@ -49,7 +56,7 @@ Technical Skills
 
 * **Simulation & Modeling**: FDTD / FEM / PWEM / RCWA methods; COMSOL Multiphysics and Lumerical FDTD; band structure, cavity mode, and parameter-sweep analysis.
 * **Characterization & Fabrication**: Photoluminescence and optical/electrical pumping; L-I-V, spectral, and beam-profile characterization; SEM-based process analysis; ICP etching; KLayout mask layout.
-* **Programming & Tools**: Python, MATLAB, Java API automation; LaTeX, Mathematica; AIGC workflow development.
+* **Programming & Tools**: Python, MATLAB, Java API automation; LaTeX, Mathematica; AIGC workflow development; literature pipeline and solver-report automation.
 
 Publications
 ======

@@ -78,6 +78,30 @@ The main output of this direction is not only a set of PCSEL simulation results.
 </div>
 </section>
 
+<section class="research-section" markdown="1">
+## Device Evidence and Experimental Loop
+
+<div class="pcsel-companion-grid">
+  <article class="pcsel-companion-card">
+    <h3>Simulation evidence</h3>
+    <p><strong>Role:</strong> connect geometry to device metrics. My PCSEL sweeps track resonance wavelength, Q-factor, field profile, optical confinement, and sensitivity rather than treating field plots as standalone outputs.</p>
+    <p><strong>Typical variables:</strong> lattice constant, air-hole radius, slab thickness, active-region position, and fabrication-feasible etch depth.</p>
+  </article>
+
+  <article class="pcsel-companion-card">
+    <h3>Device and process context</h3>
+    <p><strong>Role:</strong> keep optical designs compatible with epitaxy and process constraints. The current GaAs PCSEL work targets the 980 nm band and connects photonic-crystal design with double-quantum-well active-region assumptions.</p>
+    <p><strong>Checks:</strong> ICP etch windows, KLayout mask review, SEM-based deviation analysis, overlay accuracy, and design-to-process correspondence tables.</p>
+  </article>
+
+  <article class="pcsel-companion-card">
+    <h3>Characterization feedback</h3>
+    <p><strong>Role:</strong> close the loop after fabrication. The workflow records optical/electrical pumping, photoluminescence setup, L-I-V curves, spectra, beam profiles, and structural observations.</p>
+    <p><strong>Device target:</strong> stable single-mode emission, narrow linewidth, low-divergence surface output, and interpretable links between spectra, far-field behavior, and SEM-verified structure.</p>
+  </article>
+</div>
+</section>
+
 <section class="workstream-showcase" aria-label="pcsel-agent research points">
   <div class="workstream-showcase__header">
     <span class="workstream-showcase__eyebrow">Concrete research points under pcsel-agent</span>

@@ -9,10 +9,10 @@ redirect_from:
 ---
 
 <section class="profile-hero">
-  <p class="profile-hero__eyebrow">Photonics · Semiconductor Devices · Simulation Automation</p>
+  <p class="profile-hero__eyebrow">Simulation-guided photonic devices · Semiconductor lasers · Research automation</p>
   <h1>Wu Feiyang (吴飞洋)</h1>
   <p class="profile-hero__lead">
-    I work on GaAs photonic crystal surface-emitting lasers, integrated photonic devices, and AI-assisted electromagnetic simulation workflows.
+    I work on GaAs PCSELs, integrated photonic devices, and AI-assisted simulation workflows, with a current focus on turning device physics, numerical design, fabrication tolerance, and experimental feedback into a reproducible research loop.
   </p>
   <div class="profile-hero__actions">
     <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">Research</a>
@@ -29,13 +29,13 @@ redirect_from:
   </div>
   <div class="quick-facts__item">
     <span class="quick-facts__label">Main Direction</span>
-    <strong>980 nm GaAs PCSELs</strong>
-    <p>Full-wave modeling, fabrication support, and optical/electrical characterization.</p>
+    <strong>GaAs PCSEL research loop</strong>
+    <p>Full-wave modeling, process-aware design, optical/electrical testing, and evidence tracking.</p>
   </div>
   <div class="quick-facts__item">
     <span class="quick-facts__label">Technical Thread</span>
-    <strong>Simulation Workflows</strong>
-    <p>Lumerical FDTD, COMSOL FEM, Java/Python automation, and reproducible analysis.</p>
+    <strong>pcsel-agent and automation</strong>
+    <p>Lumerical FDTD, COMSOL FEM, Java/Python APIs, paper intake, and reproducible reports.</p>
   </div>
 </section>
 
@@ -44,40 +44,65 @@ redirect_from:
 <div class="highlight-grid">
   <article class="highlight-card">
     <h2>GaAs Photonic Crystal Surface-Emitting Laser</h2>
-    <p>Full 3D electromagnetic simulation using Lumerical FDTD and COMSOL; automated simulation workflow via Claude Code agent and Java/Python API; involved in fabrication, characterization, and process management.</p>
+    <p>Current core direction: 980 nm GaAs PCSEL modeling and experiment-aware design, including band/mode analysis, Q-factor and wavelength extraction, process gates, optical/electrical testing, SEM-informed feedback, and pcsel-agent automation.</p>
   </article>
   <article class="highlight-card">
     <h2>Thin-Film LN/LT Waveguides</h2>
-    <p>Mode analysis and phase-matching simulation using COMSOL FEM for broadband nonlinear frequency conversion in integrated photonic devices.</p>
+    <p>COMSOL FEM mode analysis and phase-matching studies for thin-film lithium niobate and lithium tantalate ridge waveguides, supporting my undergraduate thesis on broadband nonlinear frequency conversion.</p>
   </article>
   <article class="highlight-card">
     <h2>Memristor Reservoir Computing</h2>
-    <p>Multimodal signal processing with dynamic memristors for neuromorphic computing, including co-authorship on two published papers.</p>
+    <p>Dynamic SrTiO3-based memristors for reservoir computing, multimodal recognition, and spatio-temporal learning, with contributions to data preprocessing, MATLAB training workflows, and result visualization.</p>
   </article>
 </div>
 
-# Recent AI-Assisted Research Work
+# Research Trajectory
+
+<div class="trajectory-grid">
+  <article class="trajectory-card">
+    <span>2022</span>
+    <h2>Numerical physics training</h2>
+    <p>Early work with ZEUS hydrodynamic simulations and open-ended physics problems shaped my habit of understanding the physical variables before organizing the code workflow.</p>
+  </article>
+  <article class="trajectory-card">
+    <span>2022-2023</span>
+    <h2>Dynamic devices and data pipelines</h2>
+    <p>Memristor reservoir-computing work introduced the link between device nonlinearity, short-term memory, pulse encoding, and algorithm-level recognition tasks.</p>
+  </article>
+  <article class="trajectory-card">
+    <span>2024-2025</span>
+    <h2>Integrated photonics modeling</h2>
+    <p>LN/LT waveguide research trained me to connect geometry, effective-index dispersion, etch depth, and phase-matching windows through systematic COMSOL sweeps.</p>
+  </article>
+  <article class="trajectory-card">
+    <span>2025-Present</span>
+    <h2>PCSEL device loop</h2>
+    <p>Current work combines electromagnetic design, solver automation, fabrication support, optical/electrical characterization, and literature-backed decision making.</p>
+  </article>
+</div>
+
+# Current PCSEL Workflow
 
 <div class="recent-work-grid">
   <article class="recent-work-card">
-    <span class="recent-work-card__tag">COMSOL · PCSEL</span>
-    <h2>Finite-array vs. periodic-unit-cell modeling</h2>
-    <p>Built a simplified HX1 5x5 PCSEL array model and compared it with periodic unit-cell references to understand how finite aperture, side boundaries, and mesh cost change Q-factor interpretation.</p>
+    <span class="recent-work-card__tag">pcsel-agent</span>
+    <h2>Literature, solver, and report pipeline</h2>
+    <p>Built an AI-assisted workflow that connects paper intake, target specifications, COMSOL/Lumerical execution, syntax memory, artifact checks, and research reports.</p>
   </article>
   <article class="recent-work-card">
-    <span class="recent-work-card__tag">Device physics</span>
-    <h2>Quantum-well etch-depth risk gate</h2>
-    <p>Reviewed EC/HT and PDE/SRH evidence chains for QW etch-depth choices, separating a practical process candidate from high-risk QW exposure cases.</p>
+    <span class="recent-work-card__tag">Simulation evidence</span>
+    <h2>Parameter sweeps with physical questions</h2>
+    <p>PCSEL sweeps are organized around wavelength, Q, field profile, confinement factor, sensitivity, and process feasibility rather than isolated images.</p>
   </article>
   <article class="recent-work-card">
-    <span class="recent-work-card__tag">DBR · Literature</span>
-    <h2>Backside-DBR simulation route</h2>
-    <p>Surveyed PCSEL/DBR references and prepared a TMM-first simulation plan before large COMSOL sweeps, with explicit checks for PML, flux balance, and mode-index consistency.</p>
+    <span class="recent-work-card__tag">Experiment loop</span>
+    <h2>Fabrication and characterization feedback</h2>
+    <p>Optical/electrical pumping, L-I-V, spectra, beam profiles, SEM observations, ICP etch tuning, and KLayout mask checks are fed back into design decisions.</p>
   </article>
   <article class="recent-work-card">
-    <span class="recent-work-card__tag">Research infrastructure</span>
-    <h2>PCSEL literature workspace</h2>
-    <p>Organized a local searchable paper workspace for PCSEL literature, linking PDFs, notes, research groups, and topic filters into a compact review interface.</p>
+    <span class="recent-work-card__tag">PhD fit</span>
+    <h2>Next research questions</h2>
+    <p>I want to extend this workflow toward fabrication-aware inverse design, surrogate-assisted automated search, and electro-thermal-optical coupling for semiconductor photonic devices.</p>
   </article>
 </div>
 

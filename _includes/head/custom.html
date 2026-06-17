@@ -85,6 +85,7 @@
   .quick-facts,
   .highlight-grid,
   .recent-work-grid,
+  .trajectory-grid,
   .research-media-grid {
     display: grid;
     gap: 0.85rem;
@@ -97,6 +98,7 @@
 
   .highlight-grid,
   .recent-work-grid,
+  .trajectory-grid,
   .research-media-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
@@ -104,6 +106,7 @@
   .quick-facts__item,
   .highlight-card,
   .recent-work-card,
+  .trajectory-card,
   .research-figure,
   .workstream-panel,
   .contact-panel {
@@ -115,6 +118,7 @@
   .quick-facts__item,
   .highlight-card,
   .recent-work-card,
+  .trajectory-card,
   .workstream-panel,
   .contact-panel {
     padding: 0.9rem 1rem;
@@ -122,7 +126,8 @@
 
   .quick-facts__item strong,
   .highlight-card h2,
-  .recent-work-card h2 {
+  .recent-work-card h2,
+  .trajectory-card h2 {
     display: block;
     margin: 0.25rem 0 0.35rem;
     color: var(--wfy-ink);
@@ -131,6 +136,7 @@
   .quick-facts__item p,
   .highlight-card p,
   .recent-work-card p,
+  .trajectory-card p,
   .contact-panel p {
     margin: 0;
     color: #4c5963;
@@ -138,7 +144,8 @@
   }
 
   .highlight-card h2,
-  .recent-work-card h2 {
+  .recent-work-card h2,
+  .trajectory-card h2 {
     font-size: 1rem;
     line-height: 1.35;
   }
@@ -147,7 +154,12 @@
     border-top: 3px solid var(--wfy-accent);
   }
 
-  .recent-work-card__tag {
+  .trajectory-card {
+    border-top: 3px solid #56636d;
+  }
+
+  .recent-work-card__tag,
+  .trajectory-card span {
     color: var(--wfy-warm);
     font-size: 0.78rem;
     font-weight: 700;

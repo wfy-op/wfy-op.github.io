@@ -10,7 +10,9 @@ tags:
 
 # PCSELBook
 
-**《PCSEL 理论、仿真与器件物理导论》** 是我在香港中文大学（深圳）从事 GaAs 光子晶体面发射激光器（PCSEL）研究期间，借助 AI 工具撰写并持续维护的大型技术笔记，约 **30 万字**。
+**English summary.** PCSELBook is a public technical note for my GaAs PCSEL work. It organizes the theory and simulation vocabulary I use when moving from Maxwell equations and Bloch modes to practical device modeling, quantum-well gain, epitaxy assumptions, and electro-thermal-optical coupling. The repository is intended as a theory/method reference, not as a peer-reviewed result.
+
+**《PCSEL 理论、仿真与器件物理导论》** 是我在香港中文大学（深圳）从事 GaAs 光子晶体面发射激光器（PCSEL）研究期间撰写并持续维护的大型技术笔记，约 **30 万字**。
 
 本书系统梳理了光子晶体面发射激光器从基础理论到器件设计的完整知识链路，涵盖：
 

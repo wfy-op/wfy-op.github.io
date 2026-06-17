@@ -12,8 +12,11 @@ redirect_from:
   <p class="profile-hero__eyebrow">Simulation-guided photonic devices · Semiconductor lasers · Research automation</p>
   <h1>Wu Feiyang (吴飞洋)</h1>
   <p class="profile-hero__lead">
-    I work on GaAs PCSELs, memristor-based reservoir computing, and AI-assisted simulation workflows, with a current focus on turning device physics, numerical design, fabrication tolerance, and experimental feedback into a reproducible research loop.
+    I build documented simulation-to-experiment workflows for semiconductor photonic devices. My current focus is GaAs PCSELs: using full-wave modeling, process constraints, and characterization feedback to decide which designs deserve further fabrication or experimental validation.
   </p>
+  <div class="figure-explainer">
+    <p><strong>Research thesis:</strong> my through-line is metric provenance: turning complex device outputs into claims traceable to physical variables, solver settings, process limits, and experiments.</p>
+  </div>
   <div class="profile-hero__actions">
     <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">Research</a>
     <a class="btn" href="{{ '/projects/' | relative_url }}">Projects</a>
@@ -22,23 +25,30 @@ redirect_from:
   </div>
 </section>
 
-<section class="quick-facts" aria-label="Profile highlights">
-  <div class="quick-facts__item">
-    <span class="quick-facts__label">Current Role</span>
-    <strong>Research Assistant, CUHK-Shenzhen</strong>
-    <p>School of Science and Engineering, advised by Prof. Zhaoyu Zhang.</p>
-  </div>
-  <div class="quick-facts__item">
-    <span class="quick-facts__label">Main Direction</span>
-    <strong>GaAs PCSEL research loop</strong>
-    <p>Full-wave modeling, process-aware design, optical/electrical testing, and evidence tracking.</p>
-  </div>
-  <div class="quick-facts__item">
-    <span class="quick-facts__label">Technical Thread</span>
-    <strong>pcsel-agent and automation</strong>
-    <p>Lumerical FDTD, COMSOL FEM, Java/Python APIs, paper intake, and reproducible reports.</p>
-  </div>
-</section>
+## Evidence Snapshot
+
+<div class="evidence-snapshot">
+  <article class="evidence-snapshot__item">
+    <span class="evidence-snapshot__label">Current role</span>
+    <strong>Research Assistant at CUHK-Shenzhen</strong>
+    <p>PCSEL research in the School of Science and Engineering, advised by Prof. Zhaoyu Zhang.</p>
+  </article>
+  <article class="evidence-snapshot__item">
+    <span class="evidence-snapshot__label">Peer-reviewed papers</span>
+    <strong>2 memristor papers</strong>
+    <p>Co-authored Materials Futures 2023 and Advanced Materials 2025 work on neuromorphic devices.</p>
+  </article>
+  <article class="evidence-snapshot__item">
+    <span class="evidence-snapshot__label">Public artifact</span>
+    <strong><a href="https://github.com/wfy-op/PCSELbook">PCSELBook</a></strong>
+    <p>A ~300,000-character technical note on PCSEL theory, simulation, and device physics.</p>
+  </article>
+  <article class="evidence-snapshot__item">
+    <span class="evidence-snapshot__label">Device workflow</span>
+    <strong>COMSOL / Lumerical / experiment loop</strong>
+    <p>Modeling, process gates, optical/electrical setup, SEM feedback, and evidence tracking.</p>
+  </article>
+</div>
 
 ## Research Trajectory
 
@@ -51,7 +61,7 @@ redirect_from:
   <article class="trajectory-card">
     <span>2022-2023</span>
     <h2>Dynamic devices and data pipelines</h2>
-    <p>Memristor reservoir-computing work introduced the link between device nonlinearity, short-term memory, pulse encoding, and algorithm-level recognition tasks.</p>
+    <p>Memristor reservoir-computing work trained my device-to-metric discipline: separating device nonlinearity, pulse encoding, preprocessing, and task-level metrics.</p>
   </article>
   <article class="trajectory-card">
     <span>2025-Present</span>
@@ -78,7 +88,7 @@ redirect_from:
   <article class="recent-work-card">
     <span class="recent-work-card__tag">pcsel-agent</span>
     <h2>Literature, solver, and report pipeline</h2>
-    <p>Built an AI-assisted workflow that connects paper intake, target specifications, COMSOL/Lumerical execution, syntax memory, artifact checks, and research reports.</p>
+    <p>Built a Python-based workflow that connects paper intake, target specifications, COMSOL/Lumerical execution, syntax memory, artifact checks, and research reports.</p>
   </article>
   <article class="recent-work-card">
     <span class="recent-work-card__tag">Simulation evidence</span>
@@ -91,7 +101,7 @@ redirect_from:
     <p>Optical/electrical pumping, L-I-V, spectra, beam profiles, SEM observations, ICP etch tuning, and KLayout mask checks are fed back into design decisions.</p>
   </article>
   <article class="recent-work-card">
-    <span class="recent-work-card__tag">PhD fit</span>
+    <span class="recent-work-card__tag">Future research direction</span>
     <h2>Next research questions</h2>
     <p>I want to extend this workflow toward fabrication-aware inverse design, surrogate-assisted automated search, and electro-thermal-optical coupling for semiconductor photonic devices.</p>
   </article>

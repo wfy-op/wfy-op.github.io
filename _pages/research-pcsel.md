@@ -12,6 +12,29 @@ author_profile: true
 <p class="research-backlink"><a href="{{ '/research/' | relative_url }}">Back to all research directions</a></p>
 
 <section class="research-section" markdown="1">
+## Scientific Question
+
+<div class="workstream-panel" markdown="1">
+Can a GaAs PCSEL design loop jointly evaluate optical mode quality, fabrication tolerance, and electro-thermal device limits without losing metric provenance? My current answer is to keep each design decision attached to its geometry convention, solver settings, process gate, and experimental or report artifact.
+</div>
+</section>
+
+<section class="research-section" markdown="1">
+## Public Evidence Map
+
+<div class="evidence-table-wrap" markdown="1">
+
+| Research thread | Publicly inspectable artifact | Current limitation / risk | Decision value |
+| --- | --- | --- | --- |
+| HX1 940/980 nm validation | Public workflow figure and narrative; representative mode-profile figure below. | Raw run folders, exact mesh settings, and full Q/wavelength tables remain private until sanitized. | Separates genuine PCSEL trends from finite-aperture, side-boundary, and mesh artifacts. |
+| QW etch-depth risk gate | Public process-risk schematic and exported-geometry audit logic. | The current public page explains the gate; it does not yet expose a numeric etch-depth/QW-clearance table. | Prevents optically attractive designs from violating active-region or process constraints. |
+| Backside DBR and gain-band route | Public TMM-first route and literature-backed modeling plan. | Full stack parameters and 3D verification artifacts remain private until documentation is cleaned. | Keeps expensive 3D verification focused on physically plausible vertical stacks. |
+| RLcode and optimization audit | Public description of metric-provenance discipline and project context. | Code/results are private; reward traces are not presented as physical evidence. | Makes optimization claims auditable before they are interpreted as device results. |
+
+</div>
+</section>
+
+<section class="research-section" markdown="1">
 ## Project Stack
 
 <div class="pcsel-stack-grid">
@@ -51,7 +74,7 @@ author_profile: true
 ## pcsel-agent: Reproducible PCSEL Workflow
 
 <div class="pcsel-agent-panel__lead" markdown="1">
-The main output of this direction is not only a set of PCSEL simulation results. It is a workflow that makes those results auditable: every geometry convention, solver command, mesh setting, Q-factor, eigenwavelength, field identity, and process-risk claim should have a traceable source.
+In addition to simulation results, this direction produces an auditable workflow in which geometry conventions, solver commands, mesh settings, Q-factors, eigenwavelengths, mode identities, and process-risk checks are linked to their source artifacts.
 </div>
 
 <figure class="research-wide-figure">
@@ -60,7 +83,7 @@ The main output of this direction is not only a set of PCSEL simulation results.
 </figure>
 
 <div class="figure-explainer">
-  <p><strong>How to read the diagram:</strong> inputs on the left define the research question, pcsel-agent in the center records specifications and run manifests, solver/process adapters on the right produce auditable artifacts, and the report/design-review layer turns only validated evidence into public-facing claims.</p>
+  <p><strong>How to read the diagram:</strong> inputs on the left define the research question, pcsel-agent in the center records specifications and run manifests, solver/process adapters on the right produce auditable artifacts, and the report/design-review layer helps distinguish private artifacts from results that are sufficiently documented for public reporting.</p>
   <p><strong>Why it matters:</strong> this structure prevents a PCSEL result from being described only by a screenshot or a reward value; each wavelength, Q-factor, mode identity, DBR conclusion, or QW etch-risk statement needs a traceable source.</p>
 </div>
 
@@ -89,21 +112,6 @@ The main output of this direction is not only a set of PCSEL simulation results.
 </section>
 
 <section class="research-section" markdown="1">
-## Public Evidence Map
-
-<div class="evidence-table-wrap" markdown="1">
-
-| Research thread | Public evidence status | Metrics tracked | Why it matters |
-| --- | --- | --- | --- |
-| HX1 940/980 nm validation | Sanitized workflow figures and public narrative; detailed run files remain internal while reports are prepared. | Eigenwavelength, Q-factor, mode identity, mesh/boundary checks, field localization. | Separates genuine PCSEL trends from finite-aperture, side-boundary, and mesh artifacts. |
-| QW etch-depth risk gate | Public process-risk schematic and exported-geometry audit logic. | Hole depth convention, QW clearance, carrier/thermal risk, sidewall recombination proxy. | Prevents optically attractive designs from violating active-region or process constraints. |
-| Backside DBR and gain-band route | Public TMM-first route and literature-backed modeling plan. | Reflectivity, phase response, flux balance, wavelength alignment, active-region coupling. | Keeps expensive 3D verification focused on physically plausible vertical stacks. |
-| RLcode and optimization audit | Public description of metric-provenance discipline; code/results are being sanitized before release. | Solver-derived Q/wavelength versus proxy reward, Pareto behavior, convergence trace, fabrication tolerance. | Makes optimization claims auditable before they are presented as physical device results. |
-
-</div>
-</section>
-
-<section class="research-section" markdown="1">
 ## Device Evidence and Experimental Loop
 
 <div class="pcsel-companion-grid">
@@ -122,7 +130,7 @@ The main output of this direction is not only a set of PCSEL simulation results.
   <article class="pcsel-companion-card">
     <h3>Characterization feedback</h3>
     <p><strong>Role:</strong> close the loop after fabrication. The workflow records optical/electrical pumping, photoluminescence setup, L-I-V curves, spectra, beam profiles, and structural observations.</p>
-    <p><strong>Device target:</strong> stable single-mode emission, narrow linewidth, low-divergence surface output, and interpretable links between spectra, far-field behavior, and SEM-verified structure. Public pages describe the target and workflow; quantitative spectra and far-field evidence should be linked when a sanitized dataset/report is ready.</p>
+    <p><strong>Device target:</strong> single-mode operation, narrow-linewidth behavior, low-divergence surface output, and interpretable links between spectra, far-field behavior, and SEM-verified structure. These are target criteria; quantitative spectra and far-field evidence should be linked when a documented dataset/report is ready.</p>
   </article>
 </div>
 </section>
@@ -150,7 +158,7 @@ The main output of this direction is not only a set of PCSEL simulation results.
   <div class="workstream-showcase__header">
     <span class="workstream-showcase__eyebrow">Concrete research points under pcsel-agent</span>
     <h3>From solver automation to device decisions</h3>
-    <p>These are the main PCSEL research threads currently organized inside pcsel-agent. The figures are workflow schematics for public explanation; the evidence map above separates public-facing support from internal run artifacts that are still being sanitized.</p>
+    <p>These are the main PCSEL research threads currently organized inside pcsel-agent. The figures are workflow schematics for public explanation; the evidence map above separates public-facing support from private run artifacts that still need documentation before release.</p>
   </div>
 
   <div class="workstream-detail-grid">
@@ -213,7 +221,7 @@ The main output of this direction is not only a set of PCSEL simulation results.
       <div class="workstream-card__body">
         <span class="workstream-card__tag">Optimization trust</span>
         <h4>From RLcode experiments to solver-backed optimization</h4>
-        <p>RLcode is useful as an exploration framework, but pcsel-agent makes the optimization problem stricter: each candidate must be tied to solver-backed metrics, design constraints, and reproducible artifacts before it is treated as a physical result.</p>
+        <p>RLcode serves as an exploration framework, while pcsel-agent adds provenance checks: candidate designs are linked to solver-derived metrics, design constraints, and reproducible artifacts before being interpreted as physical results.</p>
         <ul class="workstream-card__points">
           <li><strong>Question:</strong> is an optimization number a real optical/device metric or only a reward/proxy signal?</li>
           <li><strong>Method:</strong> audit metric provenance, then frame expensive PCSEL search as constrained multi-objective black-box optimization.</li>
@@ -241,7 +249,7 @@ The main output of this direction is not only a set of PCSEL simulation results.
   </div>
 </section>
 
-<section class="research-section" markdown="1">
+<section id="related-project-artifacts" class="research-section" markdown="1">
 ## Related Project Artifacts
 
 <div class="workstream-panel" markdown="1">
@@ -255,19 +263,19 @@ The PCSEL work is supported by three companion artifacts: **PCSELBook** for theo
 <div class="research-media-grid">
   <figure class="research-figure">
     <img src="{{ '/images/research/pcsel_device_concept.png' | relative_url }}" alt="PCSEL layer schematic showing photonic-crystal feedback and vertical surface emission from a GaAs laser stack" loading="lazy" width="1024" height="448">
-    <figcaption><strong>Device concept.</strong> This figure frames the target device class: a GaAs PCSEL stack where the photonic-crystal layer supplies in-plane feedback and couples the resonant mode toward vertical surface emission.</figcaption>
+    <figcaption><span class="evidence-badge">Concept schematic</span><strong>Device concept.</strong> This figure frames the target device class: a GaAs PCSEL stack where the photonic-crystal layer supplies in-plane feedback and couples the resonant mode toward vertical surface emission.</figcaption>
   </figure>
   <figure class="research-figure">
     <img src="{{ '/images/research/pcsel_mode_profile.png' | relative_url }}" alt="PCSEL mode-profile plot used to connect optical confinement and refractive-index context" loading="lazy" width="1124" height="660">
-    <figcaption><strong>Mode-profile evidence.</strong> The mode plot is used to inspect field localization, vertical confinement, and active-region overlap before interpreting a wavelength/Q result as a device-relevant candidate.</figcaption>
+    <figcaption><span class="evidence-badge evidence-badge--quant">Quantitative simulation evidence</span><strong>Mode-profile evidence.</strong> The plot is used to inspect field localization, vertical confinement, and active-region overlap before interpreting a wavelength/Q result as a device-relevant candidate. It supports confinement reasoning, not by itself a device-performance claim.</figcaption>
   </figure>
   <figure class="research-figure">
-    <img src="{{ '/images/research/pcsel_iv_recombination_curve.jpeg' | relative_url }}" alt="PCSEL electrical-bias simulation plot comparing current and recombination behavior" loading="lazy" width="1227" height="813">
-    <figcaption><strong>Electrical-bias context.</strong> This simulation output is kept as process/device context for current injection and recombination behavior. Public reporting should pair it with model conditions and English axis labels before using it as quantitative evidence.</figcaption>
+    <img src="{{ '/images/research/pcsel_iv_recombination_curve.jpeg' | relative_url }}" alt="Preliminary PCSEL electrical-bias simulation with Chinese axis labels pending relabeling" loading="lazy" width="1227" height="813">
+    <figcaption><span class="evidence-badge evidence-badge--prelim">Preliminary simulation</span><strong>Electrical-bias context.</strong> This output is kept as process/device context for current injection and recombination behavior. It is not public quantitative evidence yet; model conditions, structure parameters, and English axis labels should be added before using it as a result figure.</figcaption>
   </figure>
   <figure class="research-figure">
     <img src="{{ '/images/research/pcsel_optical_setup_optimized.jpg' | relative_url }}" alt="Optical characterization setup used for PCSEL photoluminescence and beam-profile measurements" loading="lazy" width="900" height="1200">
-    <figcaption><strong>Characterization setup.</strong> The optical bench supports photoluminescence, spectra, and beam-profile measurements, giving the simulation workflow an experimental endpoint rather than leaving designs as solver-only artifacts.</figcaption>
+    <figcaption><span class="evidence-badge evidence-badge--setup">Experimental setup only</span><strong>Characterization setup.</strong> The optical bench documents measurement capability for photoluminescence, spectra, and beam-profile work. Spectra, calibration, beam profiles, and sample identity are required before using the setup as experimental performance evidence.</figcaption>
   </figure>
 </div>
 </section>

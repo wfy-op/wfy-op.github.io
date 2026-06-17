@@ -19,7 +19,7 @@ Research Positioning
 Education
 ======
 * 2021.09 -- 2025.06, B.S. in Physics, Taishan College, Shandong University
-  * Taishan College Physics Track — selective program (~20/300 students per year) under the national top-talent cultivation initiative; higher curriculum and assessment intensity than regular classes.
+  * Taishan College Physics Track, a selective undergraduate program in physics at Shandong University (~20 students admitted from ~300 candidates per year).
   * GPA: 82.9/100
 * 2025.08 -- Present, Research Assistant, School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen), supervised by Prof. Zhaoyu Zhang
 
@@ -28,13 +28,13 @@ Research Experience
 
 * **GaAs Photonic Crystal Surface-Emitting Laser (PCSEL)**, 2025.08 -- Present
   * *School of Science and Engineering, CUHK(SZ), advised by Prof. Zhaoyu Zhang*
-  * **Simulation**: Built full 3D wave simulation models in Lumerical FDTD and COMSOL Multiphysics for 980 nm GaAs PCSEL; band analysis to identify Gamma-point slow-light modes; systematic parameter sweep of lattice constant, air-hole radius, slab thickness, active-region placement, and etch-depth constraints. Evaluated double-quantum-well PCSEL designs toward stable single-mode emission, narrow linewidth, and low-divergence surface output.
-  * **Automation**: Developed pcsel-agent, a reproducible PCSEL research workflow using Claude Code skills/agents; automated paper collection, local paper library construction, target-spec organization, solver execution, and report generation; linked Lumerical and COMSOL through Java/Python APIs; audited RL optimization results through solver-backed metric provenance.
-  * **Recent technical outputs**: Built finite-array vs. periodic-unit-cell COMSOL comparison workflows, QW etch-depth EC/HT + SRH risk-gating analyses, backside-DBR TMM screening tools, and a searchable PCSEL literature workspace for evidence-driven device design.
+  * **Simulation**: Built full 3D wave simulation models in Lumerical FDTD and COMSOL Multiphysics for 980 nm GaAs PCSEL; band analysis to identify Gamma-point slow-light modes; systematic parameter sweep of lattice constant, air-hole radius, slab thickness, active-region placement, and etch-depth constraints. Used these simulations to assess design routes toward single-mode, narrow-linewidth, and low-divergence surface emission.
+  * **Automation**: Developed pcsel-agent, a Python-based workflow for organizing literature intake, target specifications, solver runs, metric provenance, and report generation; linked Lumerical and COMSOL through Java/Python APIs; audited optimization outputs through solver-backed metrics.
+  * **Recent technical outputs**: Built finite-array vs. periodic-unit-cell COMSOL comparison workflows, QW etch-depth EC/HT + SRH risk-gating analyses, backside-DBR TMM screening tools, and a searchable PCSEL literature workspace for source-linked device design.
   * **Characterization**: Built photoluminescence setup; optical/electrical pumping; L-I-V, spectral, and beam-profile measurement; correlated device performance with SEM-verified structures.
   * **Fabrication**: Participated in multiple optical-pump PCSEL tapeouts; ICP etching and recipe tuning; mask layout and review with KLayout; SEM analysis of etch deviation and overlay accuracy; maintained design-process-characterization correspondence tables.
-  * **Project Management**: Assisted supervisor in writing and closing national/provincial research grants; prepared technical proposals, progress reports, and final deliverables.
-  * **Technical Documentation**: Authored and maintained *PCSELBook* — an AI-assisted ~300,000-character technical note covering PCSEL theory, simulation, and device physics, from Maxwell equations and Bloch modes to semiconductor epitaxy, quantum-well gain, and electro-thermal-optical coupling. See [https://github.com/wfy-op/PCSELbook](https://github.com/wfy-op/PCSELbook).
+  * **Project Support**: Assisted with national/provincial research-grant materials, including technical proposals, progress reports, and final-deliverable documentation.
+  * **Technical Documentation**: Authored and maintained *PCSELBook* — a ~300,000-character technical note covering PCSEL theory, simulation, and device physics, from Maxwell equations and Bloch modes to semiconductor epitaxy, quantum-well gain, and electro-thermal-optical coupling. See [https://github.com/wfy-op/PCSELbook](https://github.com/wfy-op/PCSELbook).
 
 * **Memristor-based Reservoir Computing for Multimodal Applications**, 2022.10 -- 2023.10
   * *School of Physics, Shandong University, advised by Prof. Limei Zheng*

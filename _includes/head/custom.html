@@ -263,6 +263,118 @@
     font-weight: 700;
   }
 
+  .pcsel-stack-grid,
+  .pcsel-companion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 0.9rem;
+    margin: 1rem 0 1.8rem;
+  }
+
+  .pcsel-stack-card,
+  .pcsel-companion-card {
+    border: 1px solid var(--wfy-line);
+    border-radius: 6px;
+    background: #fff;
+    padding: 0.95rem 1rem 1.05rem;
+  }
+
+  .pcsel-stack-card--primary {
+    border-top: 4px solid var(--wfy-accent);
+    background: linear-gradient(180deg, #f7fbfb 0%, #fff 62%);
+  }
+
+  .pcsel-stack-card__tag {
+    color: var(--wfy-warm);
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .pcsel-stack-card h3,
+  .pcsel-companion-card h3 {
+    margin: 0.25rem 0 0.55rem;
+    color: var(--wfy-ink);
+    font-size: 1.05rem;
+    line-height: 1.32;
+  }
+
+  .pcsel-stack-card p,
+  .pcsel-companion-card p {
+    margin: 0 0 0.65rem;
+    color: #4c5963;
+    line-height: 1.56;
+  }
+
+  .pcsel-stack-card ul {
+    margin: 0.3rem 0 0;
+    padding-left: 1.05rem;
+    color: #45535d;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .pcsel-agent-panel {
+    margin: 2rem 0 2.25rem;
+    padding: 1.05rem 1rem 1.15rem;
+    border: 1px solid var(--wfy-line);
+    border-left: 4px solid var(--wfy-accent);
+    border-radius: 6px;
+    background: var(--wfy-panel);
+  }
+
+  .pcsel-agent-panel h2 {
+    margin-top: 0;
+  }
+
+  .pcsel-agent-panel__lead {
+    max-width: 47rem;
+    color: #41515c;
+    line-height: 1.62;
+  }
+
+  .pcsel-agent-map {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .pcsel-agent-map__item {
+    border: 1px solid #d3dde4;
+    border-radius: 6px;
+    background: #fff;
+    padding: 0.85rem 0.9rem;
+  }
+
+  .pcsel-agent-map__item span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.55rem;
+    height: 1.55rem;
+    margin-bottom: 0.45rem;
+    border-radius: 50%;
+    background: var(--wfy-accent);
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  .pcsel-agent-map__item strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--wfy-ink);
+    line-height: 1.35;
+  }
+
+  .pcsel-agent-map__item p {
+    margin: 0;
+    color: #4c5963;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
   .workstream-showcase {
     margin: 1.4rem 0 1.8rem;
   }

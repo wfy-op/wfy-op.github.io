@@ -109,6 +109,46 @@
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 
+  .research-wide-figure {
+    overflow: hidden;
+    margin: 1rem 0 1.1rem;
+    border: 1px solid var(--wfy-line);
+    border-radius: 6px;
+    background: #fff;
+  }
+
+  .research-wide-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: var(--wfy-panel);
+  }
+
+  .research-wide-figure figcaption {
+    padding: 0.75rem 0.9rem;
+    border-top: 1px solid var(--wfy-line);
+    color: var(--wfy-muted);
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .figure-explainer {
+    margin: 0.75rem 0 1.2rem;
+    padding: 0.85rem 1rem;
+    border-left: 4px solid var(--wfy-accent);
+    background: var(--wfy-panel);
+    color: #41515c;
+    line-height: 1.58;
+  }
+
+  .figure-explainer p {
+    margin: 0;
+  }
+
+  .figure-explainer p + p {
+    margin-top: 0.55rem;
+  }
+
   .quick-facts__item,
   .highlight-card,
   .recent-work-card,
@@ -254,6 +294,15 @@
     height: auto;
   }
 
+  .home-feature__media figcaption {
+    padding: 0.55rem 0.7rem 0.65rem;
+    border-top: 1px solid var(--wfy-line);
+    background: #fff;
+    color: var(--wfy-muted);
+    font-size: 0.79rem;
+    line-height: 1.42;
+  }
+
   .home-feature__body {
     padding: 1rem 1.1rem;
   }
@@ -328,6 +377,8 @@
   }
 
   .research-direction-card__media {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     min-height: 210px;
     border-right: 1px solid var(--wfy-line);
@@ -337,10 +388,19 @@
   .research-direction-card__media img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 0.4rem;
     object-fit: contain;
     box-sizing: border-box;
+  }
+
+  .research-direction-card__media figcaption {
+    padding: 0.55rem 0.7rem 0.65rem;
+    border-top: 1px solid var(--wfy-line);
+    background: #fff;
+    color: var(--wfy-muted);
+    font-size: 0.79rem;
+    line-height: 1.42;
   }
 
   .research-direction-card__body {
@@ -569,6 +629,7 @@
 
   .workstream-card__media {
     display: flex;
+    flex-direction: column;
     align-items: stretch;
     margin: 0;
     border-right: 1px solid var(--wfy-line);
@@ -578,10 +639,19 @@
   .workstream-card__media img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 0.35rem;
     object-fit: contain;
     box-sizing: border-box;
+  }
+
+  .workstream-card__media figcaption {
+    padding: 0.55rem 0.7rem 0.65rem;
+    border-top: 1px solid var(--wfy-line);
+    color: var(--wfy-muted);
+    font-size: 0.79rem;
+    line-height: 1.42;
+    background: #fff;
   }
 
   .workstream-card__body {

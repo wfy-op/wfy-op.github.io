@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 560" role="img" aria-labelledby="title desc">
+  <title id="title">Memristor reservoir-computing task pipeline</title>
+  <desc id="desc">A workflow diagram showing image and speech data preprocessing, pulse encoding, dynamic memristor response, readout training, and recognition metrics.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fb; }
+      .box { fill: #ffffff; stroke: #d8dee4; stroke-width: 2; rx: 16; }
+      .boxAccent { fill: #eef6f6; stroke: #c9dddc; stroke-width: 2; rx: 16; }
+      .boxWarm { fill: #fff7ea; stroke: #ead3ad; stroke-width: 2; rx: 16; }
+      .title { fill: #263238; font: 700 25px Arial, sans-serif; }
+      .label { fill: #263238; font: 700 18px Arial, sans-serif; }
+      .small { fill: #4c5963; font: 15px Arial, sans-serif; }
+      .tiny { fill: #65737e; font: 13px Arial, sans-serif; }
+      .arrow { fill: none; stroke: #5b6b75; stroke-width: 2.6; marker-end: url(#arrowHead); }
+      .arrowAccent { fill: none; stroke: #286a6b; stroke-width: 3; marker-end: url(#arrowHeadAccent); }
+      .signal { fill: none; stroke: #286a6b; stroke-width: 3; }
+      .signalWarm { fill: none; stroke: #8a5a16; stroke-width: 3; }
+      .dot { fill: #286a6b; }
+      .dotWarm { fill: #8a5a16; }
+    </style>
+    <marker id="arrowHead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5b6b75"/>
+    </marker>
+    <marker id="arrowHeadAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#286a6b"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1280" height="560"/>
+  <text class="title" x="52" y="58">Memristor reservoir-computing pipeline</text>
+  <text class="small" x="52" y="86">The same evidence discipline used in PCSEL work starts here: keep device response, preprocessing, and task metrics traceable.</text>
+
+  <rect class="box" x="58" y="150" width="200" height="118"/>
+  <text class="label" x="88" y="185">Image data</text>
+  <text class="small" x="88" y="213">compact matrices</text>
+  <text class="tiny" x="88" y="238">pixel values to voltage pulses</text>
+  <rect class="box" x="58" y="315" width="200" height="118"/>
+  <text class="label" x="88" y="350">Speech data</text>
+  <text class="small" x="88" y="378">framed waveforms</text>
+  <text class="tiny" x="88" y="403">filter bank and masking</text>
+
+  <rect class="boxAccent" x="335" y="220" width="210" height="142"/>
+  <text class="label" x="365" y="255">Pulse Encoding</text>
+  <text class="small" x="365" y="283">polarity and timing</text>
+  <text class="tiny" x="365" y="309">turn raw features into voltage</text>
+  <text class="tiny" x="365" y="330">sequences for device testing</text>
+
+  <rect class="boxWarm" x="622" y="185" width="230" height="212"/>
+  <text class="label" x="652" y="220">Dynamic Memristor</text>
+  <text class="small" x="652" y="248">physical reservoir</text>
+  <text class="tiny" x="652" y="276">nonlinear response</text>
+  <text class="tiny" x="652" y="298">short-term memory</text>
+  <text class="tiny" x="652" y="320">device variation checks</text>
+  <path class="signal" d="M668 355 C684 325, 700 385, 716 355 S748 325, 764 355 S796 385, 812 355"/>
+
+  <rect class="boxAccent" x="928" y="220" width="205" height="142"/>
+  <text class="label" x="958" y="255">Readout Layer</text>
+  <text class="small" x="958" y="283">train only output</text>
+  <text class="tiny" x="958" y="309">MATLAB RC / ANN workflow</text>
+  <text class="tiny" x="958" y="330">debugging and robustness</text>
+
+  <rect class="box" x="1015" y="430" width="205" height="88"/>
+  <text class="label" x="1045" y="464">Metrics</text>
+  <text class="small" x="1045" y="492">recognition accuracy</text>
+
+  <path class="arrow" d="M258 209 C296 209, 300 251, 335 264"/>
+  <path class="arrow" d="M258 374 C296 374, 300 333, 335 318"/>
+  <path class="arrowAccent" d="M545 291 L622 291"/>
+  <path class="arrowAccent" d="M852 291 L928 291"/>
+  <path class="arrow" d="M1031 362 L1108 430"/>
+
+  <circle class="dot" cx="420" cy="412" r="5"/>
+  <circle class="dot" cx="455" cy="412" r="5"/>
+  <circle class="dot" cx="490" cy="412" r="5"/>
+  <text class="tiny" x="366" y="446">preprocessing provenance</text>
+
+  <circle class="dotWarm" cx="682" cy="447" r="5"/>
+  <circle class="dotWarm" cx="717" cy="447" r="5"/>
+  <circle class="dotWarm" cx="752" cy="447" r="5"/>
+  <text class="tiny" x="650" y="481">device-state trace</text>
+
+  <path class="signalWarm" d="M960 444 C978 414, 996 474, 1014 444 S1050 414, 1068 444"/>
+  <text class="tiny" x="944" y="515">task-level evidence</text>
+</svg>

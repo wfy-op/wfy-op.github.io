@@ -54,6 +54,16 @@ author_profile: true
 The main output of this direction is not only a set of PCSEL simulation results. It is a workflow that makes those results auditable: every geometry convention, solver command, mesh setting, Q-factor, eigenwavelength, field identity, and process-risk claim should have a traceable source.
 </div>
 
+<figure class="research-wide-figure">
+  <img src="{{ '/images/research/pcsel_agent_architecture.svg' | relative_url }}" alt="Architecture diagram of pcsel-agent connecting paper library, PCSELBook, RLcode, experiment feedback, solver adapters, evidence store, and public reports" loading="lazy" width="1360" height="760">
+  <figcaption><strong>pcsel-agent architecture.</strong> The diagram shows how literature priors, PCSELBook theory notes, RLcode optimization experiments, and experimental feedback enter a single orchestration layer. COMSOL, Lumerical, Python/TMM tools, KLayout, and SEM checks are treated as evidence-producing adapters rather than isolated software islands.</figcaption>
+</figure>
+
+<div class="figure-explainer">
+  <p><strong>How to read the diagram:</strong> inputs on the left define the research question, pcsel-agent in the center records specifications and run manifests, solver/process adapters on the right produce auditable artifacts, and the report/design-review layer turns only validated evidence into public-facing claims.</p>
+  <p><strong>Why it matters:</strong> this structure prevents a PCSEL result from being described only by a screenshot or a reward value; each wavelength, Q-factor, mode identity, DBR conclusion, or QW etch-risk statement needs a traceable source.</p>
+</div>
+
 <div class="pcsel-agent-map">
   <div class="pcsel-agent-map__item">
     <span>1</span>
@@ -147,6 +157,7 @@ The main output of this direction is not only a set of PCSEL simulation results.
     <article class="workstream-card">
       <figure class="workstream-card__media">
         <img src="{{ '/images/research/pcsel_finite_array_workflow.svg' | relative_url }}" alt="Finite-array versus periodic-unit-cell PCSEL workflow schematic" loading="lazy">
+        <figcaption>Validation path for comparing periodic-cell assumptions with finite-array and full-wave checks.</figcaption>
       </figure>
       <div class="workstream-card__body">
         <span class="workstream-card__tag">HX1 reference validation</span>
@@ -163,6 +174,7 @@ The main output of this direction is not only a set of PCSEL simulation results.
     <article class="workstream-card">
       <figure class="workstream-card__media">
         <img src="{{ '/images/research/pcsel_qw_etch_risk_gate.svg' | relative_url }}" alt="Quantum-well etch-depth risk gate schematic" loading="lazy">
+        <figcaption>Process gate that keeps QW clearance, etch-front convention, and sidewall risk attached to every optical design point.</figcaption>
       </figure>
       <div class="workstream-card__body">
         <span class="workstream-card__tag">Process-aware design</span>
@@ -179,6 +191,7 @@ The main output of this direction is not only a set of PCSEL simulation results.
     <article class="workstream-card">
       <figure class="workstream-card__media">
         <img src="{{ '/images/research/pcsel_backside_dbr_tmm_route.svg' | relative_url }}" alt="Backside DBR TMM-first simulation route schematic" loading="lazy">
+        <figcaption>TMM-first route for filtering vertical DBR/gain-band choices before expensive 3D simulation.</figcaption>
       </figure>
       <div class="workstream-card__body">
         <span class="workstream-card__tag">Vertical stack</span>
@@ -195,6 +208,7 @@ The main output of this direction is not only a set of PCSEL simulation results.
     <article class="workstream-card">
       <figure class="workstream-card__media">
         <img src="{{ '/images/research/pcsel_optimization_map.svg' | relative_url }}" alt="FDTD-driven black-box multi-objective optimization schematic" loading="lazy">
+        <figcaption>Optimization audit path separating solver-derived metrics from reward shaping and proxy objectives.</figcaption>
       </figure>
       <div class="workstream-card__body">
         <span class="workstream-card__tag">Optimization trust</span>
@@ -211,6 +225,7 @@ The main output of this direction is not only a set of PCSEL simulation results.
     <article class="workstream-card workstream-card--wide">
       <figure class="workstream-card__media">
         <img src="{{ '/images/research/pcsel_literature_workspace.svg' | relative_url }}" alt="PCSEL literature workspace schematic" loading="lazy">
+        <figcaption>Literature workspace used to turn paper intake into searchable design priors and source-linked claims.</figcaption>
       </figure>
       <div class="workstream-card__body">
         <span class="workstream-card__tag">Paper library</span>
@@ -240,19 +255,19 @@ The PCSEL work is supported by three companion artifacts: **PCSELBook** for theo
 <div class="research-media-grid">
   <figure class="research-figure">
     <img src="{{ '/images/research/pcsel_device_concept.png' | relative_url }}" alt="PCSEL layer schematic showing photonic-crystal feedback and vertical surface emission from a GaAs laser stack" loading="lazy" width="1024" height="448">
-    <figcaption>Device-level PCSEL concept linking the photonic-crystal layer to surface emission.</figcaption>
+    <figcaption><strong>Device concept.</strong> This figure frames the target device class: a GaAs PCSEL stack where the photonic-crystal layer supplies in-plane feedback and couples the resonant mode toward vertical surface emission.</figcaption>
   </figure>
   <figure class="research-figure">
     <img src="{{ '/images/research/pcsel_mode_profile.png' | relative_url }}" alt="PCSEL mode-profile plot used to connect optical confinement and refractive-index context" loading="lazy" width="1124" height="660">
-    <figcaption>Mode-profile evidence used to connect field localization, effective-index context, and active-region overlap.</figcaption>
+    <figcaption><strong>Mode-profile evidence.</strong> The mode plot is used to inspect field localization, vertical confinement, and active-region overlap before interpreting a wavelength/Q result as a device-relevant candidate.</figcaption>
   </figure>
   <figure class="research-figure">
     <img src="{{ '/images/research/pcsel_iv_recombination_curve.jpeg' | relative_url }}" alt="PCSEL electrical-bias simulation plot comparing current and recombination behavior" loading="lazy" width="1227" height="813">
-    <figcaption>Electrical-bias simulation output used to reason about current and recombination behavior; a public report should add model condition and English axis labels.</figcaption>
+    <figcaption><strong>Electrical-bias context.</strong> This simulation output is kept as process/device context for current injection and recombination behavior. Public reporting should pair it with model conditions and English axis labels before using it as quantitative evidence.</figcaption>
   </figure>
   <figure class="research-figure">
     <img src="{{ '/images/research/pcsel_optical_setup_optimized.jpg' | relative_url }}" alt="Optical characterization setup used for PCSEL photoluminescence and beam-profile measurements" loading="lazy" width="900" height="1200">
-    <figcaption>Optical characterization setup for photoluminescence and beam-profile measurements.</figcaption>
+    <figcaption><strong>Characterization setup.</strong> The optical bench supports photoluminescence, spectra, and beam-profile measurements, giving the simulation workflow an experimental endpoint rather than leaving designs as solver-only artifacts.</figcaption>
   </figure>
 </div>
 </section>

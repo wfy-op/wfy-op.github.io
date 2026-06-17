@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 760" role="img" aria-labelledby="title desc">
+  <title id="title">pcsel-agent architecture for reproducible PCSEL research</title>
+  <desc id="desc">A workflow diagram showing literature, theory, optimization, solver adapters, evidence validation, reports, and experiment feedback connected through pcsel-agent.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fb; }
+      .panel { fill: #ffffff; stroke: #d8dee4; stroke-width: 2; rx: 16; }
+      .panelSoft { fill: #eef6f6; stroke: #c9dddc; stroke-width: 2; rx: 16; }
+      .panelWarm { fill: #fff7ea; stroke: #ead3ad; stroke-width: 2; rx: 16; }
+      .panelBlue { fill: #edf4fb; stroke: #c9d9e7; stroke-width: 2; rx: 16; }
+      .hub { fill: #286a6b; stroke: #1d5152; stroke-width: 3; rx: 20; }
+      .title { fill: #263238; font: 700 26px Arial, sans-serif; }
+      .label { fill: #263238; font: 700 18px Arial, sans-serif; }
+      .small { fill: #4c5963; font: 15px Arial, sans-serif; }
+      .tiny { fill: #65737e; font: 13px Arial, sans-serif; }
+      .hubText { fill: #ffffff; font: 700 23px Arial, sans-serif; }
+      .hubSmall { fill: #e7f2f2; font: 15px Arial, sans-serif; }
+      .arrow { fill: none; stroke: #5b6b75; stroke-width: 2.6; marker-end: url(#arrowHead); }
+      .arrowAccent { fill: none; stroke: #286a6b; stroke-width: 3; marker-end: url(#arrowHeadAccent); }
+      .loop { fill: none; stroke: #8a5a16; stroke-width: 2.6; stroke-dasharray: 8 7; marker-end: url(#arrowHeadWarm); }
+      .badge { fill: #ffffff; stroke: #d8dee4; stroke-width: 1.5; rx: 10; }
+      .badgeText { fill: #286a6b; font: 700 13px Arial, sans-serif; }
+    </style>
+    <marker id="arrowHead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5b6b75"/>
+    </marker>
+    <marker id="arrowHeadAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#286a6b"/>
+    </marker>
+    <marker id="arrowHeadWarm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a5a16"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1360" height="760"/>
+  <text class="title" x="58" y="58">pcsel-agent architecture</text>
+  <text class="small" x="58" y="86">A reproducible loop for turning PCSEL papers, solver runs, and device evidence into auditable design decisions.</text>
+
+  <rect class="panel" x="50" y="125" width="260" height="118"/>
+  <text class="label" x="76" y="160">Paper Library</text>
+  <text class="small" x="76" y="188">101 structured entries</text>
+  <text class="tiny" x="76" y="213">device claims, methods, bands</text>
+
+  <rect class="panel" x="50" y="280" width="260" height="118"/>
+  <text class="label" x="76" y="315">PCSELBook</text>
+  <text class="small" x="76" y="343">theory backbone</text>
+  <text class="tiny" x="76" y="368">Maxwell, Bloch, QW gain, ETO</text>
+
+  <rect class="panel" x="50" y="435" width="260" height="118"/>
+  <text class="label" x="76" y="470">RLcode</text>
+  <text class="small" x="76" y="498">optimization sandbox</text>
+  <text class="tiny" x="76" y="523">reward audit, Pareto candidates</text>
+
+  <rect class="panelWarm" x="50" y="590" width="260" height="118"/>
+  <text class="label" x="76" y="625">Experiment Feedback</text>
+  <text class="small" x="76" y="653">PL, L-I-V, spectra, SEM</text>
+  <text class="tiny" x="76" y="678">process and characterization records</text>
+
+  <rect class="hub" x="442" y="252" width="310" height="230"/>
+  <text class="hubText" x="492" y="306">pcsel-agent</text>
+  <text class="hubSmall" x="475" y="340">research orchestration layer</text>
+  <rect class="badge" x="475" y="368" width="244" height="32"/>
+  <text class="badgeText" x="494" y="389">specs, manifests, memory</text>
+  <rect class="badge" x="475" y="412" width="244" height="32"/>
+  <text class="badgeText" x="496" y="433">validators and report writer</text>
+
+  <rect class="panelBlue" x="870" y="112" width="210" height="105"/>
+  <text class="label" x="900" y="148">COMSOL</text>
+  <text class="small" x="900" y="176">FEM eigenmodes</text>
+  <text class="tiny" x="900" y="198">mesh, boundary, Q</text>
+
+  <rect class="panelBlue" x="1102" y="112" width="210" height="105"/>
+  <text class="label" x="1132" y="148">Lumerical</text>
+  <text class="small" x="1132" y="176">FDTD / FDE</text>
+  <text class="tiny" x="1132" y="198">field, spectra, flux</text>
+
+  <rect class="panelBlue" x="870" y="248" width="210" height="105"/>
+  <text class="label" x="900" y="284">Python Tools</text>
+  <text class="small" x="900" y="312">TMM, gain, plots</text>
+  <text class="tiny" x="900" y="334">fast screens before 3D</text>
+
+  <rect class="panelBlue" x="1102" y="248" width="210" height="105"/>
+  <text class="label" x="1132" y="284">KLayout / SEM</text>
+  <text class="small" x="1132" y="312">geometry checks</text>
+  <text class="tiny" x="1132" y="334">mask, etch, overlay</text>
+
+  <rect class="panelSoft" x="870" y="418" width="442" height="122"/>
+  <text class="label" x="900" y="454">Evidence Store</text>
+  <text class="small" x="900" y="482">metric provenance, artifacts, convergence history</text>
+  <text class="tiny" x="900" y="509">wavelength, Q, mode identity, QW clearance, DBR response</text>
+
+  <rect class="panelWarm" x="870" y="590" width="442" height="118"/>
+  <text class="label" x="900" y="625">Public Report and Design Review</text>
+  <text class="small" x="900" y="653">figures, tables, assumptions, residual risks</text>
+  <text class="tiny" x="900" y="678">human-readable outputs before a claim becomes public</text>
+
+  <path class="arrow" d="M310 184 C358 184, 378 260, 442 300"/>
+  <path class="arrow" d="M310 339 C360 339, 378 355, 442 362"/>
+  <path class="arrow" d="M310 494 C368 494, 385 454, 442 428"/>
+  <path class="loop" d="M310 650 C420 650, 408 504, 480 478"/>
+
+  <path class="arrowAccent" d="M752 304 C805 260, 810 164, 870 164"/>
+  <path class="arrowAccent" d="M752 336 C842 290, 1010 166, 1102 166"/>
+  <path class="arrowAccent" d="M752 376 C806 356, 811 304, 870 304"/>
+  <path class="arrowAccent" d="M752 414 C842 389, 1010 308, 1102 308"/>
+  <path class="arrowAccent" d="M975 217 L975 248"/>
+  <path class="arrowAccent" d="M1207 217 L1207 248"/>
+  <path class="arrowAccent" d="M975 353 L975 418"/>
+  <path class="arrowAccent" d="M1207 353 L1207 418"/>
+  <path class="arrowAccent" d="M1091 540 L1091 590"/>
+  <path class="loop" d="M870 653 C735 705, 590 705, 560 482"/>
+
+  <text class="tiny" x="365" y="228">priors</text>
+  <text class="tiny" x="347" y="648">measured feedback</text>
+  <text class="tiny" x="778" y="274">solver jobs</text>
+  <text class="tiny" x="1115" y="570">validated claims</text>
+</svg>

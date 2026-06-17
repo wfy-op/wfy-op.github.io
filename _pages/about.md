@@ -65,6 +65,7 @@ redirect_from:
 <section class="home-feature">
   <figure class="home-feature__media">
     <img src="{{ '/images/research/pcsel_device_concept.png' | relative_url }}" alt="Schematic PCSEL stack showing how the photonic-crystal layer couples in-plane feedback to surface emission." loading="lazy" width="1024" height="448">
+    <figcaption>PCSEL concept figure: the photonic-crystal layer couples in-plane feedback to surface emission, anchoring the current device-design loop.</figcaption>
   </figure>
   <div class="home-feature__body">
     <span class="recent-work-card__tag">Current focus</span>

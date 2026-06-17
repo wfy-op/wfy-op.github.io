@@ -51,6 +51,7 @@ author_profile: true
   <article class="research-direction-card">
     <figure class="research-direction-card__media">
       <img src="{{ '/images/research/pcsel_device_concept.png' | relative_url }}" alt="PCSEL stack schematic connecting photonic-crystal feedback with vertical surface emission" loading="lazy" width="1024" height="448">
+      <figcaption>Device concept: photonic-crystal feedback, vertical emission, and process-aware design variables.</figcaption>
     </figure>
     <div class="research-direction-card__body">
       <span class="research-direction-card__tag">Current focus</span>
@@ -68,6 +69,7 @@ author_profile: true
   <article class="research-direction-card">
     <figure class="research-direction-card__media">
       <img src="{{ '/images/research/memristor_reservoir_framework.png' | relative_url }}" alt="Reservoir-computing diagram linking input pulses, memristor internal state, and readout output" loading="lazy" width="406" height="343">
+      <figcaption>Computing concept: pulse input, dynamic physical state, and trained readout layer.</figcaption>
     </figure>
     <div class="research-direction-card__body">
       <span class="research-direction-card__tag">Neuromorphic devices</span>

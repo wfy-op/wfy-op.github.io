@@ -32,7 +32,7 @@ My contribution focused on text and speech data preprocessing, pulse-encoding pi
 ## Training Value for Current PCSEL Work
 
 <div class="workstream-panel" markdown="1">
-This project trained a different but useful part of my current PCSEL workflow: separating device physics from task-level metrics. In the memristor work, I had to track how nonlinear device dynamics, pulse encoding, data preprocessing, MATLAB training code, and recognition metrics fit together. The same habit now helps me audit PCSEL optimization outputs, distinguish solver-derived physical metrics from proxy rewards, and document data provenance before making device-design claims.
+This project trained a different but useful part of my current PCSEL workflow: separating device physics from task-level metrics. In the memristor work, I had to track how nonlinear device dynamics, pulse encoding, data preprocessing, MATLAB training code, and recognition metrics fit together. The same habit now helps me audit PCSEL optimization outputs, distinguish solver-derived physical metrics from proxy rewards, and document metric provenance before making device-design claims.
 </div>
 </section>
 

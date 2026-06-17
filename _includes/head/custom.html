@@ -88,6 +88,7 @@
   .trajectory-grid,
   .publication-card-grid,
   .project-card-grid,
+  .zhihu-note-grid,
   .research-media-grid {
     display: grid;
     gap: 0.85rem;
@@ -103,6 +104,7 @@
   .trajectory-grid,
   .publication-card-grid,
   .project-card-grid,
+  .zhihu-note-grid,
   .research-media-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
@@ -113,6 +115,7 @@
   .trajectory-card,
   .publication-card,
   .project-card,
+  .zhihu-note-card,
   .research-figure,
   .workstream-panel,
   .contact-panel {
@@ -127,6 +130,7 @@
   .trajectory-card,
   .publication-card,
   .project-card,
+  .zhihu-note-card,
   .workstream-panel,
   .contact-panel {
     padding: 0.9rem 1rem;
@@ -137,6 +141,7 @@
   .recent-work-card h2,
   .trajectory-card h2,
   .publication-card h3,
+  .zhihu-note-card h3,
   .project-card h2 {
     display: block;
     margin: 0.25rem 0 0.35rem;
@@ -148,6 +153,7 @@
   .recent-work-card p,
   .trajectory-card p,
   .publication-card p,
+  .zhihu-note-card p,
   .project-card p,
   .contact-panel p {
     margin: 0;
@@ -159,6 +165,7 @@
   .recent-work-card h2,
   .trajectory-card h2,
   .publication-card h3,
+  .zhihu-note-card h3,
   .project-card h2 {
     font-size: 1rem;
     line-height: 1.35;
@@ -173,7 +180,8 @@
   }
 
   .publication-card,
-  .project-card {
+  .project-card,
+  .zhihu-note-card {
     border-top: 3px solid var(--wfy-accent);
   }
 
@@ -185,6 +193,7 @@
   .recent-work-card__tag,
   .trajectory-card span,
   .publication-card__venue,
+  .zhihu-note-card__tag,
   .project-card__status {
     color: var(--wfy-warm);
     font-size: 0.78rem;
@@ -195,6 +204,22 @@
   .publication-card__authors {
     color: var(--wfy-muted) !important;
     font-size: 0.9rem;
+  }
+
+  .zhihu-note-card h3 a {
+    color: var(--wfy-ink);
+    text-decoration: none;
+  }
+
+  .zhihu-note-card h3 a:hover {
+    color: var(--wfy-accent);
+    text-decoration: underline;
+  }
+
+  .zhihu-note-card__meta {
+    margin-top: 0.55rem !important;
+    color: var(--wfy-muted) !important;
+    font-size: 0.84rem;
   }
 
   .project-card ul {

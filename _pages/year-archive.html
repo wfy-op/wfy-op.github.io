@@ -1,13 +1,83 @@
 ---
 layout: archive
 permalink: /year-archive/
-title: "Blog posts"
+title: "Notes"
 author_profile: true
 redirect_from:
   - /wordpress/blog-posts/
 ---
 
 {% include base_path %}
+
+<p class="research-intro">
+  Selected public notes from my Zhihu page. I keep this section focused on articles that best represent my research taste, physics training, teaching notes, and study-planning experience.
+</p>
+
+<section class="research-section" markdown="1">
+## Selected Zhihu Notes
+
+<div class="zhihu-note-grid">
+  <article class="zhihu-note-card">
+    <span class="zhihu-note-card__tag">Research automation</span>
+    <h3><a href="https://zhuanlan.zhihu.com/p/2040940692151719155" target="_blank" rel="noopener noreferrer">Codex 控制 COMSOL 和 FDTD</a></h3>
+    <p>A recent note on turning AI agents from text assistants into solver-facing research tools for COMSOL and Lumerical FDTD workflows.</p>
+    <p class="zhihu-note-card__meta">Zhihu · simulation workflow · 2026</p>
+  </article>
+
+  <article class="zhihu-note-card">
+    <span class="zhihu-note-card__tag">Photonics</span>
+    <h3><a href="https://zhuanlan.zhihu.com/p/693564504" target="_blank" rel="noopener noreferrer">非线性极化与谐波生成</a></h3>
+    <p>A physics note connecting Maxwell equations, nonlinear polarization, and harmonic generation, close to my integrated nonlinear-photonics background.</p>
+    <p class="zhihu-note-card__meta">Zhihu · nonlinear optics · 11 likes</p>
+  </article>
+
+  <article class="zhihu-note-card">
+    <span class="zhihu-note-card__tag">Optics preparation</span>
+    <h3><a href="https://zhuanlan.zhihu.com/p/7814256485" target="_blank" rel="noopener noreferrer">光学方向夏令营面试常见问题笔记整理</a></h3>
+    <p>An interview-preparation note that organizes core optics concepts and common questions for summer-camp and graduate-school interviews.</p>
+    <p class="zhihu-note-card__meta">Zhihu · optics interview · 19 likes / 81 saves</p>
+  </article>
+
+  <article class="zhihu-note-card">
+    <span class="zhihu-note-card__tag">Electrodynamics</span>
+    <h3><a href="https://zhuanlan.zhihu.com/p/675743248" target="_blank" rel="noopener noreferrer">电磁场的麦克斯韦理论体系及其对称性</a></h3>
+    <p>A structured electrodynamics note on Maxwell theory and field symmetry, useful as a compact bridge from coursework to photonics modeling.</p>
+    <p class="zhihu-note-card__meta">Zhihu · electrodynamics · 20 likes / 60 saves</p>
+  </article>
+
+  <article class="zhihu-note-card">
+    <span class="zhihu-note-card__tag">Math methods</span>
+    <h3><a href="https://zhuanlan.zhihu.com/p/642666021" target="_blank" rel="noopener noreferrer">数学物理方法提纲与复习指南</a></h3>
+    <p>A high-engagement review guide for mathematical physics, based on Liang Kunmiao's textbook and course outlines.</p>
+    <p class="zhihu-note-card__meta">Zhihu · mathematical physics · 78 likes / 280 saves</p>
+  </article>
+
+  <article class="zhihu-note-card">
+    <span class="zhihu-note-card__tag">Quantum mechanics</span>
+    <h3><a href="https://zhuanlan.zhihu.com/p/670570092" target="_blank" rel="noopener noreferrer">量子力学手写笔记</a></h3>
+    <p>Handwritten quantum-mechanics notes, including calculation logic, special relations, and update notes through time-dependent perturbation topics.</p>
+    <p class="zhihu-note-card__meta">Zhihu · quantum mechanics · 18 likes / 44 saves</p>
+  </article>
+
+  <article class="zhihu-note-card">
+    <span class="zhihu-note-card__tag">Solid-state physics</span>
+    <h3><a href="https://zhuanlan.zhihu.com/p/1922736632521536207" target="_blank" rel="noopener noreferrer">固体物理手写笔记</a></h3>
+    <p>A handwritten solid-state physics note collection, complementary to my later device-physics and semiconductor-photonics work.</p>
+    <p class="zhihu-note-card__meta">Zhihu · solid-state physics</p>
+  </article>
+
+  <article class="zhihu-note-card">
+    <span class="zhihu-note-card__tag">Study planning</span>
+    <h3><a href="https://zhuanlan.zhihu.com/p/2026292563263463726" target="_blank" rel="noopener noreferrer">物理系本科四年该怎么规划</a></h3>
+    <p>A planning note comparing recommendation, overseas applications, entrance exams, and employment paths for physics undergraduates.</p>
+    <p class="zhihu-note-card__meta">Zhihu · physics undergraduate planning · 2026</p>
+  </article>
+</div>
+</section>
+
+<section class="research-section" markdown="1">
+## Site Posts
+
 {% capture written_year %}'None'{% endcapture %}
 {% for post in site.posts %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
@@ -17,3 +87,4 @@ redirect_from:
   {% endif %}
   {% include archive-single.html %}
 {% endfor %}
+</section>

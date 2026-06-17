@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Wu Feiyang / 吴飞洋"
 title_separator          : "-"
 name                     : &name "Wu Feiyang"
-description              : &description "Hello, I'm Wu Feiyang (吴飞洋). Very glad to meet you!"
+description              : &description "Wu Feiyang is a photonics researcher working on GaAs PCSELs, integrated photonic devices, and reproducible simulation workflows."
 url                      : "https://wfy-op.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "wfy-op/wfy-op.github.io"
@@ -145,6 +145,9 @@ exclude:
   - log
   - node_modules
   - package.json
+  - files/paper1.pdf
+  - files/paper2.pdf
+  - files/paper3.pdf
   - tmp
   - vendor
 keep_files:
@@ -183,7 +186,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:path/
   talks:
     output: true

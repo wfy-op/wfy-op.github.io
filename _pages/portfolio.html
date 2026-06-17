@@ -3,12 +3,11 @@ layout: archive
 title: "Portfolio"
 permalink: /portfolio/
 author_profile: true
+sitemap: false
 ---
 
-{% include base_path %}
+<p class="research-intro">
+  My research portfolio is now organized as a project and artifact page rather than a photo gallery.
+</p>
 
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+<p><a class="btn btn--primary" href="{{ '/projects/' | relative_url }}">Open Projects</a></p>

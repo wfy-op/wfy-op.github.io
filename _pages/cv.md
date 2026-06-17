@@ -13,7 +13,7 @@ Research Positioning
 ======
 
 * Current focus: simulation-guided semiconductor photonic devices, especially GaAs photonic crystal surface-emitting lasers (PCSELs) where electromagnetic design, fabrication tolerance, carrier/thermal effects, and experimental feedback need to be considered together.
-* PhD-oriented research fit: fabrication-aware inverse design, surrogate-assisted automated search, and electro-thermal-optical coupling for PCSELs and nanophotonic cavities.
+* Research fit: fabrication-aware inverse design, surrogate-assisted automated search, and electro-thermal-optical coupling for PCSELs and nanophotonic cavities.
 * Working style: start from a physical question, build a reliable numerical or data workflow, verify metric provenance, and feed device evidence back into design decisions.
 
 Education
@@ -21,20 +21,20 @@ Education
 * 2021.09 -- 2025.06, B.S. in Physics, Taishan College, Shandong University
   * Taishan College Physics Track — selective program (~20/300 students per year) under the national top-talent cultivation initiative; higher curriculum and assessment intensity than regular classes.
   * GPA: 82.9/100
-* 2025.08 -- Present, Research Assistant (PhD offer received), School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen), supervised by Prof. Zhaoyu Zhang
+* 2025.08 -- Present, Research Assistant, School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen), supervised by Prof. Zhaoyu Zhang
 
 Research Experience
 ======
 
 * **GaAs Photonic Crystal Surface-Emitting Laser (PCSEL)**, 2025.08 -- Present
   * *School of Science and Engineering, CUHK(SZ), advised by Prof. Zhaoyu Zhang*
-  * **Simulation**: Built full 3D wave simulation models in Lumerical FDTD and COMSOL Multiphysics for 980 nm GaAs PCSEL; band analysis to identify Gamma-point slow-light modes; systematic parameter sweep of lattice constant, air-hole radius, slab thickness, active-region placement, and etch-depth constraints. Designed double quantum-well epitaxial structure achieving stable single-mode lasing (FWHM < 0.2 nm, far-field divergence < 1 degree).
-  * **Automation**: Developed pcsel-agent, a Claude Code based skill/agent workflow for PCSEL research; automated paper collection, local paper library construction, target-spec organization, solver execution, and report generation; linked Lumerical and COMSOL through Java/Python APIs; audited RL optimization results through solver-backed metric provenance.
+  * **Simulation**: Built full 3D wave simulation models in Lumerical FDTD and COMSOL Multiphysics for 980 nm GaAs PCSEL; band analysis to identify Gamma-point slow-light modes; systematic parameter sweep of lattice constant, air-hole radius, slab thickness, active-region placement, and etch-depth constraints. Evaluated double-quantum-well PCSEL designs toward stable single-mode emission, narrow linewidth, and low-divergence surface output.
+  * **Automation**: Developed pcsel-agent, a reproducible PCSEL research workflow using Claude Code skills/agents; automated paper collection, local paper library construction, target-spec organization, solver execution, and report generation; linked Lumerical and COMSOL through Java/Python APIs; audited RL optimization results through solver-backed metric provenance.
   * **Recent technical outputs**: Built finite-array vs. periodic-unit-cell COMSOL comparison workflows, QW etch-depth EC/HT + SRH risk-gating analyses, backside-DBR TMM screening tools, and a searchable PCSEL literature workspace for evidence-driven device design.
   * **Characterization**: Built photoluminescence setup; optical/electrical pumping; L-I-V, spectral, and beam-profile measurement; correlated device performance with SEM-verified structures.
   * **Fabrication**: Participated in multiple optical-pump PCSEL tapeouts; ICP etching and recipe tuning; mask layout and review with KLayout; SEM analysis of etch deviation and overlay accuracy; maintained design-process-characterization correspondence tables.
   * **Project Management**: Assisted supervisor in writing and closing national/provincial research grants; prepared technical proposals, progress reports, and final deliverables.
-  * **Technical Documentation**: Co-wrote *PCSELBook* — a ~300,000-character monograph covering PCSEL theory, simulation, and device physics, from Maxwell equations and Bloch modes to semiconductor epitaxy, quantum-well gain, and electro-thermal-optical coupling. See [https://github.com/wfy-op/PCSELbook](https://github.com/wfy-op/PCSELbook).
+  * **Technical Documentation**: Authored and maintained *PCSELBook* — an AI-assisted ~300,000-character technical note covering PCSEL theory, simulation, and device physics, from Maxwell equations and Bloch modes to semiconductor epitaxy, quantum-well gain, and electro-thermal-optical coupling. See [https://github.com/wfy-op/PCSELbook](https://github.com/wfy-op/PCSELbook).
 
 * **Thin-Film LiNbO₃ / LiTaO₃ Waveguide Mode Analysis and Phase Matching**, 2024.01 -- 2025.06
   * *School of Physics, Shandong University, advised by Prof. Lei Wang*
@@ -63,7 +63,7 @@ Publications
 
 1. F. Nie, J. Wang, H. Fang, S. Ma, **F. Wu**, et al. *Ultrathin SrTiO₃-based oxide memristor with both drift and diffusive dynamics as versatile synaptic emulators for neuromorphic computing*. Materials Futures, 2023, 2(3): 035302. [DOI: 10.1088/2752-5724/ace3dc](https://doi.org/10.1088/2752-5724/ace3dc)
 
-2. F. Nie, S. Yang, L. Zhao, C. Jia, S. Ma, **F. Wu**, et al. *An Adaptive Solid-state Synapse with Bi-directional Relaxation for Multimodal Recognition and Spatio-temporal Learning*. Advanced Materials, 2025, 37(17): e2412006. [DOI: 10.1002/adma.202412006](https://doi.org/10.1002/adma.202412006)
+2. F. Nie, S. Yang, L. Zhao, C. Jia, S. Ma, **F. Wu**, et al. *An Adaptive Solid-state Synapse with Bi-directional Relaxation for Multimodal Recognition and Spatio-temporal Learning*. Advanced Materials, 2025, 37(17): 2412006. [DOI: 10.1002/adma.202412006](https://doi.org/10.1002/adma.202412006)
 
 Awards
 ======
@@ -88,4 +88,4 @@ Other Activities
 Language
 ======
 * Chinese (Native)
-* English (Fluent) — IELTS: 6.5 overall (L: 6 / R: 6.5 / W: 6 / S: 6.5)
+* English — IELTS: 6.5 overall (L: 6 / R: 6.5 / W: 6 / S: 6.5); working proficiency

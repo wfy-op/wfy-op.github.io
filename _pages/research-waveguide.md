@@ -46,6 +46,14 @@ Key outputs include:
 </section>
 
 <section class="research-section" markdown="1">
+## Modeling Details
+
+<div class="workstream-panel" markdown="1">
+The COMSOL models treated thin-film LN/LT ridge waveguides with anisotropic refractive-index settings, using an X-cut, Y-propagation convention and a sidewall angle of about 60 degrees in the representative geometry. The analysis compared TE00, TE10, TM00, and TM10 mode families, then related effective-index curves to phase-matching opportunities. The public page currently summarizes the main trends; a future technical note should expose the exact width, thickness, etch-depth, and poling-period tables from the thesis workflow.
+</div>
+</section>
+
+<section class="research-section" markdown="1">
 ## Training Value for Current PCSEL Work
 
 <div class="workstream-panel" markdown="1">
@@ -58,16 +66,16 @@ This project trained the workflow I now use in PCSEL research: build a stable si
 
 <div class="research-media-grid">
   <figure class="research-figure">
-    <img src="{{ '/images/research/waveguide_geometry.png' | relative_url }}" alt="Waveguide geometry" loading="lazy">
-    <figcaption>Ridge waveguide geometry used for simulation and analysis.</figcaption>
+    <img src="{{ '/images/research/waveguide_geometry.png' | relative_url }}" alt="Thin-film LN/LT ridge-waveguide geometry with width, etch-depth, and sidewall-angle parameters" loading="lazy" width="762" height="564">
+    <figcaption>Ridge waveguide geometry used to define width, etch depth, and sidewall-angle parameters.</figcaption>
   </figure>
   <figure class="research-figure">
-    <img src="{{ '/images/research/waveguide_comsol_field_map.png' | relative_url }}" alt="COMSOL field map" loading="lazy">
-    <figcaption>Representative COMSOL field map in a ring-waveguide structure.</figcaption>
+    <img src="{{ '/images/research/waveguide_comsol_field_map.png' | relative_url }}" alt="COMSOL field map showing guided-mode confinement in a ring-waveguide structure" loading="lazy" width="1183" height="887">
+    <figcaption>Representative COMSOL field map used to inspect guided-mode confinement.</figcaption>
   </figure>
   <figure class="research-figure">
-    <img src="{{ '/images/research/waveguide_phase_matching_ln_lt.png' | relative_url }}" alt="Phase matching comparison" loading="lazy">
-    <figcaption>Phase-matching comparison between LN and LT material systems.</figcaption>
+    <img src="{{ '/images/research/waveguide_phase_matching_ln_lt.png' | relative_url }}" alt="LN/LT effective-index plots comparing geometry-sensitive phase-matching behavior" loading="lazy" width="1357" height="695">
+    <figcaption>Phase-matching comparison between LN and LT material systems through effective-index curves.</figcaption>
   </figure>
 </div>
 </section>

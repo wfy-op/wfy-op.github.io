@@ -3,6 +3,7 @@ layout: archive
 title: "Daily Paper"
 permalink: /daily-paper/
 author_profile: true
+sitemap: false
 ---
 
 <style>

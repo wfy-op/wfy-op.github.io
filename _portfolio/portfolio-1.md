@@ -1,17 +1,8 @@
 ---
-title: "Photo Gallery"
-excerpt: "My memories"
+title: "Research Portfolio Redirect"
+excerpt: "Research artifacts are organized on the Projects page."
 collection: portfolio
+sitemap: false
 ---
 
-## My Lab
-
-Coming soon.
-
-## Taishan College
-
-Coming soon.
-
-## Campus Life
-
-Coming soon.
+Research artifacts are now organized on the [Projects](/projects/) page.

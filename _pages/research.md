@@ -28,10 +28,29 @@ author_profile: true
 </div>
 </section>
 
+<section class="research-section" markdown="1">
+## Current Research Questions
+
+<div class="highlight-grid">
+  <article class="highlight-card">
+    <h2>How can fabrication tolerance enter design directly?</h2>
+    <p>I want PCSEL optimization to include etch-depth limits, SEM-observed deviations, mask/layout constraints, and QW clearance before a design is called promising.</p>
+  </article>
+  <article class="highlight-card">
+    <h2>How can automated search stay physically trustworthy?</h2>
+    <p>The goal is not just faster sweeps, but solver-backed optimization with clear metric provenance: wavelength, Q, mode identity, confinement, process risk, and convergence history.</p>
+  </article>
+  <article class="highlight-card">
+    <h2>How can experiments close the simulation loop?</h2>
+    <p>Optical/electrical pumping, L-I-V, spectra, beam profiles, SEM, ICP process tuning, and KLayout review should feed back into the next device model rather than remain separate records.</p>
+  </article>
+</div>
+</section>
+
 <section class="research-direction-grid" aria-label="Research directions">
   <article class="research-direction-card">
     <figure class="research-direction-card__media">
-      <img src="{{ '/images/research/pcsel_device_concept.png' | relative_url }}" alt="PCSEL device concept" loading="lazy">
+      <img src="{{ '/images/research/pcsel_device_concept.png' | relative_url }}" alt="PCSEL stack schematic connecting photonic-crystal feedback with vertical surface emission" loading="lazy" width="1024" height="448">
     </figure>
     <div class="research-direction-card__body">
       <span class="research-direction-card__tag">Current focus</span>
@@ -48,7 +67,7 @@ author_profile: true
 
   <article class="research-direction-card">
     <figure class="research-direction-card__media">
-      <img src="{{ '/images/research/waveguide_phase_matching_ln_lt.png' | relative_url }}" alt="LN and LT phase matching comparison" loading="lazy">
+      <img src="{{ '/images/research/waveguide_phase_matching_ln_lt.png' | relative_url }}" alt="LN/LT effective-index curves used to compare nonlinear phase-matching windows" loading="lazy" width="1357" height="695">
     </figure>
     <div class="research-direction-card__body">
       <span class="research-direction-card__tag">Integrated photonics</span>
@@ -65,7 +84,7 @@ author_profile: true
 
   <article class="research-direction-card">
     <figure class="research-direction-card__media">
-      <img src="{{ '/images/research/memristor_reservoir_framework.png' | relative_url }}" alt="Memristor reservoir computing framework" loading="lazy">
+      <img src="{{ '/images/research/memristor_reservoir_framework.png' | relative_url }}" alt="Reservoir-computing diagram linking input pulses, memristor internal state, and readout output" loading="lazy" width="406" height="343">
     </figure>
     <div class="research-direction-card__body">
       <span class="research-direction-card__tag">Neuromorphic devices</span>

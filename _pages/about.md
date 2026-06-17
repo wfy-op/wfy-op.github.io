@@ -16,6 +16,7 @@ redirect_from:
   </p>
   <div class="profile-hero__actions">
     <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">Research</a>
+    <a class="btn" href="{{ '/projects/' | relative_url }}">Projects</a>
     <a class="btn" href="{{ '/publications/' | relative_url }}">Publications</a>
     <a class="btn" href="{{ '/cv/' | relative_url }}">CV</a>
   </div>
@@ -39,24 +40,7 @@ redirect_from:
   </div>
 </section>
 
-# Research Highlights
-
-<div class="highlight-grid">
-  <article class="highlight-card">
-    <h2>GaAs Photonic Crystal Surface-Emitting Laser</h2>
-    <p>Current core direction: 980 nm GaAs PCSEL modeling and experiment-aware design, including band/mode analysis, Q-factor and wavelength extraction, process gates, optical/electrical testing, SEM-informed feedback, and pcsel-agent automation.</p>
-  </article>
-  <article class="highlight-card">
-    <h2>Thin-Film LN/LT Waveguides</h2>
-    <p>COMSOL FEM mode analysis and phase-matching studies for thin-film lithium niobate and lithium tantalate ridge waveguides, supporting my undergraduate thesis on broadband nonlinear frequency conversion.</p>
-  </article>
-  <article class="highlight-card">
-    <h2>Memristor Reservoir Computing</h2>
-    <p>Dynamic SrTiO3-based memristors for reservoir computing, multimodal recognition, and spatio-temporal learning, with contributions to data preprocessing, MATLAB training workflows, and result visualization.</p>
-  </article>
-</div>
-
-# Research Trajectory
+## Research Trajectory
 
 <div class="trajectory-grid">
   <article class="trajectory-card">
@@ -81,7 +65,18 @@ redirect_from:
   </article>
 </div>
 
-# Current PCSEL Workflow
+## Current PCSEL Workflow
+
+<section class="home-feature">
+  <figure class="home-feature__media">
+    <img src="{{ '/images/research/pcsel_device_concept.png' | relative_url }}" alt="Schematic PCSEL stack showing how the photonic-crystal layer couples in-plane feedback to surface emission." loading="lazy" width="1024" height="448">
+  </figure>
+  <div class="home-feature__body">
+    <span class="recent-work-card__tag">Current focus</span>
+    <h2>From PCSEL design variables to verified device evidence</h2>
+    <p>My current work treats PCSEL research as a loop: literature priors define device questions, COMSOL/Lumerical runs extract wavelength/Q/field metrics, process checks constrain feasible structures, and optical/electrical characterization feeds back into the next design step.</p>
+  </div>
+</section>
 
 <div class="recent-work-grid">
   <article class="recent-work-card">
@@ -106,18 +101,35 @@ redirect_from:
   </article>
 </div>
 
-# Education
+## Research Highlights
+
+<div class="highlight-grid">
+  <article class="highlight-card">
+    <h2>GaAs Photonic Crystal Surface-Emitting Laser</h2>
+    <p>Current core direction: 980 nm GaAs PCSEL modeling and experiment-aware design, including band/mode analysis, Q-factor and wavelength extraction, process gates, optical/electrical testing, SEM-informed feedback, and pcsel-agent automation.</p>
+  </article>
+  <article class="highlight-card">
+    <h2>Thin-Film LN/LT Waveguides</h2>
+    <p>COMSOL FEM mode analysis and phase-matching studies for thin-film lithium niobate and lithium tantalate ridge waveguides, supporting my undergraduate thesis on broadband nonlinear frequency conversion.</p>
+  </article>
+  <article class="highlight-card">
+    <h2>Memristor Reservoir Computing</h2>
+    <p>Dynamic SrTiO3-based memristors for reservoir computing, multimodal recognition, and spatio-temporal learning, with contributions to data preprocessing, MATLAB training workflows, and result visualization.</p>
+  </article>
+</div>
+
+## Education
 
 - 2021.09 -- 2025.06, B.S. in Physics, Taishan College, Shandong University
-- 2025.08 -- Present, Research Assistant (PhD offer received), School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen), supervised by Prof. Zhaoyu Zhang
+- 2025.08 -- Present, Research Assistant, School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen), supervised by Prof. Zhaoyu Zhang
 
-# Selected Publications
+## Selected Publications
 
 1. F. Nie, J. Wang, H. Fang, S. Ma, **F. Wu**, et al. *Ultrathin SrTiO₃-based oxide memristor with both drift and diffusive dynamics as versatile synaptic emulators for neuromorphic computing*. Materials Futures, 2023, 2(3): 035302. [DOI](https://doi.org/10.1088/2752-5724/ace3dc)
 
-2. F. Nie, S. Yang, L. Zhao, C. Jia, S. Ma, **F. Wu**, et al. *An Adaptive Solid-state Synapse with Bi-directional Relaxation for Multimodal Recognition and Spatio-temporal Learning*. Advanced Materials, 2025, 37(17): e2412006. [DOI](https://doi.org/10.1002/adma.202412006)
+2. F. Nie, S. Yang, L. Zhao, C. Jia, S. Ma, **F. Wu**, et al. *An Adaptive Solid-state Synapse with Bi-directional Relaxation for Multimodal Recognition and Spatio-temporal Learning*. Advanced Materials, 2025, 37(17): 2412006. [DOI](https://doi.org/10.1002/adma.202412006)
 
-# Useful Links
+## Useful Links
 
 <div class="link-list">
   <a href="https://github.com/wfy-op/PCSELbook">PCSELBook - PCSEL Theory, Simulation & Device Physics</a>
@@ -125,7 +137,7 @@ redirect_from:
   <a href="https://www.zhihu.com/people/fei-yu-33-8">Zhihu Profile</a>
 </div>
 
-# Contact
+## Contact
 
 <div class="contact-panel">
   <p><strong>Name:</strong> Wu Feiyang 吴飞洋</p>

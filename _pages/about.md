@@ -12,7 +12,7 @@ redirect_from:
   <p class="profile-hero__eyebrow">Simulation-guided photonic devices · Semiconductor lasers · Research automation</p>
   <h1>Wu Feiyang (吴飞洋)</h1>
   <p class="profile-hero__lead">
-    I work on GaAs PCSELs, integrated photonic devices, and AI-assisted simulation workflows, with a current focus on turning device physics, numerical design, fabrication tolerance, and experimental feedback into a reproducible research loop.
+    I work on GaAs PCSELs, memristor-based reservoir computing, and AI-assisted simulation workflows, with a current focus on turning device physics, numerical design, fabrication tolerance, and experimental feedback into a reproducible research loop.
   </p>
   <div class="profile-hero__actions">
     <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">Research</a>
@@ -52,11 +52,6 @@ redirect_from:
     <span>2022-2023</span>
     <h2>Dynamic devices and data pipelines</h2>
     <p>Memristor reservoir-computing work introduced the link between device nonlinearity, short-term memory, pulse encoding, and algorithm-level recognition tasks.</p>
-  </article>
-  <article class="trajectory-card">
-    <span>2024-2025</span>
-    <h2>Integrated photonics modeling</h2>
-    <p>LN/LT waveguide research trained me to connect geometry, effective-index dispersion, etch depth, and phase-matching windows through systematic COMSOL sweeps.</p>
   </article>
   <article class="trajectory-card">
     <span>2025-Present</span>
@@ -107,10 +102,6 @@ redirect_from:
   <article class="highlight-card">
     <h2>GaAs Photonic Crystal Surface-Emitting Laser</h2>
     <p>Current core direction: 980 nm GaAs PCSEL modeling and experiment-aware design, including band/mode analysis, Q-factor and wavelength extraction, process gates, optical/electrical testing, SEM-informed feedback, and pcsel-agent automation.</p>
-  </article>
-  <article class="highlight-card">
-    <h2>Thin-Film LN/LT Waveguides</h2>
-    <p>COMSOL FEM mode analysis and phase-matching studies for thin-film lithium niobate and lithium tantalate ridge waveguides, supporting my undergraduate thesis on broadband nonlinear frequency conversion.</p>
   </article>
   <article class="highlight-card">
     <h2>Memristor Reservoir Computing</h2>

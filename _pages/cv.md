@@ -36,12 +36,6 @@ Research Experience
   * **Project Management**: Assisted supervisor in writing and closing national/provincial research grants; prepared technical proposals, progress reports, and final deliverables.
   * **Technical Documentation**: Authored and maintained *PCSELBook* — an AI-assisted ~300,000-character technical note covering PCSEL theory, simulation, and device physics, from Maxwell equations and Bloch modes to semiconductor epitaxy, quantum-well gain, and electro-thermal-optical coupling. See [https://github.com/wfy-op/PCSELbook](https://github.com/wfy-op/PCSELbook).
 
-* **Thin-Film LiNbO₃ / LiTaO₃ Waveguide Mode Analysis and Phase Matching**, 2024.01 -- 2025.06
-  * *School of Physics, Shandong University, advised by Prof. Lei Wang*
-  * COMSOL FEM simulation of ridge waveguide geometry vs. effective mode index and phase-matching wavelength for LiNbO₃ and LiTaO₃; fundamental-mode phase matching via periodic poling.
-  * Learned polishing/lapping of thin-film micro-nano devices and frequency-response optical measurement of ring resonators.
-  * Undergraduate thesis: *Broadband Nonlinear Frequency Conversion in Thin-Film Lithium Niobate*.
-
 * **Memristor-based Reservoir Computing for Multimodal Applications**, 2022.10 -- 2023.10
   * *School of Physics, Shandong University, advised by Prof. Limei Zheng*
   * Empirical study on dynamic memristors for reservoir computing; multimodal recognition and spatio-temporal learning tasks.

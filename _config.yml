@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Wu Feiyang / 吴飞洋"
 title_separator          : "-"
 name                     : &name "Wu Feiyang"
-description              : &description "Wu Feiyang is a photonics researcher working on GaAs PCSELs, integrated photonic devices, and reproducible simulation workflows."
+description              : &description "Wu Feiyang is a photonics researcher working on GaAs PCSELs, memristor-based reservoir computing, and reproducible simulation workflows."
 url                      : "https://wfy-op.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "wfy-op/wfy-op.github.io"
@@ -148,6 +148,29 @@ exclude:
   - files/paper1.pdf
   - files/paper2.pdf
   - files/paper3.pdf
+  - files/Thesis.pdf
+  - files/结题报告.pdf
+  - markdown_generator
+  - talkmap
+  - lingyuxia
+  - _portfolio/image
+  - images/portfolio
+  - images/3953273590_704e3899d5_m.jpg
+  - images/500x300.png
+  - images/bio-photo.jpg
+  - images/bio-photo-2.jpg
+  - images/editing-talk.png
+  - images/foo-bar-identity.jpg
+  - images/foo-bar-identity-th.jpg
+  - images/image-alignment-1200x4002.jpg
+  - images/image-alignment-150x150.jpg
+  - images/image-alignment-300x200.jpg
+  - images/image-alignment-580x300.jpg
+  - images/paragraph-indent.png
+  - images/paragraph-no-indent.png
+  - images/research/waveguide_comsol_field_map.png
+  - images/research/waveguide_geometry.png
+  - images/research/waveguide_phase_matching_ln_lt.png
   - tmp
   - vendor
 keep_files:
@@ -189,7 +212,7 @@ collections:
     output: false
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 

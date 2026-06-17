@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 <p class="research-intro">
-  My research sits at the intersection of photonic devices, full-wave electromagnetic simulation, and experiment-aware design workflows. The work is organized into three directions: GaAs PCSELs, thin-film LN/LT waveguides, and memristor-based reservoir computing, with a common method: define the physical question, build the numerical or data workflow, and close the loop with device evidence.
+  My research sits at the intersection of photonic devices, full-wave electromagnetic simulation, and experiment-aware design workflows. The work is organized around GaAs PCSELs and memristor-based reservoir computing, with a common method: define the physical question, build the numerical or data workflow, and close the loop with device evidence.
 </p>
 
 <section class="research-section" markdown="1">
@@ -15,7 +15,7 @@ author_profile: true
 <div class="highlight-grid">
   <article class="highlight-card">
     <h2>From numerical models to device variables</h2>
-    <p>Early numerical-physics training and waveguide simulations taught me to identify the physical variables first, then choose the solver, mesh, parameter sweep, and metric extraction strategy.</p>
+    <p>Early numerical-physics training taught me to identify the physical variables first, then choose the solver, mesh, parameter sweep, and metric extraction strategy.</p>
   </article>
   <article class="highlight-card">
     <h2>From device dynamics to task-level evidence</h2>
@@ -62,23 +62,6 @@ author_profile: true
         <li>QW etch-depth, DBR, fabrication tolerance, and experimental feedback gates</li>
       </ul>
       <a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}">Open PCSEL research</a>
-    </div>
-  </article>
-
-  <article class="research-direction-card">
-    <figure class="research-direction-card__media">
-      <img src="{{ '/images/research/waveguide_phase_matching_ln_lt.png' | relative_url }}" alt="LN/LT effective-index curves used to compare nonlinear phase-matching windows" loading="lazy" width="1357" height="695">
-    </figure>
-    <div class="research-direction-card__body">
-      <span class="research-direction-card__tag">Integrated photonics</span>
-      <h2>Thin-Film LN / LT Waveguide Mode Analysis</h2>
-      <p>COMSOL FEM analysis of ridge waveguides in thin-film lithium niobate and lithium tantalate, focused on geometry-dependent effective-index dispersion, etch-depth sensitivity, and nonlinear phase-matching windows.</p>
-      <ul>
-        <li>Mode-profile and effective-index analysis</li>
-        <li>LN/LT platform comparison</li>
-        <li>Undergraduate thesis on broadband nonlinear frequency conversion</li>
-      </ul>
-      <a class="btn btn--primary" href="{{ '/research/waveguide/' | relative_url }}">Open waveguide research</a>
     </div>
   </article>
 

@@ -49,16 +49,9 @@ author_profile: true
 </section>
 
 <section class="research-section" markdown="1">
-## Research Outputs
+## Community and Study Notes
 
 <div class="project-card-grid">
-  <article class="project-card">
-    <span class="project-card__status">Thesis PDF</span>
-    <h2>Broadband Nonlinear Frequency Conversion in Thin-Film Lithium Niobate</h2>
-    <p>Undergraduate thesis on integrated nonlinear photonics, waveguide phase matching, resonators, and broadband conversion mechanisms.</p>
-    <p><a class="btn" href="{{ '/files/Thesis.pdf' | relative_url }}">PDF</a> <a class="btn" href="{{ '/research/waveguide/' | relative_url }}">Research page</a></p>
-  </article>
-
   <article class="project-card">
     <span class="project-card__status">Community / notes</span>
     <h2>Taishan Seminar and Study Notes</h2>

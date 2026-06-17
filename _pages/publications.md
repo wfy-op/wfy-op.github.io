@@ -40,16 +40,9 @@ author_profile: true
 </section>
 
 <section class="research-section" markdown="1">
-## Thesis and Technical Outputs
+## Technical Outputs
 
 <div class="publication-card-grid">
-  <article class="publication-card">
-    <span class="publication-card__venue">Undergraduate thesis · 2025</span>
-    <h3>Broadband Nonlinear Frequency Conversion in Thin-Film Lithium Niobate</h3>
-    <p>Thesis work on thin-film lithium niobate integrated photonic devices, broadband nonlinear frequency conversion, waveguides, resonators, and optical frequency-comb implementations.</p>
-    <p><a class="btn" href="{{ '/files/Thesis.pdf' | relative_url }}">PDF</a> <a class="btn" href="{{ '/research/waveguide/' | relative_url }}">Waveguide research</a></p>
-  </article>
-
   <article class="publication-card">
     <span class="publication-card__venue">Technical note · ongoing</span>
     <h3>PCSELBook: PCSEL Theory, Simulation, and Device Physics</h3>

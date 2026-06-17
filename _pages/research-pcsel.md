@@ -5,10 +5,6 @@ permalink: /research/pcsel/
 author_profile: true
 ---
 
-<p class="research-intro">
-  My PCSEL work is organized around <strong>pcsel-agent</strong>, a reproducible research workflow for GaAs photonic-crystal surface-emitting lasers. The current device target is the 980 nm band, while the 940/980 nm HX1 work is used as a validation and reference track. Instead of treating each simulation as an isolated file, I use pcsel-agent to connect literature intake, device specifications, COMSOL/Lumerical/FDTD execution, solver-syntax memory, metric provenance, and human-readable reports.
-</p>
-
 <p class="research-backlink"><a href="{{ '/research/' | relative_url }}">Back to all research directions</a></p>
 
 <section class="research-section" markdown="1">

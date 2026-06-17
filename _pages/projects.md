@@ -5,10 +5,6 @@ permalink: /projects/
 author_profile: true
 ---
 
-<p class="research-intro">
-  This page collects research software, technical notes, and workflow systems that support my photonics work. I separate public links from private artifacts so visitors can see what is inspectable now and what still needs cleanup before release.
-</p>
-
 <section class="research-section" markdown="1">
 ## PCSEL Research Infrastructure
 

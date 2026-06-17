@@ -11,10 +11,6 @@ author_profile: true
 
 {% include base_path %}
 
-<p class="research-intro">
-  This page collects peer-reviewed papers and selected research outputs. For multi-author papers, I include a short contribution note so the publication list is useful as evidence rather than only a citation record.
-</p>
-
 <section class="research-section" markdown="1">
 ## Journal Articles
 

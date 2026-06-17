@@ -5,10 +5,6 @@ permalink: /research/
 author_profile: true
 ---
 
-<p class="research-intro">
-  My research sits at the intersection of photonic devices, full-wave electromagnetic simulation, and experiment-aware design workflows. The current center of gravity is GaAs PCSELs; earlier memristor reservoir-computing work provides a device-to-metric training ground for the same habit: separate physical response, data processing, and downstream performance claims.
-</p>
-
 <section class="research-direction-grid" aria-label="Research directions">
   <article class="research-direction-card">
     <figure class="research-direction-card__media">

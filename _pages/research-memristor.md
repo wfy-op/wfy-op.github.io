@@ -5,10 +5,6 @@ permalink: /research/memristor/
 author_profile: true
 ---
 
-<p class="research-intro">
-  This direction connects dynamic SrTiO3-based memristor physics with reservoir computing, multimodal recognition, and spatio-temporal learning workflows.
-</p>
-
 <p class="research-backlink"><a href="{{ '/research/' | relative_url }}">Back to all research directions</a></p>
 
 <section class="research-section" markdown="1">

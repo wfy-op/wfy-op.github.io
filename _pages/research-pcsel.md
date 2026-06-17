@@ -30,6 +30,7 @@ Can a GaAs PCSEL design loop jointly evaluate optical mode quality, fabrication 
 | QW etch-depth risk gate | Public process-risk schematic and exported-geometry audit logic. | The current public page explains the gate; it does not yet expose a numeric etch-depth/QW-clearance table. | Prevents optically attractive designs from violating active-region or process constraints. |
 | Backside DBR and gain-band route | Public TMM-first route and literature-backed modeling plan. | Full stack parameters and 3D verification artifacts remain private until documentation is cleaned. | Keeps expensive 3D verification focused on physically plausible vertical stacks. |
 | RLcode and optimization audit | Public description of metric-provenance discipline and project context. | Code/results are private; reward traces are not presented as physical evidence. | Makes optimization claims auditable before they are interpreted as device results. |
+| Automated design-optimization method | CNIPA patent application accepted: CN 202610820592.4, application date 2026-06-08, titled 半导体激光器自动化设计优化方法及存储介质. | This is an accepted application, not a granted patent; technical details are not exposed on the public page. | Records the formal IP path for the semiconductor-laser automation workflow while keeping public research claims evidence-limited. |
 
 </div>
 </section>
@@ -46,6 +47,7 @@ Can a GaAs PCSEL design loop jointly evaluate optical mode quality, fabrication 
       <li>COMSOL and Lumerical automation with verified syntax memory.</li>
       <li>HX1 940/980 nm reference validation across GME, FEM, and FDTD routes.</li>
       <li>Process-aware gates for QW etch depth, DBR stacks, gain bands, and optimization results.</li>
+      <li>Related CN patent application accepted for semiconductor-laser automated design optimization.</li>
     </ul>
   </article>
 

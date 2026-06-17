@@ -40,6 +40,21 @@ author_profile: true
 </section>
 
 <section class="research-section" markdown="1">
+## Patent Applications
+
+<div class="publication-card-grid">
+  <article class="publication-card">
+    <span class="publication-card__venue">CNIPA application accepted · 2026</span>
+    <h3>Semiconductor Laser Automated Design Optimization Method and Storage Medium</h3>
+    <p><strong>Chinese title:</strong> 半导体激光器自动化设计优化方法及存储介质</p>
+    <p><strong>Application no.:</strong> CN 202610820592.4. <strong>Application date:</strong> 2026-06-08.</p>
+    <p><strong>Applicant:</strong> The Chinese University of Hong Kong, Shenzhen. <strong>Inventors:</strong> Zhaoyu Zhang, Feiyang Wu, Sixuan Mao, and Kebo He.</p>
+    <p><strong>Status:</strong> Patent application accepted by the China National Intellectual Property Administration (CNIPA); listed here as an accepted application, not as a granted patent.</p>
+  </article>
+</div>
+</section>
+
+<section class="research-section" markdown="1">
 ## Technical Outputs
 
 <div class="publication-card-grid">

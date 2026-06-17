@@ -39,6 +39,11 @@ redirect_from:
     <p>Co-authored Materials Futures 2023 and Advanced Materials 2025 work on neuromorphic devices.</p>
   </article>
   <article class="evidence-snapshot__item">
+    <span class="evidence-snapshot__label">Patent application</span>
+    <strong>CN 202610820592.4 accepted</strong>
+    <p>Semiconductor-laser automated design-optimization method; CNIPA application accepted on 2026-06-08, not a granted patent.</p>
+  </article>
+  <article class="evidence-snapshot__item">
     <span class="evidence-snapshot__label">Public artifact</span>
     <strong><a href="https://github.com/wfy-op/PCSELbook">PCSELBook</a></strong>
     <p>A ~300,000-character technical note on PCSEL theory, simulation, and device physics.</p>

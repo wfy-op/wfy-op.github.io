@@ -59,6 +59,11 @@ Publications
 
 2. F. Nie, S. Yang, L. Zhao, C. Jia, S. Ma, **F. Wu**, et al. *An Adaptive Solid-state Synapse with Bi-directional Relaxation for Multimodal Recognition and Spatio-temporal Learning*. Advanced Materials, 2025, 37(17): 2412006. [DOI: 10.1002/adma.202412006](https://doi.org/10.1002/adma.202412006)
 
+Patent Applications
+======
+
+1. Z. Zhang, **F. Wu**, S. Mao, and K. He. *Semiconductor Laser Automated Design Optimization Method and Storage Medium* (半导体激光器自动化设计优化方法及存储介质). CN patent application no. 202610820592.4, application date 2026-06-08; application accepted by CNIPA. Applicant: The Chinese University of Hong Kong, Shenzhen. Status: accepted application, not a granted patent.
+
 Awards
 ======
 * 2023.07, **National Second Prize**, China Undergraduate Physics Experiment Competition

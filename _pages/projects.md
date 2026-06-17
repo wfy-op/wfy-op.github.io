@@ -21,6 +21,7 @@ author_profile: true
       <li><strong>Research role:</strong> make PCSEL simulation and optimization auditable.</li>
       <li><strong>Evidence tracked:</strong> eigenwavelength, Q-factor, mode identity, mesh/boundary checks, QW/process risk, and report artifacts.</li>
       <li><strong>Public status:</strong> concept, workflow map, and evidence-status table are public; raw run artifacts remain private until they are cleaned and documented.</li>
+      <li><strong>IP status:</strong> related semiconductor-laser automated design-optimization method filed as CN patent application 202610820592.4; application accepted by CNIPA on 2026-06-08, not a granted patent.</li>
     </ul>
     <p><a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}">Open PCSEL research</a></p>
   </article>

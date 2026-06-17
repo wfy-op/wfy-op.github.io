@@ -35,4 +35,216 @@
 </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
+<style>
+  :root {
+    --wfy-ink: #263238;
+    --wfy-muted: #65737e;
+    --wfy-line: #d8dee4;
+    --wfy-panel: #f7f9fb;
+    --wfy-accent: #286a6b;
+    --wfy-warm: #8a5a16;
+  }
+
+  .profile-hero {
+    margin: 0 0 2rem;
+    padding: 1.25rem 0 1.5rem;
+    border-bottom: 1px solid var(--wfy-line);
+  }
+
+  .profile-hero__eyebrow,
+  .quick-facts__label,
+  .contact-panel__updated {
+    color: var(--wfy-muted);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .profile-hero h1 {
+    margin: 0.1rem 0 0.6rem;
+    color: var(--wfy-ink);
+    font-size: 2.35rem;
+    line-height: 1.1;
+  }
+
+  .profile-hero__lead {
+    max-width: 42rem;
+    margin: 0 0 1rem;
+    color: #384650;
+    font-size: 1.08rem;
+    line-height: 1.65;
+  }
+
+  .profile-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .quick-facts,
+  .highlight-grid,
+  .recent-work-grid,
+  .research-media-grid {
+    display: grid;
+    gap: 0.85rem;
+    margin: 1.1rem 0 1.75rem;
+  }
+
+  .quick-facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .highlight-grid,
+  .recent-work-grid,
+  .research-media-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .quick-facts__item,
+  .highlight-card,
+  .recent-work-card,
+  .research-figure,
+  .workstream-panel,
+  .contact-panel {
+    border: 1px solid var(--wfy-line);
+    border-radius: 6px;
+    background: #fff;
+  }
+
+  .quick-facts__item,
+  .highlight-card,
+  .recent-work-card,
+  .workstream-panel,
+  .contact-panel {
+    padding: 0.9rem 1rem;
+  }
+
+  .quick-facts__item strong,
+  .highlight-card h2,
+  .recent-work-card h2 {
+    display: block;
+    margin: 0.25rem 0 0.35rem;
+    color: var(--wfy-ink);
+  }
+
+  .quick-facts__item p,
+  .highlight-card p,
+  .recent-work-card p,
+  .contact-panel p {
+    margin: 0;
+    color: #4c5963;
+    line-height: 1.55;
+  }
+
+  .highlight-card h2,
+  .recent-work-card h2 {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .recent-work-card {
+    border-top: 3px solid var(--wfy-accent);
+  }
+
+  .recent-work-card__tag {
+    color: var(--wfy-warm);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .link-list {
+    display: grid;
+    gap: 0.45rem;
+    margin: 0.75rem 0 1.5rem;
+  }
+
+  .link-list a {
+    border-left: 3px solid var(--wfy-accent);
+    padding: 0.25rem 0 0.25rem 0.7rem;
+    font-weight: 600;
+  }
+
+  .contact-panel p + p {
+    margin-top: 0.45rem;
+  }
+
+  .contact-panel__updated {
+    margin-top: 0.8rem !important;
+    color: var(--wfy-warm) !important;
+  }
+
+  .research-intro {
+    margin: 0 0 1.5rem;
+    padding: 0.85rem 1rem;
+    border-left: 4px solid var(--wfy-accent);
+    background: var(--wfy-panel);
+    color: #41515c;
+  }
+
+  .research-section {
+    margin: 2rem 0 2.25rem;
+  }
+
+  .research-section > h2 {
+    margin-top: 0;
+  }
+
+  .research-section__summary {
+    max-width: 46rem;
+  }
+
+  .workstream-panel {
+    margin: 1rem 0 1.35rem;
+    background: var(--wfy-panel);
+  }
+
+  .workstream-panel p {
+    margin-top: 0;
+  }
+
+  .workstream-panel ul {
+    margin-bottom: 0;
+  }
+
+  .research-figure {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .research-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .research-figure figcaption {
+    padding: 0.65rem 0.75rem;
+    border-top: 1px solid var(--wfy-line);
+    color: var(--wfy-muted);
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  @media (max-width: 720px) {
+    .profile-hero h1 {
+      font-size: 1.85rem;
+    }
+
+    .profile-hero__lead {
+      font-size: 1rem;
+    }
+
+    .quick-facts {
+      grid-template-columns: 1fr;
+    }
+
+    .profile-hero__actions .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+
 <!-- end custom head snippets -->

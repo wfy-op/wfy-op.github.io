@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Finite-array versus periodic-unit-cell workflow</title>
+  <desc id="desc">Schematic comparison between a finite 5 by 5 PCSEL array model and a periodic unit-cell reference.</desc>
+  <rect width="640" height="360" fill="#f7f9fb"/>
+  <rect x="36" y="34" width="250" height="248" rx="10" fill="#ffffff" stroke="#d8dee4" stroke-width="2"/>
+  <text x="61" y="67" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#263238">Finite array</text>
+  <text x="61" y="91" font-family="Arial, sans-serif" font-size="12" fill="#65737e">HX1 5x5 aperture model</text>
+  <g transform="translate(71 112)">
+    <rect x="0" y="0" width="160" height="160" rx="8" fill="#edf4f4" stroke="#286a6b" stroke-width="2"/>
+    <g fill="#286a6b">
+      <circle cx="24" cy="24" r="8"/><circle cx="56" cy="24" r="8"/><circle cx="88" cy="24" r="8"/><circle cx="120" cy="24" r="8"/><circle cx="152" cy="24" r="8"/>
+      <circle cx="24" cy="56" r="8"/><circle cx="56" cy="56" r="8"/><circle cx="88" cy="56" r="8"/><circle cx="120" cy="56" r="8"/><circle cx="152" cy="56" r="8"/>
+      <circle cx="24" cy="88" r="8"/><circle cx="56" cy="88" r="8"/><circle cx="88" cy="88" r="8"/><circle cx="120" cy="88" r="8"/><circle cx="152" cy="88" r="8"/>
+      <circle cx="24" cy="120" r="8"/><circle cx="56" cy="120" r="8"/><circle cx="88" cy="120" r="8"/><circle cx="120" cy="120" r="8"/><circle cx="152" cy="120" r="8"/>
+      <circle cx="24" cy="152" r="8"/><circle cx="56" cy="152" r="8"/><circle cx="88" cy="152" r="8"/><circle cx="120" cy="152" r="8"/><circle cx="152" cy="152" r="8"/>
+    </g>
+  </g>
+  <path d="M305 156 H352" stroke="#8a5a16" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M352 204 H305" stroke="#8a5a16" stroke-width="3" marker-end="url(#arrow2)"/>
+  <rect x="372" y="34" width="232" height="248" rx="10" fill="#ffffff" stroke="#d8dee4" stroke-width="2"/>
+  <text x="397" y="67" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#263238">Periodic cell</text>
+  <text x="397" y="91" font-family="Arial, sans-serif" font-size="12" fill="#65737e">reference boundary condition</text>
+  <g transform="translate(431 125)">
+    <rect x="0" y="0" width="116" height="116" rx="8" fill="#f2f5f7" stroke="#286a6b" stroke-width="2"/>
+    <circle cx="58" cy="58" r="22" fill="#286a6b"/>
+    <path d="M0 0 L116 116 M116 0 L0 116" stroke="#d8dee4" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="304" width="464" height="32" rx="16" fill="#ffffff" stroke="#d8dee4"/>
+  <text x="115" y="325" font-family="Arial, sans-serif" font-size="13" fill="#384650">Compare Q trend, mode identity, boundary artifact, and mesh cost</text>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5a16"/></marker>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8a5a16"/></marker>
+  </defs>
+</svg>

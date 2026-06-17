@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Backside DBR TMM-first route</title>
+  <desc id="desc">Schematic of using transfer-matrix modeling before 3D full-wave simulation for backside DBR design.</desc>
+  <rect width="640" height="360" fill="#f7f9fb"/>
+  <text x="42" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#263238">Backside DBR route</text>
+  <text x="42" y="75" font-family="Arial, sans-serif" font-size="13" fill="#65737e">TMM-first screening before expensive 3D full-wave sweeps</text>
+  <g transform="translate(55 112)">
+    <rect width="190" height="165" rx="10" fill="#ffffff" stroke="#d8dee4" stroke-width="2"/>
+    <rect x="32" y="30" width="126" height="14" fill="#dfe8ef"/>
+    <rect x="32" y="44" width="126" height="14" fill="#286a6b"/>
+    <rect x="32" y="58" width="126" height="14" fill="#dfe8ef"/>
+    <rect x="32" y="72" width="126" height="14" fill="#286a6b"/>
+    <rect x="32" y="86" width="126" height="14" fill="#dfe8ef"/>
+    <rect x="32" y="100" width="126" height="14" fill="#286a6b"/>
+    <rect x="32" y="124" width="126" height="20" fill="#8a5a16"/>
+    <text x="54" y="154" font-family="Arial, sans-serif" font-size="12" fill="#65737e">DBR + active region</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#263238">
+    <rect x="292" y="113" width="112" height="48" rx="8" fill="#ffffff" stroke="#d8dee4"/>
+    <text x="321" y="142">TMM</text>
+    <path d="M405 137 H454" stroke="#8a5a16" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="456" y="113" width="126" height="48" rx="8" fill="#ffffff" stroke="#d8dee4"/>
+    <text x="475" y="142">DBR shortlist</text>
+    <rect x="292" y="207" width="112" height="48" rx="8" fill="#ffffff" stroke="#d8dee4"/>
+    <text x="313" y="236">checks</text>
+    <path d="M348 161 V204" stroke="#8a5a16" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M519 161 V204" stroke="#8a5a16" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="456" y="207" width="126" height="48" rx="8" fill="#ffffff" stroke="#286a6b" stroke-width="2"/>
+    <text x="476" y="236">3D COMSOL</text>
+  </g>
+  <text x="296" y="292" font-family="Arial, sans-serif" font-size="12" fill="#65737e">Flux balance · PML sanity · mode-index consistency</text>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8a5a16"/></marker>
+  </defs>
+</svg>

@@ -26,8 +26,8 @@ author_profile: true
 
   <article class="publication-card">
     <span class="publication-card__venue">Advanced Materials · 2025</span>
-    <h3>An Adaptive Solid-state Synapse with Bi-directional Relaxation for Multimodal Recognition and Spatio-temporal Learning</h3>
-    <p class="publication-card__authors">F. Nie, S. Yang, L. Zhao, C. Jia, S. Ma, <strong>F. Wu</strong>, et al.</p>
+    <h3>An Adaptive Solid-State Synapse with Bi-Directional Relaxation for Multimodal Recognition and Spatio-Temporal Learning</h3>
+    <p class="publication-card__authors">F. Nie, H. Fang, J. Wang, L. Zhao, C. Jia, S. Ma, <strong>F. Wu</strong>, et al.</p>
     <p><strong>Citation:</strong> Advanced Materials 2025, 37(17), 2412006.</p>
     <p><strong>Contribution note:</strong> Contributed to text/speech data preprocessing, MATLAB-based training workflow, code debugging, and result visualization for multimodal reservoir-computing tasks. This work shaped my later PCSEL practice of separating physical device response from downstream performance metrics.</p>
     <p><a class="btn" href="https://doi.org/10.1002/adma.202412006">DOI</a></p>

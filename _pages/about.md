@@ -69,6 +69,11 @@ redirect_from:
     <p>Memristor reservoir-computing work trained my device-to-metric discipline: separating device nonlinearity, pulse encoding, preprocessing, and task-level metrics.</p>
   </article>
   <article class="trajectory-card">
+    <span>2024-2025</span>
+    <h2>Integrated photonics waveguides</h2>
+    <p>LN/LT waveguide work with Prof. Lei Wang trained my COMSOL-based mode-analysis workflow: connect geometry sweeps, effective indices, and phase-matching conditions.</p>
+  </article>
+  <article class="trajectory-card">
     <span>2025-Present</span>
     <h2>PCSEL device loop</h2>
     <p>Current work combines electromagnetic design, solver automation, fabrication support, optical/electrical characterization, and literature-backed decision making.</p>
@@ -122,6 +127,10 @@ redirect_from:
   <article class="highlight-card">
     <h2>Memristor Reservoir Computing</h2>
     <p>Dynamic SrTiO3-based memristors for reservoir computing, multimodal recognition, and spatio-temporal learning, with contributions to data preprocessing, MATLAB training workflows, and result visualization.</p>
+  </article>
+  <article class="highlight-card">
+    <h2>LN/LT Waveguide Mode Analysis</h2>
+    <p>Thin-film lithium niobate and lithium tantalate ridge-waveguide simulations with COMSOL, focused on geometry-dependent mode indices and phase-matching behavior.</p>
   </article>
 </div>
 

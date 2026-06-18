@@ -41,6 +41,24 @@ author_profile: true
       <a class="btn btn--primary" href="{{ '/research/memristor/' | relative_url }}">Open memristor research</a>
     </div>
   </article>
+
+  <article class="research-direction-card">
+    <figure class="research-direction-card__media">
+      <img src="{{ '/images/research/waveguide_phase_matching_ln_lt.png' | relative_url }}" alt="LN and LT waveguide phase-matching comparison from COMSOL-based mode analysis" loading="lazy" width="1357" height="695">
+      <figcaption>Integrated-photonics training: mode indices, geometry sweeps, and phase-matching windows.</figcaption>
+    </figure>
+    <div class="research-direction-card__body">
+      <span class="research-direction-card__tag">Integrated photonics training</span>
+      <h2>LN/LT Waveguide Mode Analysis</h2>
+      <p>COMSOL-based work on thin-film lithium niobate and lithium tantalate ridge waveguides, comparing geometry-dependent effective indices and phase-matching behavior.</p>
+      <ul>
+        <li>Ridge-waveguide mode analysis and geometry sweeps</li>
+        <li>LN/LT material-platform comparison for phase matching</li>
+        <li>Simulation discipline transferred into later PCSEL modeling</li>
+      </ul>
+      <a class="btn btn--primary" href="{{ '/research/waveguide/' | relative_url }}">Open waveguide research</a>
+    </div>
+  </article>
 </section>
 
 <section class="research-section" markdown="1">
@@ -73,6 +91,10 @@ author_profile: true
   <article class="highlight-card">
     <h2>From device dynamics to task-level evidence</h2>
     <p>Memristor work connected nonlinear device behavior to image, audio, multimodal recognition, and spatio-temporal learning tasks, making metric provenance and data processing part of the research question.</p>
+  </article>
+  <article class="highlight-card">
+    <h2>From waveguide modes to phase matching</h2>
+    <p>LN/LT waveguide work with Prof. Lei Wang trained my integrated-photonics simulation workflow: connect geometry sweeps, effective indices, material dispersion, and phase-matching windows.</p>
   </article>
   <article class="highlight-card">
     <h2>From PCSEL simulation to research automation</h2>

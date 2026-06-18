@@ -41,6 +41,11 @@ Research Experience
   * Empirical study on dynamic memristors for reservoir computing; multimodal recognition and spatio-temporal learning tasks.
   * Responsible for training data processing (text and speech), neural network training (MATLAB), and code debugging.
 
+* **Thin-Film LN/LT Waveguide Mode Analysis and Phase Matching**, 2024.01 -- 2025.06
+  * *School of Physics, Shandong University, advised by Prof. Lei Wang*
+  * Built COMSOL finite-element models for thin-film lithium niobate and lithium tantalate ridge waveguides on insulator; studied how waveguide geometry affects effective mode index and phase-matching wavelength.
+  * Compared material-platform and geometry trends under quasi-phase-matching assumptions, strengthening my later PCSEL practice of linking parameter sweeps to physical interpretation.
+
 * **Numerical Simulation of Black Hole Accretion**, Summer 2022
   * *Shanghai Astronomical Observatory, CAS, advised by Prof. Feng Yuan*
   * Used ZEUS hydrodynamic simulation code to study black-hole gas accretion.
@@ -48,7 +53,7 @@ Research Experience
 Technical Skills
 ======
 
-* **Simulation & Modeling**: FDTD / FEM / PWEM / RCWA methods; COMSOL Multiphysics and Lumerical FDTD; band structure, cavity mode, and parameter-sweep analysis.
+* **Simulation & Modeling**: FDTD / FEM / PWEM / RCWA methods; COMSOL Multiphysics and Lumerical FDTD; waveguide mode analysis, band structure, cavity mode, phase matching, and parameter-sweep analysis.
 * **Characterization & Fabrication**: Photoluminescence and optical/electrical pumping; L-I-V, spectral, and beam-profile characterization; SEM-based process analysis; ICP etching; KLayout mask layout.
 * **Programming & Tools**: Python, MATLAB, Java API automation; LaTeX, Mathematica; AIGC workflow development; literature pipeline and solver-report automation.
 

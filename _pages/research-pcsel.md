@@ -55,6 +55,13 @@ Can a GaAs PCSEL design loop jointly evaluate optical mode quality, fabrication 
   </article>
 
   <article class="pcsel-stack-card">
+    <span class="pcsel-stack-card__tag">Solver connection</span>
+    <h3>codex-for-comsol-lumerical</h3>
+    <p>A public Codex skill repository that keeps COMSOL and Lumerical FDTD connection probes, API/CLI fallback paths, and solver-syntax memory separate from device-specific PCSEL assumptions.</p>
+    <a href="https://github.com/wfy-op/codex-for-comsol-lumerical">Open GitHub repository</a>
+  </article>
+
+  <article class="pcsel-stack-card">
     <span class="pcsel-stack-card__tag">Optimization code</span>
     <h3>RLcode</h3>
     <p>A reinforcement-learning and optimization codebase used to explore PCSEL structural search. My current emphasis is metric provenance: separating solver-derived physical results from bookkeeping, reward shaping, or proxy objectives.</p>
@@ -82,7 +89,7 @@ In addition to simulation results, this direction produces an auditable workflow
 
 <div class="figure-explainer">
   <p><strong>How to read the diagram:</strong> inputs on the left define the research question, pcsel-agent in the center records specifications and run manifests, solver/process adapters on the right produce auditable artifacts, and the report/design-review layer helps distinguish private artifacts from results that are sufficiently documented for public reporting.</p>
-  <p><strong>Why it matters:</strong> this structure prevents a PCSEL result from being described only by a screenshot or a reward value; each wavelength, Q-factor, mode identity, DBR conclusion, or QW etch-risk statement needs a traceable source.</p>
+  <p><strong>Why it matters:</strong> this structure prevents a PCSEL result from being described only by a screenshot or a reward value; each wavelength, Q-factor, mode identity, DBR conclusion, or QW etch-risk statement needs a traceable source. The public <a href="https://github.com/wfy-op/codex-for-comsol-lumerical">codex-for-comsol-lumerical</a> repository documents the generic solver-connection layer behind this practice.</p>
 </div>
 
 <div class="pcsel-agent-map">
@@ -251,7 +258,7 @@ In addition to simulation results, this direction produces an auditable workflow
 ## Related Project Artifacts
 
 <div class="workstream-panel" markdown="1">
-The PCSEL work is supported by three companion artifacts: **PCSELBook** for theory and method vocabulary, **RLcode** for optimization experiments and metric-provenance audits, and a **101-entry PCSEL paper library** for literature-backed design review. I keep their public status and links on the [Projects]({{ '/projects/' | relative_url }}) page so this research page can stay focused on the device evidence chain.
+The PCSEL work is supported by companion artifacts: **PCSELBook** for theory and method vocabulary, **codex-for-comsol-lumerical** for public COMSOL/Lumerical connection skills, **RLcode** for optimization experiments and metric-provenance audits, and a **101-entry PCSEL paper library** for literature-backed design review. I keep their public status and links on the [Projects]({{ '/projects/' | relative_url }}) page so this research page can stay focused on the device evidence chain.
 </div>
 </section>
 

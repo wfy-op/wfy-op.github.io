@@ -30,6 +30,18 @@ author_profile: true
   </article>
 
   <article class="project-card">
+    <span class="project-card__status">Public solver-connection skills</span>
+    <h2>codex-for-comsol-lumerical</h2>
+    <p>A Codex skill repository for connecting commercial simulation solvers to local research workflows. It separates COMSOL Multiphysics and Ansys Lumerical FDTD into reusable skills for path discovery, minimal probes, API/CLI fallback checks, and solver-syntax memory.</p>
+    <ul>
+      <li><strong>COMSOL:</strong> command-line tools, Java API, Python <code>mph</code> sessions, and local manual lookup.</li>
+      <li><strong>Lumerical FDTD:</strong> <code>lumapi</code> probing, CLI sentinel scripts, Qanalysis, far-field, monitor, and material syntax checks.</li>
+      <li><strong>Boundary:</strong> general solver-connection infrastructure, not a PCSEL device-template or reproduction package.</li>
+    </ul>
+    <p><a class="btn" href="https://github.com/wfy-op/codex-for-comsol-lumerical">GitHub</a></p>
+  </article>
+
+  <article class="project-card">
     <span class="project-card__status">Optimization sandbox · private</span>
     <h2>RLcode</h2>
     <p>Reinforcement-learning and black-box optimization experiments for PCSEL structural search. The current public emphasis is metric provenance: separating solver-derived physical metrics from reward/proxy quantities.</p>

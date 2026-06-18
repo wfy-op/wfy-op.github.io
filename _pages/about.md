@@ -149,6 +149,7 @@ redirect_from:
 
 <div class="link-list">
   <a href="https://github.com/wfy-op/PCSELbook">PCSELBook - PCSEL Theory, Simulation & Device Physics</a>
+  <a href="https://github.com/wfy-op/codex-for-comsol-lumerical">codex-for-comsol-lumerical - COMSOL / Lumerical solver skills</a>
   <a href="https://space.bilibili.com/1601830564">Taishan Seminar (Bilibili)</a>
   <a href="https://www.zhihu.com/people/fei-yu-33-8">Zhihu Profile</a>
 </div>

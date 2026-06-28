@@ -5,7 +5,7 @@ permalink: /research/pcsel/
 author_profile: true
 ---
 
-<p class="research-backlink"><a href="{{ '/research/' | relative_url }}">Back to all research directions</a> · <a href="{{ '/research/portal/' | relative_url }}">Open Research Portal</a></p>
+<p class="research-backlink"><a href="{{ '/research/' | relative_url }}">Back to all research directions</a> · <a href="#pcsel-portal">Open PCSEL evidence dashboard</a></p>
 
 <section class="research-section" markdown="1">
 ## Scientific Question
@@ -14,6 +14,8 @@ author_profile: true
 Can a GaAs PCSEL design loop jointly evaluate optical mode quality, fabrication tolerance, and electro-thermal device limits without losing metric provenance? My current answer is to keep each design decision attached to its geometry convention, solver settings, process gate, and experimental or report artifact.
 </div>
 </section>
+
+{% include research-portal-dashboard.html %}
 
 <section class="research-section" markdown="1">
 ## Public Evidence Map
@@ -72,7 +74,7 @@ Can a GaAs PCSEL design loop jointly evaluate optical mode quality, fabrication 
     <span class="pcsel-stack-card__tag">COMSOL-backed optimization</span>
     <h3>RLcomsol</h3>
     <p>A COMSOL-backed optimization bridge that tests whether search policies remain physically auditable when connected to geometry checks, mode-selection policy, accepted-score guards, multi-seed smoke panels, and reportable run provenance.</p>
-    <a href="{{ '/research/portal/' | relative_url }}#rlcomsol">Open portal panel</a>
+    <a href="#rlcomsol">Open dashboard panel</a>
   </article>
 
   <article class="pcsel-stack-card">
@@ -266,7 +268,7 @@ In addition to simulation results, this direction produces an auditable workflow
 ## Related Project Artifacts
 
 <div class="workstream-panel" markdown="1">
-The PCSEL work is supported by companion artifacts: **PCSELBook** for theory and method vocabulary, **codex-for-comsol-lumerical** for public COMSOL/Lumerical connection skills, **RLcode** for optimization experiments, **RLcomsol** for COMSOL-backed search validation and metric-provenance audits, and a **482-record PCSEL paper library** for literature-backed design review. I keep their public status and links on the [Projects]({{ '/projects/' | relative_url }}) page, while the [Research Portal]({{ '/research/portal/' | relative_url }}) exposes current aggregate statistics and selected public-safe figures.
+The PCSEL work is supported by companion artifacts: **PCSELBook** for theory and method vocabulary, **codex-for-comsol-lumerical** for public COMSOL/Lumerical connection skills, **RLcode** for optimization experiments, **RLcomsol** for COMSOL-backed search validation and metric-provenance audits, and a **482-record PCSEL paper library** for literature-backed design review. I keep their public status and links on the [Projects]({{ '/projects/' | relative_url }}) page, while the [PCSEL evidence dashboard](#pcsel-portal) above exposes current aggregate statistics and selected public-safe figures.
 </div>
 </section>
 

@@ -7,14 +7,14 @@ author_profile: true
 
 <section class="home-feature">
   <figure class="home-feature__media">
-    <img src="{{ '/images/research/portal/pcsel_library_year_distribution.svg' | relative_url }}" alt="PCSEL literature library year-distribution chart from the research portal" loading="lazy">
-    <figcaption>Research Portal snapshot: literature coverage, HX1-940 sweep figures, CWT reproduction progress, COMSOL/FDTD comparison status, RLcomsol optimization validation, and DailyBrief academic radar.</figcaption>
+    <img src="{{ '/images/research/portal/pcsel_library_year_distribution.svg' | relative_url }}" alt="PCSEL literature library year-distribution chart from the PCSEL evidence dashboard" loading="lazy">
+    <figcaption>PCSEL dashboard snapshot: literature coverage, HX1-940 sweep figures, CWT reproduction progress, COMSOL/FDTD comparison status, RLcomsol optimization validation, and DailyBrief academic radar.</figcaption>
   </figure>
   <div class="home-feature__body">
-    <span class="recent-work-card__tag">Evidence dashboard</span>
-    <h2>Research outcomes as an inspectable portal</h2>
-    <p>The portal turns local research artifacts into a public-safe dashboard for presentations, applications, group meetings, and defense-style discussions.</p>
-    <p><a class="btn btn--primary" href="{{ '/research/portal/' | relative_url }}">Open Research Portal</a></p>
+    <span class="recent-work-card__tag">PCSEL evidence dashboard</span>
+    <h2>Research outcomes inside the PCSEL page</h2>
+    <p>The PCSEL dashboard turns local research artifacts into a public-safe view for presentations, applications, group meetings, and defense-style discussions.</p>
+    <p><a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}#pcsel-portal">Open PCSEL Dashboard</a></p>
   </div>
 </section>
 

@@ -57,14 +57,14 @@ author_profile: true
       <li><strong>Latest public-safe panel:</strong> three-seed, 20-step radius-guard smoke check with completed runs 3/3 and best accepted score 97.14.</li>
       <li><strong>Boundary:</strong> private code and raw solver artifacts; public page shows aggregate status and sanitized figures only.</li>
     </ul>
-    <p><a class="btn" href="{{ '/research/portal/' | relative_url }}#rlcomsol">Portal panel</a> <a class="btn" href="{{ '/research/pcsel/' | relative_url }}#related-project-artifacts">PCSEL context</a></p>
+    <p><a class="btn" href="{{ '/research/pcsel/' | relative_url }}#rlcomsol">Dashboard panel</a> <a class="btn" href="{{ '/research/pcsel/' | relative_url }}#related-project-artifacts">PCSEL context</a></p>
   </article>
 
   <article class="project-card">
     <span class="project-card__status">Knowledge base · private</span>
     <h2>PCSEL Paper Library</h2>
     <p>A private PCSEL literature workspace currently containing 482 structured records, 473 DOI-linked entries, local full-text parsing, and topic/group metadata for design-review evidence.</p>
-    <p><a class="btn" href="{{ '/research/pcsel/' | relative_url }}">Research context</a> <a class="btn" href="{{ '/research/portal/' | relative_url }}#pcsel-library">Portal stats</a></p>
+    <p><a class="btn" href="{{ '/research/pcsel/' | relative_url }}">Research context</a> <a class="btn" href="{{ '/research/pcsel/' | relative_url }}#pcsel-library">Dashboard stats</a></p>
   </article>
 </div>
 </section>

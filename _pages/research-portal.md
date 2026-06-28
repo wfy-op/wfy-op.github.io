@@ -10,7 +10,7 @@ author_profile: true
 <section class="portal-hero">
   <p class="profile-hero__eyebrow">Research outcome portal</p>
   <h1>Evidence dashboard for PCSEL design, reproduction, and academic radar</h1>
-  <p class="portal-hero__lead">A public-facing snapshot of the research artifacts that matter for group meetings, proposal reviews, applications, and defense-style presentations: literature coverage, solver sweeps, reproduction status, solver-comparison evidence, and daily academic monitoring.</p>
+  <p class="portal-hero__lead">A public-facing snapshot of the research artifacts that matter for group meetings, proposal reviews, applications, and defense-style presentations: literature coverage, solver sweeps, reproduction status, solver-comparison evidence, RL/COMSOL optimization validation, and daily academic monitoring.</p>
   <div class="portal-hero__meta">
     <span>Updated {{ portal.snapshot.updated }}</span>
     <span>{{ portal.snapshot.scope }}</span>
@@ -96,6 +96,44 @@ author_profile: true
       <h2>Interpretation boundary</h2>
       <p>Use this panel to discuss solver-model differences, mode tracking, and process gates; do not present it as a final laser-performance claim.</p>
     </article>
+  </div>
+</section>
+
+<section class="portal-module" id="rlcomsol">
+  <div class="portal-module__header">
+    <span class="portal-module__eyebrow">RLcomsol</span>
+    <h2>COMSOL-backed optimization validation</h2>
+    <p>RLcomsol is the bridge between the earlier RLcode optimization sandbox and solver-backed PCSEL evidence. It tests whether candidate-search policies can stay tied to COMSOL geometry audits, mode-selection policy, accepted-score guards, and reportable run provenance.</p>
+  </div>
+  <div class="portal-metric-strip">
+    <span>Reports: {{ portal.rlcomsol.reports_count }}</span>
+    <span>Scripts: {{ portal.rlcomsol.scripts_count }}</span>
+    <span>Tests: {{ portal.rlcomsol.tests_count }}</span>
+    <span>Completed runs: {{ portal.rlcomsol.completed_runs }}</span>
+    <span>Verdict: {{ portal.rlcomsol.verdict }}</span>
+    <span>Best accepted score: {{ portal.rlcomsol.best_score }}</span>
+  </div>
+  <div class="portal-card-grid">
+    <article class="highlight-card">
+      <h2>Best smoke-panel point</h2>
+      <p>{{ portal.rlcomsol.best_seed }} step {{ portal.rlcomsol.best_step }} reached accepted score {{ portal.rlcomsol.best_score }} with Q {{ portal.rlcomsol.best_q }} under the fixed radius-guard protocol.</p>
+    </article>
+    <article class="highlight-card">
+      <h2>Interpretation boundary</h2>
+      <p>The three-seed 20-step panel is a repeatability and guard-provenance smoke check. It supports discussion of optimization stability, not a claim of global optimum discovery.</p>
+    </article>
+    <article class="highlight-card">
+      <h2>Public boundary</h2>
+      <p>{{ portal.rlcomsol.public_boundary }}</p>
+    </article>
+  </div>
+  <div class="portal-media-grid">
+    {% for figure in portal.rlcomsol.figures %}
+    <figure class="research-figure">
+      <img src="{{ figure.src | relative_url }}" alt="{{ figure.alt }}" loading="lazy">
+      <figcaption>{{ figure.caption }}</figcaption>
+    </figure>
+    {% endfor %}
   </div>
 </section>
 

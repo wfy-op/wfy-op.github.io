@@ -256,6 +256,79 @@ def load_cwt(cwt_dir: Path | None) -> dict[str, Any]:
     }
 
 
+def load_rlcomsol(rlcomsol_dir: Path | None) -> dict[str, Any]:
+    fallback = {
+        "reports_count": 0,
+        "scripts_count": 0,
+        "tests_count": 0,
+        "completed_runs": "not available",
+        "verdict": "not available",
+        "best_seed": "not available",
+        "best_step": "not available",
+        "best_score": "not available",
+        "best_q": "not available",
+        "latest_report": "not available",
+        "figures": [],
+        "public_boundary": "Private COMSOL/RL project; the website exposes aggregate status and selected sanitized figures only.",
+    }
+    if not rlcomsol_dir:
+        return fallback
+
+    reports_dir = rlcomsol_dir / "reports"
+    scripts_dir = rlcomsol_dir / "scripts"
+    tests_dir = rlcomsol_dir / "tests"
+    latest_report = reports_dir / "20260625_comsol_goal_three_seed_radius_guard_perm_a_20pt_panel.md"
+    panel_dir = rlcomsol_dir / "runs" / "comsol_goal_three_seed_radius_guard_perm_a_20pt_panel_20260625"
+
+    parsed = {}
+    if latest_report.exists():
+        text = latest_report.read_text(encoding="utf-8", errors="replace")
+        patterns = {
+            "completed_runs": r"Completed runs: `([^`]+)`",
+            "verdict": r"Verdict: `([^`]+)`",
+            "best": r"Best cross-seed accepted point: `([^`]+)` step `([^`]+)` with score `([^`]+)` and Q `([^`]+)`",
+        }
+        for key, pattern in patterns.items():
+            match = re.search(pattern, text)
+            if match:
+                parsed[key] = match.groups() if len(match.groups()) > 1 else match.group(1)
+
+    best = parsed.get("best", ("not available", "not available", "not available", "not available"))
+    copied = [
+        {
+            "src": copy_asset(
+                panel_dir / "three_seed_radius_guard_perm_a_20pt_curves.png",
+                "rlcomsol_three_seed_radius_guard_perm_a_20pt_curves.png",
+            ),
+            "alt": "RLcomsol three-seed COMSOL optimization curves",
+            "caption": "Three-seed 20-step COMSOL smoke panel: best-so-far and accepted-score curves under a fixed radius-guard protocol.",
+        },
+        {
+            "src": copy_asset(
+                panel_dir / "three_seed_radius_guard_perm_a_20pt_actions.png",
+                "rlcomsol_three_seed_radius_guard_perm_a_20pt_actions.png",
+            ),
+            "alt": "RLcomsol action trajectory panel",
+            "caption": "Action trajectory panel showing warmup, restart, and incumbent-refinement actions separately from final design claims.",
+        },
+    ]
+
+    return {
+        "reports_count": len(list(reports_dir.glob("*.md"))) if reports_dir.exists() else 0,
+        "scripts_count": len(list(scripts_dir.glob("*.py"))) if scripts_dir.exists() else 0,
+        "tests_count": len(list(tests_dir.glob("test_*.py"))) if tests_dir.exists() else 0,
+        "completed_runs": parsed.get("completed_runs", "not available"),
+        "verdict": parsed.get("verdict", "not available"),
+        "best_seed": best[0],
+        "best_step": best[1],
+        "best_score": best[2],
+        "best_q": best[3],
+        "latest_report": latest_report.name if latest_report.exists() else "not available",
+        "figures": [item for item in copied if item["src"]],
+        "public_boundary": fallback["public_boundary"],
+    }
+
+
 def find_dailybrief_dir() -> Path | None:
     env = env_path("DAILYBRIEF_DIR")
     if env:
@@ -372,10 +445,12 @@ def yaml_dump(value: Any, indent: int = 0) -> list[str]:
 def build_data() -> dict[str, Any]:
     pcsel_dir = env_path("PCSEL_AGENT_DIR")
     cwt_dir = env_path("CWT_REBUILD_DIR")
+    rlcomsol_dir = env_path("RLCOMSOL_DIR")
 
     paper = load_paper_library(pcsel_dir)
     hx1 = load_hx1(pcsel_dir)
     cwt = load_cwt(cwt_dir)
+    rlcomsol = load_rlcomsol(rlcomsol_dir)
     daily = load_dailybrief()
 
     return {
@@ -390,11 +465,13 @@ def build_data() -> dict[str, Any]:
             {"label": "HX1-940 sweep rows", "value": hx1["fdtd_rows"], "note": f"FDTD mesh comparison across {len(hx1['depths_nm'])} hole depths."},
             {"label": "COMSOL reference rows", "value": hx1["comsol_rows"], "note": "Target-window COMSOL rows paired with the FDTD credibility report."},
             {"label": "CWT provenance files", "value": cwt["provenance_count"], "note": f"{cwt['scripts_count']} reproduction scripts and {cwt['report_figures']} report figures."},
+            {"label": "RLcomsol reports", "value": rlcomsol["reports_count"], "note": f"Latest seed panel verdict: {rlcomsol['verdict']}."},
             {"label": "DailyBrief HTML reports", "value": daily["html_count"], "note": f"Latest local academic radar: {daily['latest']}."},
         ],
         "paper_library": paper,
         "hx1": hx1,
         "cwt": cwt,
+        "rlcomsol": rlcomsol,
         "dailybrief": daily,
     }
 

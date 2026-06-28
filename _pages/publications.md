@@ -67,6 +67,6 @@ author_profile: true
 ## Software and Research Artifacts
 
 <p>
-  Public-ready artifacts are listed on the <a href="{{ '/projects/' | relative_url }}">Projects</a> page. Private solver runs, RLcode outputs, and PCSEL paper-library entries are not presented as public evidence until they are cleaned and documented.
+  Public-ready artifacts are listed on the <a href="{{ '/projects/' | relative_url }}">Projects</a> page. Private solver runs, RLcode/RLcomsol outputs, and PCSEL paper-library entries are not presented as public evidence until they are cleaned and documented.
 </p>
 </section>

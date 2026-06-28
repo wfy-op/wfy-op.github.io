@@ -32,7 +32,7 @@ redirect_from:
   <article class="evidence-snapshot__item">
     <span class="evidence-snapshot__label">Research portal</span>
     <strong><a href="{{ '/research/portal/' | relative_url }}">Live evidence dashboard</a></strong>
-    <p>PCSEL library statistics, HX1-940 sweep figures, CWT reproduction progress, COMSOL/FDTD comparison status, and DailyBrief academic radar.</p>
+    <p>PCSEL library statistics, HX1-940 sweep figures, CWT reproduction progress, COMSOL/FDTD comparison status, RLcomsol optimization validation, and DailyBrief academic radar.</p>
   </article>
   <article class="evidence-snapshot__item">
     <span class="evidence-snapshot__label">Current role</span>

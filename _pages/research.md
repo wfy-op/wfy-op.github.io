@@ -8,7 +8,7 @@ author_profile: true
 <section class="home-feature">
   <figure class="home-feature__media">
     <img src="{{ '/images/research/portal/pcsel_library_year_distribution.svg' | relative_url }}" alt="PCSEL literature library year-distribution chart from the research portal" loading="lazy">
-    <figcaption>Research Portal snapshot: literature coverage, HX1-940 sweep figures, CWT reproduction progress, COMSOL/FDTD comparison status, and DailyBrief academic radar.</figcaption>
+    <figcaption>Research Portal snapshot: literature coverage, HX1-940 sweep figures, CWT reproduction progress, COMSOL/FDTD comparison status, RLcomsol optimization validation, and DailyBrief academic radar.</figcaption>
   </figure>
   <div class="home-feature__body">
     <span class="recent-work-card__tag">Evidence dashboard</span>

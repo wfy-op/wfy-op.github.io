@@ -26,6 +26,7 @@ Can a GaAs PCSEL design loop jointly evaluate optical mode quality, fabrication 
 | QW etch-depth risk gate | Public process-risk schematic and exported-geometry audit logic. | The current public page explains the gate; it does not yet expose a numeric etch-depth/QW-clearance table. | Prevents optically attractive designs from violating active-region or process constraints. |
 | Backside DBR and gain-band route | Public TMM-first route and literature-backed modeling plan. | Full stack parameters and 3D verification artifacts remain private until documentation is cleaned. | Keeps expensive 3D verification focused on physically plausible vertical stacks. |
 | RLcode and optimization audit | Public description of metric-provenance discipline and project context. | Code/results are private; reward traces are not presented as physical evidence. | Makes optimization claims auditable before they are interpreted as device results. |
+| RLcomsol optimization validation | Public-safe portal panel with three-seed 20-step COMSOL smoke curves and action trajectory figures. | Raw COMSOL models, local run folders, and training internals remain private. | Connects search policy, geometry audit, mode selection, score guards, and repeatability checks. |
 | Automated design-optimization method | CNIPA patent application accepted: CN 202610820592.4, application date 2026-06-08, titled 半导体激光器自动化设计优化方法及存储介质. | This is an accepted application, not a granted patent; technical details are not exposed on the public page. | Records the formal IP path for the semiconductor-laser automation workflow while keeping public research claims evidence-limited. |
 
 </div>
@@ -65,6 +66,13 @@ Can a GaAs PCSEL design loop jointly evaluate optical mode quality, fabrication 
     <span class="pcsel-stack-card__tag">Optimization code</span>
     <h3>RLcode</h3>
     <p>A reinforcement-learning and optimization codebase used to explore PCSEL structural search. My current emphasis is metric provenance: separating solver-derived physical results from bookkeeping, reward shaping, or proxy objectives.</p>
+  </article>
+
+  <article class="pcsel-stack-card">
+    <span class="pcsel-stack-card__tag">COMSOL-backed optimization</span>
+    <h3>RLcomsol</h3>
+    <p>A COMSOL-backed optimization bridge that tests whether search policies remain physically auditable when connected to geometry checks, mode-selection policy, accepted-score guards, multi-seed smoke panels, and reportable run provenance.</p>
+    <a href="{{ '/research/portal/' | relative_url }}#rlcomsol">Open portal panel</a>
   </article>
 
   <article class="pcsel-stack-card">
@@ -225,8 +233,8 @@ In addition to simulation results, this direction produces an auditable workflow
       </figure>
       <div class="workstream-card__body">
         <span class="workstream-card__tag">Optimization trust</span>
-        <h4>From RLcode experiments to solver-backed optimization</h4>
-        <p>RLcode serves as an exploration framework, while pcsel-agent adds provenance checks: candidate designs are linked to solver-derived metrics, design constraints, and reproducible artifacts before being interpreted as physical results.</p>
+        <h4>From RLcode experiments to RLcomsol validation</h4>
+        <p>RLcode serves as the exploration sandbox, while RLcomsol connects search policies to COMSOL-backed PCSEL metrics and pcsel-agent adds provenance checks. Candidate designs are linked to solver-derived metrics, design constraints, accepted-score guards, and reproducible artifacts before being interpreted as physical results.</p>
         <ul class="workstream-card__points">
           <li><strong>Question:</strong> is an optimization number a real optical/device metric or only a reward/proxy signal?</li>
           <li><strong>Method:</strong> audit metric provenance, then frame expensive PCSEL search as constrained multi-objective black-box optimization.</li>
@@ -258,7 +266,7 @@ In addition to simulation results, this direction produces an auditable workflow
 ## Related Project Artifacts
 
 <div class="workstream-panel" markdown="1">
-The PCSEL work is supported by companion artifacts: **PCSELBook** for theory and method vocabulary, **codex-for-comsol-lumerical** for public COMSOL/Lumerical connection skills, **RLcode** for optimization experiments and metric-provenance audits, and a **482-record PCSEL paper library** for literature-backed design review. I keep their public status and links on the [Projects]({{ '/projects/' | relative_url }}) page, while the [Research Portal]({{ '/research/portal/' | relative_url }}) exposes current aggregate statistics and selected public-safe figures.
+The PCSEL work is supported by companion artifacts: **PCSELBook** for theory and method vocabulary, **codex-for-comsol-lumerical** for public COMSOL/Lumerical connection skills, **RLcode** for optimization experiments, **RLcomsol** for COMSOL-backed search validation and metric-provenance audits, and a **482-record PCSEL paper library** for literature-backed design review. I keep their public status and links on the [Projects]({{ '/projects/' | relative_url }}) page, while the [Research Portal]({{ '/research/portal/' | relative_url }}) exposes current aggregate statistics and selected public-safe figures.
 </div>
 </section>
 

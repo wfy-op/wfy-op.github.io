@@ -21,6 +21,10 @@ kpis:
     value: 58
     note: "58 reproduction scripts and 76 report figures."
   -
+    label: "RLcomsol reports"
+    value: 69
+    note: "Latest seed panel verdict: pass_three_seed_20step_smoke."
+  -
     label: "DailyBrief HTML reports"
     value: 38
     note: "Latest local academic radar: 2026-06-28.html."
@@ -131,6 +135,27 @@ cwt:
     - "Fig. 3.6 radiation constant versus filling factor"
     - "Fig. 3.7 frequency versus filling factor"
     - "Fig. 4.5 / Table 4.2 method-ranking checks"
+rlcomsol:
+  reports_count: 69
+  scripts_count: 104
+  tests_count: 1
+  completed_runs: "3/3"
+  verdict: "pass_three_seed_20step_smoke"
+  best_seed: "seed41"
+  best_step: "16"
+  best_score: "97.14"
+  best_q: "2.109e+07"
+  latest_report: "20260625_comsol_goal_three_seed_radius_guard_perm_a_20pt_panel.md"
+  figures:
+    -
+      src: "/images/research/portal/rlcomsol_three_seed_radius_guard_perm_a_20pt_curves.png"
+      alt: "RLcomsol three-seed COMSOL optimization curves"
+      caption: "Three-seed 20-step COMSOL smoke panel: best-so-far and accepted-score curves under a fixed radius-guard protocol."
+    -
+      src: "/images/research/portal/rlcomsol_three_seed_radius_guard_perm_a_20pt_actions.png"
+      alt: "RLcomsol action trajectory panel"
+      caption: "Action trajectory panel showing warmup, restart, and incumbent-refinement actions separately from final design claims."
+  public_boundary: "Private COMSOL/RL project; the website exposes aggregate status and selected sanitized figures only."
 dailybrief:
   html_count: 38
   date_range: "2026-05-22-2026-06-28"

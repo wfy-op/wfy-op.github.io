@@ -47,9 +47,9 @@
   <text class="tiny" x="76" y="368">Maxwell, Bloch, QW gain, ETO</text>
 
   <rect class="panel" x="50" y="435" width="260" height="118"/>
-  <text class="label" x="76" y="470">RLcode</text>
-  <text class="small" x="76" y="498">optimization sandbox</text>
-  <text class="tiny" x="76" y="523">reward audit, Pareto candidates</text>
+  <text class="label" x="76" y="470">RLcode / RLcomsol</text>
+  <text class="small" x="76" y="498">optimization validation</text>
+  <text class="tiny" x="76" y="523">score guards, COMSOL panels</text>
 
   <rect class="panelWarm" x="50" y="590" width="260" height="118"/>
   <text class="label" x="76" y="625">Experiment Feedback</text>

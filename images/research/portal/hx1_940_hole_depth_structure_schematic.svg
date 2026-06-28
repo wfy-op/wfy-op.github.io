@@ -1,0 +1,51 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='880' height='440' viewBox='0 0 880 440'>
+<rect width='100%' height='100%' fill='#ffffff'/>
+<text x='24' y='24' font-family='Segoe UI, Arial' font-size='16' font-weight='700'>HX1-940 hole-depth sweep schematic</text>
+<line x1='90' y1='40' x2='820' y2='40' stroke='#1d2d44' stroke-width='2'/>
+<text x='20' y='45' font-family='Segoe UI, Arial' font-size='12'>top surface</text>
+<rect x='90' y='310.7692307692308' width='710' height='3.9384615384615245' fill='#f0a84b' opacity='0.9'/>
+<rect x='90' y='324.55384615384617' width='710' height='3.9384615384615245' fill='#f0a84b' opacity='0.9'/>
+<text x='735' y='311.75384615384615' font-family='Segoe UI, Arial' font-size='12' fill='#8a4b00'>QW1 550-558 nm</text>
+<text x='735' y='327.5076923076923' font-family='Segoe UI, Arial' font-size='12' fill='#8a4b00'>QW2 578-586 nm</text>
+<rect x='122.0' y='40' width='56' height='49.230769230769226' fill='#1f6f8b' opacity='0.72' stroke='#26364a'/>
+<text x='120.0' y='107.23076923076923' font-family='Segoe UI, Arial' font-size='12'>h=100</text>
+<line x1='185.0' y1='89.23076923076923' x2='232.0' y2='310.7692307692308' stroke='#677181' stroke-dasharray='4 4'/>
+<text x='182.0' y='196.0' font-family='Segoe UI, Arial' font-size='11' fill='#47515f'>450 nm</text>
+<rect x='235.33333333333331' y='40' width='56' height='98.46153846153845' fill='#3b7a57' opacity='0.72' stroke='#26364a'/>
+<text x='233.33333333333331' y='156.46153846153845' font-family='Segoe UI, Arial' font-size='12'>h=200</text>
+<line x1='298.3333333333333' y1='138.46153846153845' x2='345.3333333333333' y2='310.7692307692308' stroke='#677181' stroke-dasharray='4 4'/>
+<text x='295.3333333333333' y='220.6153846153846' font-family='Segoe UI, Arial' font-size='11' fill='#47515f'>350 nm</text>
+<rect x='348.66666666666663' y='40' width='56' height='147.69230769230768' fill='#9a6b2f' opacity='0.72' stroke='#26364a'/>
+<text x='346.66666666666663' y='205.69230769230768' font-family='Segoe UI, Arial' font-size='12'>h=300</text>
+<line x1='411.66666666666663' y1='187.69230769230768' x2='458.66666666666663' y2='310.7692307692308' stroke='#677181' stroke-dasharray='4 4'/>
+<text x='408.66666666666663' y='245.23076923076923' font-family='Segoe UI, Arial' font-size='11' fill='#47515f'>250 nm</text>
+<rect x='462.0' y='40' width='56' height='196.92307692307693' fill='#8d4f92' opacity='0.72' stroke='#26364a'/>
+<text x='460.0' y='254.92307692307693' font-family='Segoe UI, Arial' font-size='12'>h=400</text>
+<line x1='525.0' y1='236.92307692307693' x2='572.0' y2='310.7692307692308' stroke='#677181' stroke-dasharray='4 4'/>
+<text x='522.0' y='269.84615384615387' font-family='Segoe UI, Arial' font-size='11' fill='#47515f'>150 nm</text>
+<rect x='575.3333333333333' y='40' width='56' height='246.1538461538462' fill='#9a3d3d' opacity='0.72' stroke='#26364a'/>
+<text x='573.3333333333333' y='304.1538461538462' font-family='Segoe UI, Arial' font-size='12'>h=500</text>
+<line x1='638.3333333333333' y1='286.1538461538462' x2='685.3333333333333' y2='310.7692307692308' stroke='#677181' stroke-dasharray='4 4'/>
+<text x='635.3333333333333' y='294.46153846153845' font-family='Segoe UI, Arial' font-size='11' fill='#47515f'>50 nm</text>
+<rect x='688.6666666666666' y='40' width='56' height='295.38461538461536' fill='#1f6f8b' opacity='0.30' stroke='#26364a'/>
+<text x='686.6666666666666' y='353.38461538461536' font-family='Segoe UI, Arial' font-size='12'>h=600</text>
+<line x1='751.6666666666666' y1='335.38461538461536' x2='798.6666666666666' y2='310.7692307692308' stroke='#677181' stroke-dasharray='4 4'/>
+<text x='748.6666666666666' y='319.0769230769231' font-family='Segoe UI, Arial' font-size='11' fill='#47515f'>-50 nm</text>
+<line x1='82' y1='40.0' x2='90' y2='40.0' stroke='#667'/>
+<text x='35' y='44.0' font-family='Segoe UI, Arial' font-size='11'>0</text>
+<line x1='82' y1='187.69230769230768' x2='90' y2='187.69230769230768' stroke='#667'/>
+<text x='35' y='191.69230769230768' font-family='Segoe UI, Arial' font-size='11'>300</text>
+<line x1='82' y1='236.92307692307693' x2='90' y2='236.92307692307693' stroke='#667'/>
+<text x='35' y='240.92307692307693' font-family='Segoe UI, Arial' font-size='11'>400</text>
+<line x1='82' y1='286.1538461538462' x2='90' y2='286.1538461538462' stroke='#667'/>
+<text x='35' y='290.1538461538462' font-family='Segoe UI, Arial' font-size='11'>500</text>
+<line x1='82' y1='310.7692307692308' x2='90' y2='310.7692307692308' stroke='#667'/>
+<text x='35' y='314.7692307692308' font-family='Segoe UI, Arial' font-size='11'>550</text>
+<line x1='82' y1='328.4923076923077' x2='90' y2='328.4923076923077' stroke='#667'/>
+<text x='35' y='332.4923076923077' font-family='Segoe UI, Arial' font-size='11'>586</text>
+<line x1='82' y1='360.0' x2='90' y2='360.0' stroke='#667'/>
+<text x='35' y='364.0' font-family='Segoe UI, Arial' font-size='11'>650</text>
+<line x1='90' y1='40' x2='90' y2='360' stroke='#667'/>
+<text x='18' y='384' font-family='Segoe UI, Arial' font-size='12'>depth from top (nm)</text>
+<text x='90' y='410' font-family='Segoe UI, Arial' font-size='12' fill='#47515f'>Depths at or beyond 550 nm reach/cross QW1 and are skipped unless explicitly allowed.</text>
+</svg>

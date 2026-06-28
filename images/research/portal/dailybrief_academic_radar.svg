@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" role="img" aria-label="DailyBrief academic radar keyword counts">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="76" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#263238">DailyBrief academic radar keyword counts</text>
+<line x1="76" y1="342" x2="792" y2="342" stroke="#d8dee4" stroke-width="1"/>
+<line x1="76" y1="62" x2="76" y2="342" stroke="#d8dee4" stroke-width="1"/>
+<line x1="76" y1="342.0" x2="792" y2="342.0" stroke="#eef1f3" stroke-width="1"/>
+<text x="66" y="346.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#65737e">0</text>
+<line x1="76" y1="272.0" x2="792" y2="272.0" stroke="#eef1f3" stroke-width="1"/>
+<text x="66" y="276.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#65737e">17</text>
+<line x1="76" y1="202.0" x2="792" y2="202.0" stroke="#eef1f3" stroke-width="1"/>
+<text x="66" y="206.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#65737e">34</text>
+<line x1="76" y1="132.0" x2="792" y2="132.0" stroke="#eef1f3" stroke-width="1"/>
+<text x="66" y="136.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#65737e">50</text>
+<line x1="76" y1="62.0" x2="792" y2="62.0" stroke="#eef1f3" stroke-width="1"/>
+<text x="66" y="66.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#65737e">67</text>
+<rect x="76.0" y="95.4" width="112.7" height="246.6" rx="3" fill="#286a6b"/>
+<text x="132.3" y="88.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">59</text>
+<text x="132.3" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 132.3 362)">PCSEL</text>
+<rect x="196.7" y="62.0" width="112.7" height="280.0" rx="3" fill="#8a5a16"/>
+<text x="253.0" y="55.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">67</text>
+<text x="253.0" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 253.0 362)">photon</text>
+<rect x="317.3" y="141.4" width="112.7" height="200.6" rx="3" fill="#286a6b"/>
+<text x="373.7" y="134.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">48</text>
+<text x="373.7" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 373.7 362)">laser</text>
+<rect x="438.0" y="312.7" width="112.7" height="29.3" rx="3" fill="#8a5a16"/>
+<text x="494.3" y="305.7" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">7</text>
+<text x="494.3" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 494.3 362)">arxiv</text>
+<rect x="558.7" y="304.4" width="112.7" height="37.6" rx="3" fill="#286a6b"/>
+<text x="615.0" y="297.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">9</text>
+<text x="615.0" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 615.0 362)">paper</text>
+<rect x="679.3" y="337.8" width="112.7" height="4.2" rx="3" fill="#8a5a16"/>
+<text x="735.7" y="330.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">1</text>
+<text x="735.7" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 735.7 362)">academic</text>
+<text x="410.0" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#65737e">Latest local brief: 2026-06-28</text>
+</svg>

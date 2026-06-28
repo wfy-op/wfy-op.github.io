@@ -51,8 +51,8 @@ author_profile: true
   <article class="project-card">
     <span class="project-card__status">Knowledge base · private</span>
     <h2>PCSEL Paper Library</h2>
-    <p>A private PCSEL literature workspace currently containing 101 structured wiki entries, multi-source paper intake, local PDF parsing, and topic/group metadata for design-review evidence.</p>
-    <p><a class="btn" href="{{ '/research/pcsel/' | relative_url }}">Research context</a></p>
+    <p>A private PCSEL literature workspace currently containing 482 structured records, 473 DOI-linked entries, local full-text parsing, and topic/group metadata for design-review evidence.</p>
+    <p><a class="btn" href="{{ '/research/pcsel/' | relative_url }}">Research context</a> <a class="btn" href="{{ '/research/portal/' | relative_url }}#pcsel-library">Portal stats</a></p>
   </article>
 </div>
 </section>

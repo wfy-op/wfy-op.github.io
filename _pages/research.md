@@ -5,6 +5,19 @@ permalink: /research/
 author_profile: true
 ---
 
+<section class="home-feature">
+  <figure class="home-feature__media">
+    <img src="{{ '/images/research/portal/pcsel_library_year_distribution.svg' | relative_url }}" alt="PCSEL literature library year-distribution chart from the research portal" loading="lazy">
+    <figcaption>Research Portal snapshot: literature coverage, HX1-940 sweep figures, CWT reproduction progress, COMSOL/FDTD comparison status, and DailyBrief academic radar.</figcaption>
+  </figure>
+  <div class="home-feature__body">
+    <span class="recent-work-card__tag">Evidence dashboard</span>
+    <h2>Research outcomes as an inspectable portal</h2>
+    <p>The portal turns local research artifacts into a public-safe dashboard for presentations, applications, group meetings, and defense-style discussions.</p>
+    <p><a class="btn btn--primary" href="{{ '/research/portal/' | relative_url }}">Open Research Portal</a></p>
+  </div>
+</section>
+
 <section class="research-direction-grid" aria-label="Research directions">
   <article class="research-direction-card">
     <figure class="research-direction-card__media">

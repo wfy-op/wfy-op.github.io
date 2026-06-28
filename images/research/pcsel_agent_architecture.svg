@@ -38,7 +38,7 @@
 
   <rect class="panel" x="50" y="125" width="260" height="118"/>
   <text class="label" x="76" y="160">Paper Library</text>
-  <text class="small" x="76" y="188">101 structured entries</text>
+  <text class="small" x="76" y="188">482 structured records</text>
   <text class="tiny" x="76" y="213">device claims, methods, bands</text>
 
   <rect class="panel" x="50" y="280" width="260" height="118"/>

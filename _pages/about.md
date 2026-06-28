@@ -18,7 +18,8 @@ redirect_from:
     <p><strong>Research thesis:</strong> my through-line is metric provenance: turning complex device outputs into claims traceable to physical variables, solver settings, process limits, and experiments.</p>
   </div>
   <div class="profile-hero__actions">
-    <a class="btn btn--primary" href="{{ '/research/' | relative_url }}">Research</a>
+    <a class="btn btn--primary" href="{{ '/research/portal/' | relative_url }}">Research Portal</a>
+    <a class="btn" href="{{ '/research/' | relative_url }}">Research</a>
     <a class="btn" href="{{ '/projects/' | relative_url }}">Projects</a>
     <a class="btn" href="{{ '/publications/' | relative_url }}">Publications</a>
     <a class="btn" href="{{ '/cv/' | relative_url }}">CV</a>
@@ -28,6 +29,11 @@ redirect_from:
 ## Evidence Snapshot
 
 <div class="evidence-snapshot">
+  <article class="evidence-snapshot__item">
+    <span class="evidence-snapshot__label">Research portal</span>
+    <strong><a href="{{ '/research/portal/' | relative_url }}">Live evidence dashboard</a></strong>
+    <p>PCSEL library statistics, HX1-940 sweep figures, CWT reproduction progress, COMSOL/FDTD comparison status, and DailyBrief academic radar.</p>
+  </article>
   <article class="evidence-snapshot__item">
     <span class="evidence-snapshot__label">Current role</span>
     <strong>Research Assistant at CUHK-Shenzhen</strong>

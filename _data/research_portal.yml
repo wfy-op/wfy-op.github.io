@@ -1,0 +1,149 @@
+snapshot:
+  updated: "2026-06-28"
+  scope: "Public-safe aggregate snapshot from local research artifacts."
+  boundary: "No raw Codex chats, local absolute paths, private PDFs, or unreleased simulation files are published."
+  refresh_script: "scripts/update_research_portal.py"
+kpis:
+  -
+    label: "PCSEL library records"
+    value: 482
+    note: "473 DOI-linked entries; 259 records since 2020."
+  -
+    label: "HX1-940 sweep rows"
+    value: 12
+    note: "FDTD mesh comparison across 6 hole depths."
+  -
+    label: "COMSOL reference rows"
+    value: 6
+    note: "Target-window COMSOL rows paired with the FDTD credibility report."
+  -
+    label: "CWT provenance files"
+    value: 58
+    note: "58 reproduction scripts and 76 report figures."
+  -
+    label: "DailyBrief HTML reports"
+    value: 38
+    note: "Latest local academic radar: 2026-06-28.html."
+paper_library:
+  records: 482
+  doi_count: 473
+  recent_2020_plus: 259
+  year_range: "1977-2026"
+  top_years:
+    -
+      label: "2024"
+      count: 53
+    -
+      label: "2021"
+      count: 46
+    -
+      label: "2023"
+      count: 41
+    -
+      label: "2025"
+      count: 39
+    -
+      label: "2022"
+      count: 36
+    -
+      label: "2026"
+      count: 25
+    -
+      label: "2019"
+      count: 24
+    -
+      label: "2018"
+      count: 21
+  top_groups:
+    -
+      label: "Noda Group"
+      count: 94
+    -
+      label: "Manual_Desktop_PCSEL_Intake"
+      count: 90
+    -
+      label: "NYCU PCSEL Group"
+      count: 35
+    -
+      label: "Hogg Vector Photonics Group"
+      count: 23
+    -
+      label: "High_Score_Open_Access_Context"
+      count: 14
+    -
+      label: "Zotero_NOEL_Imported_Literature"
+      count: 10
+    -
+      label: "Tong Cunzhu Group"
+      count: 9
+    -
+      label: "Zhou UTA Group"
+      count: 7
+  exported_at: "20260628-nas-full-sync-v2"
+  redistribution_allowed: false
+  year_chart: "/images/research/portal/pcsel_library_year_distribution.svg"
+hx1:
+  fdtd_rows: 12
+  comsol_rows: 6
+  depths_nm:
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+  mesh_labels:
+    - "mesh3"
+    - "mesh5"
+  fdtd_q_minmax: "55.6-47248.1"
+  fdtd_detuning_minmax_nm: "11.90-39.63"
+  comsol_q_minmax: "264039.4-99582184.1"
+  created_at: "2026-06-27T13:18:46"
+  figures:
+    -
+      src: "/images/research/portal/hx1_940_hole_depth_structure_schematic.svg"
+      alt: "HX1-940 hole-depth structure schematic"
+      caption: "Structure schematic used for the HX1-940 hole-depth sweep; quantum-well clearance remains part of the risk gate."
+    -
+      src: "/images/research/portal/hx1_940_fdtd_vs_comsol_q_by_depth.png"
+      alt: "HX1-940 Q-factor comparison by hole depth"
+      caption: "FDTD closest-mode Q and COMSOL target-window Q compared across the 100-600 nm hole-depth sweep."
+    -
+      src: "/images/research/portal/hx1_940_fdtd_vs_comsol_wavelength_by_depth.png"
+      alt: "HX1-940 wavelength comparison by hole depth"
+      caption: "FDTD and COMSOL wavelength trends expose solver-model differences rather than a final accepted device prediction."
+cwt:
+  provenance_count: 58
+  report_figures: 76
+  scripts_count: 58
+  report_exists: true
+  figures:
+    -
+      src: "/images/research/portal/cwt_fig3_7_c2d_r2_order_pair_audit.png"
+      alt: "CWT Fig. 3.7 R2 order-pair audit"
+      caption: "Computed CWT audit figure for the Fig. 3.7 C2D R2 order-pair reproduction check."
+    -
+      src: "/images/research/portal/cwt_fig4_5_table42_method_ranking_audit.png"
+      alt: "CWT Fig. 4.5 Table 4.2 method-ranking audit"
+      caption: "Computed CWT audit figure linking method-ranking checks to the reproduction report."
+  focus:
+    - "Fig. 3.5 truncation-order convergence"
+    - "Fig. 3.6 radiation constant versus filling factor"
+    - "Fig. 3.7 frequency versus filling factor"
+    - "Fig. 4.5 / Table 4.2 method-ranking checks"
+dailybrief:
+  html_count: 38
+  date_range: "2026-05-22-2026-06-28"
+  latest: "2026-06-28.html"
+  latest_title: "\u6bcf\u65e5\u7b80\u62a5 \u00b7 2026-06-28"
+  href_count: 139
+  keyword_counts:
+    PCSEL: 59
+    photon: 67
+    laser: 48
+    arxiv: 7
+    paper: 9
+    academic: 1
+  latest_topics:
+    - "\u7528\u4e8e\u81ea\u7531\u7a7a\u95f4\u5149\u901a\u4fe1\u4e2d\u5149\u675f\u64cd\u63a7\u7684\u8d85\u8868\u9762\u4e0e\u5149\u5b50\u6676\u4f53\u8868\u9762\u53d1\u5c04\u6fc0\u5149\u5668\uff08PCSEL\uff09\u7684\u5355\u7247\u96c6\u6210"
+  radar_chart: "/images/research/portal/dailybrief_academic_radar.svg"

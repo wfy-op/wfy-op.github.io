@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" role="img" aria-label="PCSEL library year distribution">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="76" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#263238">PCSEL library year distribution</text>
+<line x1="76" y1="342" x2="792" y2="342" stroke="#d8dee4" stroke-width="1"/>
+<line x1="76" y1="62" x2="76" y2="342" stroke="#d8dee4" stroke-width="1"/>
+<line x1="76" y1="342.0" x2="792" y2="342.0" stroke="#eef1f3" stroke-width="1"/>
+<text x="66" y="346.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#65737e">0</text>
+<line x1="76" y1="272.0" x2="792" y2="272.0" stroke="#eef1f3" stroke-width="1"/>
+<text x="66" y="276.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#65737e">13</text>
+<line x1="76" y1="202.0" x2="792" y2="202.0" stroke="#eef1f3" stroke-width="1"/>
+<text x="66" y="206.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#65737e">26</text>
+<line x1="76" y1="132.0" x2="792" y2="132.0" stroke="#eef1f3" stroke-width="1"/>
+<text x="66" y="136.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#65737e">40</text>
+<line x1="76" y1="62.0" x2="792" y2="62.0" stroke="#eef1f3" stroke-width="1"/>
+<text x="66" y="66.0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#65737e">53</text>
+<rect x="76.0" y="62.0" width="82.5" height="280.0" rx="3" fill="#286a6b"/>
+<text x="117.2" y="55.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">53</text>
+<text x="117.2" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 117.2 362)">2024</text>
+<rect x="166.5" y="99.0" width="82.5" height="243.0" rx="3" fill="#8a5a16"/>
+<text x="207.8" y="92.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">46</text>
+<text x="207.8" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 207.8 362)">2021</text>
+<rect x="257.0" y="125.4" width="82.5" height="216.6" rx="3" fill="#286a6b"/>
+<text x="298.2" y="118.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">41</text>
+<text x="298.2" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 298.2 362)">2023</text>
+<rect x="347.5" y="136.0" width="82.5" height="206.0" rx="3" fill="#8a5a16"/>
+<text x="388.8" y="129.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">39</text>
+<text x="388.8" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 388.8 362)">2025</text>
+<rect x="438.0" y="151.8" width="82.5" height="190.2" rx="3" fill="#286a6b"/>
+<text x="479.2" y="144.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">36</text>
+<text x="479.2" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 479.2 362)">2022</text>
+<rect x="528.5" y="209.9" width="82.5" height="132.1" rx="3" fill="#8a5a16"/>
+<text x="569.8" y="202.9" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">25</text>
+<text x="569.8" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 569.8 362)">2026</text>
+<rect x="619.0" y="215.2" width="82.5" height="126.8" rx="3" fill="#286a6b"/>
+<text x="660.2" y="208.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">24</text>
+<text x="660.2" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 660.2 362)">2019</text>
+<rect x="709.5" y="231.1" width="82.5" height="110.9" rx="3" fill="#8a5a16"/>
+<text x="750.8" y="224.1" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#263238">21</text>
+<text x="750.8" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4c5963" transform="rotate(35 750.8 362)">2018</text>
+<text x="410.0" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#65737e">Top publication years by local index count</text>
+</svg>

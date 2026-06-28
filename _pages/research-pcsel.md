@@ -5,7 +5,7 @@ permalink: /research/pcsel/
 author_profile: true
 ---
 
-<p class="research-backlink"><a href="{{ '/research/' | relative_url }}">Back to all research directions</a></p>
+<p class="research-backlink"><a href="{{ '/research/' | relative_url }}">Back to all research directions</a> · <a href="{{ '/research/portal/' | relative_url }}">Open Research Portal</a></p>
 
 <section class="research-section" markdown="1">
 ## Scientific Question
@@ -70,7 +70,7 @@ Can a GaAs PCSEL design loop jointly evaluate optical mode quality, fabrication 
   <article class="pcsel-stack-card">
     <span class="pcsel-stack-card__tag">Knowledge base</span>
     <h3>Paper Library</h3>
-    <p>A local PCSEL paper library with <strong>101</strong> structured wiki entries. It ingests literature from arXiv, Semantic Scholar, Crossref, DOAJ, and local PDFs, then turns papers into searchable design evidence.</p>
+    <p>A local PCSEL paper library with <strong>482</strong> structured records and <strong>473</strong> DOI-linked entries. It ingests multi-source literature and local full-text parsing, then turns papers into searchable design evidence.</p>
   </article>
 </div>
 </section>
@@ -247,7 +247,7 @@ In addition to simulation results, this direction produces an auditable workflow
         <ul class="workstream-card__points">
           <li><strong>Question:</strong> what has already been reported for a band, material system, geometry, or fabrication route?</li>
           <li><strong>Method:</strong> combine multi-source search, local PDF parsing, wiki pages, and topic/group metadata.</li>
-          <li><strong>Evidence:</strong> 101 structured paper entries with searchable methods, device claims, and source context.</li>
+          <li><strong>Evidence:</strong> 482 structured literature records with searchable methods, device claims, and source context.</li>
         </ul>
       </div>
     </article>
@@ -258,7 +258,7 @@ In addition to simulation results, this direction produces an auditable workflow
 ## Related Project Artifacts
 
 <div class="workstream-panel" markdown="1">
-The PCSEL work is supported by companion artifacts: **PCSELBook** for theory and method vocabulary, **codex-for-comsol-lumerical** for public COMSOL/Lumerical connection skills, **RLcode** for optimization experiments and metric-provenance audits, and a **101-entry PCSEL paper library** for literature-backed design review. I keep their public status and links on the [Projects]({{ '/projects/' | relative_url }}) page so this research page can stay focused on the device evidence chain.
+The PCSEL work is supported by companion artifacts: **PCSELBook** for theory and method vocabulary, **codex-for-comsol-lumerical** for public COMSOL/Lumerical connection skills, **RLcode** for optimization experiments and metric-provenance audits, and a **482-record PCSEL paper library** for literature-backed design review. I keep their public status and links on the [Projects]({{ '/projects/' | relative_url }}) page, while the [Research Portal]({{ '/research/portal/' | relative_url }}) exposes current aggregate statistics and selected public-safe figures.
 </div>
 </section>
 

@@ -1229,6 +1229,10 @@ details[open] > summary .disclosure-state::before {
   font-size: 1.55rem;
 }
 
+.portal-kpi-card p {
+  overflow-wrap: anywhere;
+}
+
 .portal-module__header h2 {
   font-size: 1.35rem;
 }

@@ -145,6 +145,14 @@ class FrontendContractTests(unittest.TestCase):
             with self.subTest(selector=selector):
                 self.assertIn(selector, stylesheet)
 
+    def test_long_portal_status_tokens_wrap_inside_kpi_cards(self):
+        stylesheet = read("assets/css/wfy-modern.scss")
+
+        self.assertIn(
+            ".portal-kpi-card p {\n  overflow-wrap: anywhere;",
+            stylesheet,
+        )
+
     def test_pcsel_page_contains_evidence_bounded_validation_cases(self):
         page = read("_pages/research-pcsel.md")
         required_fragments = (

@@ -1,3 +1,5 @@
 _site/
 .venv/
 tmp/
+__pycache__/
+*.pyc

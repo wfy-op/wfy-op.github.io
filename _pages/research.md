@@ -5,19 +5,6 @@ permalink: /research/
 author_profile: true
 ---
 
-<section class="home-feature">
-  <figure class="home-feature__media">
-    <img src="{{ '/images/research/portal/pcsel_library_year_distribution.svg' | relative_url }}" alt="PCSEL literature library year-distribution chart from the PCSEL evidence dashboard" loading="lazy">
-    <figcaption>PCSEL dashboard snapshot: literature coverage, HX1-940 sweep figures, CWT reproduction progress, COMSOL/FDTD comparison status, RLcomsol optimization validation, and DailyBrief academic radar.</figcaption>
-  </figure>
-  <div class="home-feature__body">
-    <span class="recent-work-card__tag">PCSEL evidence dashboard</span>
-    <h2>Research outcomes inside the PCSEL page</h2>
-    <p>The PCSEL dashboard turns local research artifacts into a public-safe view for presentations, applications, group meetings, and defense-style discussions.</p>
-    <p><a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}#pcsel-portal">Open PCSEL Dashboard</a></p>
-  </div>
-</section>
-
 <section class="research-direction-grid" aria-label="Research directions">
   <article class="research-direction-card">
     <figure class="research-direction-card__media">
@@ -25,12 +12,12 @@ author_profile: true
       <figcaption>Current focus: photonic-crystal feedback, vertical emission, and process-aware design variables.</figcaption>
     </figure>
     <div class="research-direction-card__body">
-      <span class="research-direction-card__tag">Current focus</span>
+      <span class="research-direction-card__tag">Primary research program</span>
       <h2>GaAs Photonic Crystal Surface-Emitting Lasers</h2>
-      <p>Design and simulation of 980 nm GaAs PCSELs, with full-wave modeling, process-aware risk screening, fabrication/characterization feedback, and pcsel-agent evidence tracking.</p>
+      <p>Design and simulation of 940/980 nm GaAs PCSELs, with full-wave modeling, mode-localization and convergence gates, process-aware screening, fabrication/characterization feedback, and pcsel-agent evidence tracking.</p>
       <ul>
         <li>COMSOL and Lumerical FDTD modeling</li>
-        <li>Parameter sweeps for wavelength, Q, field profile, and confinement factor</li>
+        <li>Validation cases for mode identity, boundary sensitivity, SCH design, and morphology risk</li>
         <li>QW etch-depth, DBR, fabrication tolerance, and experimental feedback gates</li>
       </ul>
       <a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}">Open PCSEL research</a>

@@ -25,10 +25,10 @@ My contribution focused on text and speech data preprocessing, pulse-encoding pi
 </section>
 
 <section class="research-section" markdown="1">
-## Training Value for Current PCSEL Work
+## Research Contribution and Method Transfer
 
 <div class="workstream-panel" markdown="1">
-This project trained a different but useful part of my current PCSEL workflow: separating device physics from task-level metrics. In the memristor work, I had to track how nonlinear device dynamics, pulse encoding, data preprocessing, MATLAB training code, and recognition metrics fit together. The same habit now helps me audit PCSEL optimization outputs, distinguish solver-derived physical metrics from proxy rewards, and document metric provenance before making device-design claims.
+The scientific contribution was to connect dynamic physical synapses with reproducible image, speech, multimodal, and spatio-temporal learning pipelines. That required nonlinear device response, pulse encoding, data preprocessing, MATLAB training code, and recognition metrics to remain distinguishable. The same provenance discipline later became useful for auditing PCSEL optimization outputs, but the memristor work stands on its own as a device-to-computing research program.
 </div>
 </section>
 

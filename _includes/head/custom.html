@@ -628,6 +628,98 @@
     line-height: 1.5;
   }
 
+  .agent-report-corpus {
+    margin: 1.25rem 0 0;
+  }
+
+  .agent-report-corpus__header {
+    max-width: 50rem;
+    margin: 0 0 0.9rem;
+  }
+
+  .agent-report-corpus__header h3 {
+    margin: 0.25rem 0 0.45rem;
+    color: var(--wfy-ink);
+    font-size: 1.12rem;
+    line-height: 1.32;
+  }
+
+  .agent-report-corpus__header p {
+    margin: 0;
+    color: #4c5963;
+    line-height: 1.58;
+  }
+
+  .agent-report-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.9rem;
+    margin: 1rem 0 0;
+  }
+
+  .agent-report-card {
+    overflow: hidden;
+    border: 1px solid #d3dde4;
+    border-radius: 6px;
+    background: #fff;
+  }
+
+  .agent-report-card__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    margin: 0;
+    border-bottom: 1px solid var(--wfy-line);
+    background: #f7f9fb;
+  }
+
+  .agent-report-card__media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+    padding: 0.35rem;
+    object-fit: contain;
+    box-sizing: border-box;
+  }
+
+  .agent-report-card__body {
+    padding: 0.9rem 0.95rem 1rem;
+  }
+
+  .agent-report-card__tag {
+    color: var(--wfy-warm);
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .agent-report-card__body h4 {
+    margin: 0.2rem 0 0.45rem;
+    color: var(--wfy-ink);
+    font-size: 1rem;
+    line-height: 1.34;
+  }
+
+  .agent-report-card__body p {
+    margin: 0;
+    color: #4c5963;
+    font-size: 0.9rem;
+    line-height: 1.52;
+  }
+
+  .agent-report-card__body p + p {
+    margin-top: 0.6rem;
+  }
+
+  .agent-report-card__meta {
+    padding-top: 0.55rem;
+    border-top: 1px solid #e3e8ed;
+    color: var(--wfy-muted) !important;
+    font-size: 0.8rem !important;
+  }
+
   .workstream-showcase {
     margin: 1.4rem 0 1.8rem;
   }
@@ -989,5 +1081,7 @@
     }
   }
 </style>
+
+<link rel="stylesheet" href="{{ base_path }}/assets/css/wfy-modern.css">
 
 <!-- end custom head snippets -->

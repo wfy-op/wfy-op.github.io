@@ -57,7 +57,7 @@ author_profile: true
   <article class="publication-card">
     <span class="publication-card__venue">Technical note · ongoing</span>
     <h3>PCSELBook: PCSEL Theory, Simulation, and Device Physics</h3>
-    <p>A ~300,000-character technical note on PCSEL electromagnetic theory, numerical methods, epitaxy, quantum-well gain, and electro-thermal-optical device modeling.</p>
+    <p>A living technical monograph connecting PCSEL electromagnetic theory, numerical methods, epitaxy, quantum-well gain, coupled device physics, and practical validation cases.</p>
     <p><a class="btn" href="https://github.com/wfy-op/PCSELbook">GitHub</a> <a class="btn" href="{{ '/posts/2026/04/pcselbook/' | relative_url }}">Project note</a></p>
   </article>
 </div>
@@ -67,6 +67,6 @@ author_profile: true
 ## Software and Research Artifacts
 
 <p>
-  Public-ready artifacts are listed on the <a href="{{ '/projects/' | relative_url }}">Projects</a> page. Private solver runs, RLcode/RLcomsol outputs, and PCSEL paper-library entries are not presented as public evidence until they are cleaned and documented.
+  Public repositories and release boundaries are listed on the <a href="{{ '/projects/' | relative_url }}">Research Software</a> page. Private solver runs, RLcode/RLcomsol outputs, and PCSEL paper-library entries are not presented as public evidence until they are cleaned and documented.
 </p>
 </section>

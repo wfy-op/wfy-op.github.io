@@ -8,6 +8,6 @@ sitemap: false
 author_profile: true
 ---
 
-The research portal has moved into the PCSEL research page:
+Evidence and progress now live inside the PCSEL research page:
 
-[Open the PCSEL evidence dashboard]({{ '/research/pcsel/' | relative_url }}#pcsel-portal)
+[Open PCSEL evidence and progress]({{ '/research/pcsel/' | relative_url }}#pcsel-portal)

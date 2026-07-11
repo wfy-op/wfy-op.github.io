@@ -11,7 +11,7 @@ author_profile: true
 ## Thin-Film LN/LT Waveguide Mode Analysis
 
 <div class="research-section__summary" markdown="1">
-From 2024.01 to 2025.06, I worked with Prof. Lei Wang at the School of Physics, Shandong University on mode analysis and phase-matching problems in thin-film lithium niobate and lithium tantalate waveguides on insulator. This project trained the simulation habits that later transferred into my PCSEL work: define geometry carefully, extract mode indices consistently, compare material platforms, and connect parameter sweeps back to physical phase-matching conditions.
+From 2024.01 to 2025.06, I worked with Prof. Lei Wang at the School of Physics, Shandong University on mode analysis and phase-matching problems in thin-film lithium niobate and lithium tantalate waveguides on insulator. The project compared how geometry and material dispersion control effective indices, confinement, and quasi-phase-matching windows across the two platforms.
 </div>
 
 <div class="highlight-grid">
@@ -24,8 +24,8 @@ From 2024.01 to 2025.06, I worked with Prof. Lei Wang at the School of Physics, 
     <p>Compared lithium niobate and lithium tantalate waveguides under quasi-phase-matching assumptions, focusing on how geometry and material dispersion shift the accessible wavelength window.</p>
   </article>
   <article class="highlight-card">
-    <h2>Transfer to PCSEL practice</h2>
-    <p>The project strengthened my habit of treating parameter sweeps as physical arguments rather than image generation: every mode plot, effective index, and phase-matching curve needs a geometry convention and a solver setting.</p>
+    <h2>Modeling discipline</h2>
+    <p>The project treated parameter sweeps as physical arguments rather than image generation: every mode plot, effective index, and phase-matching curve remained attached to a geometry convention, material model, and solver setting.</p>
   </article>
 </div>
 </section>

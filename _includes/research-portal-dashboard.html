@@ -1,16 +1,16 @@
 {% assign portal = site.data.research_portal %}
 
 <section id="pcsel-portal" class="portal-hero">
-  <p class="profile-hero__eyebrow">PCSEL research evidence dashboard</p>
-  <h1>Data-backed portal for PCSEL design, optimization, and literature evidence</h1>
-  <p class="portal-hero__lead">This dashboard folds the former Research Portal into the PCSEL research page. It keeps the public-safe evidence together: literature coverage, HX1-940 sweeps, COMSOL/FDTD comparison, RLcomsol optimization validation, CWT reproduction progress, and DailyBrief academic monitoring.</p>
+  <p class="profile-hero__eyebrow">Evidence &amp; progress</p>
+  <h1>Reproducible status for the PCSEL research program</h1>
+  <p class="portal-hero__lead">Aggregate indicators connect literature review, HX1-940 solver comparisons, optimization checks, CWT reproduction, and academic monitoring. They support research review; they are not device-performance claims.</p>
   <div class="portal-hero__meta">
     <span>Updated {{ portal.snapshot.updated }}</span>
     <span>{{ portal.snapshot.scope }}</span>
   </div>
 </section>
 
-<section class="portal-kpi-grid" aria-label="PCSEL evidence dashboard key metrics">
+<section class="portal-kpi-grid" aria-label="PCSEL evidence and progress metrics">
   {% for item in portal.kpis %}
   <article class="portal-kpi-card">
     <span>{{ item.label }}</span>
@@ -24,7 +24,7 @@
   <div class="portal-module__header">
     <span class="portal-module__eyebrow">PCSEL knowledge base</span>
     <h2>PCSEL literature library statistics</h2>
-    <p>The private literature index is exposed here as aggregate evidence only: counts, year coverage, DOI coverage, source-group coverage, and refresh status. PDFs and private metadata stay outside the public site.</p>
+    <p>The private literature workspace is exposed as aggregate review status only. Indexed records, standardized analyses, DOI coverage, and promotion state are kept separate so collection size is not mistaken for validated design knowledge.</p>
   </div>
   <div class="portal-split">
     <figure class="research-figure">
@@ -34,6 +34,8 @@
     <div class="portal-fact-panel">
       <h3>Coverage signals</h3>
       <ul class="portal-list">
+        <li>{{ portal.paper_library.standardized_analyses }} standardized analyses are available inside the indexed collection.</li>
+        <li>{{ portal.paper_library.design_priors_auto_promoted }} auto-promoted design priors; promotion status is {{ portal.paper_library.promotion_status }}.</li>
         <li>{{ portal.paper_library.recent_2020_plus }} records are from 2020 or later.</li>
         <li>PDF redistribution is {% if portal.paper_library.redistribution_allowed %}enabled{% else %}disabled{% endif %}; public pages show statistics, not PDFs.</li>
         <li>Top source groups:</li>
@@ -74,7 +76,7 @@
   <div class="portal-module__header">
     <span class="portal-module__eyebrow">COMSOL / FDTD comparison</span>
     <h2>Comparison report status</h2>
-    <p>The dashboard separates solver agreement from device claims. COMSOL rows currently provide the high-Q target-window reference; Lumerical FDTD provides a periodic-cell trend model whose wavelength detuning and Q spread still need interpretation before being used as a design conclusion.</p>
+    <p>The comparison separates solver agreement from device claims. COMSOL rows currently provide the high-Q target-window reference; Lumerical FDTD provides a periodic-cell trend model whose wavelength detuning and Q spread still need interpretation before being used as a design conclusion.</p>
   </div>
   <div class="portal-card-grid">
     <article class="highlight-card">
@@ -133,14 +135,16 @@
 <section class="portal-module" id="cwt-reproduction">
   <div class="portal-module__header">
     <span class="portal-module__eyebrow">CWT reproduction</span>
-    <h2>Reproduction progress and provenance</h2>
-    <p>The CWT work is shown as computed reproduction progress: report figures, per-result provenance, and scripts. This keeps the discussion anchored in real generated outputs rather than hand-drawn lookalikes.</p>
+    <h2>Reproduction closure, not file volume</h2>
+    <p>The current status follows the reproduction manifest item by item. A structural-parameter check has closed, most spectra/field/trend panels remain diagnostic, and strict FEM/HH power-flow evidence remains blocked.</p>
   </div>
   <div class="portal-metric-strip">
-    <span>Provenance files: {{ portal.cwt.provenance_count }}</span>
-    <span>Report figures: {{ portal.cwt.report_figures }}</span>
-    <span>Scripts: {{ portal.cwt.scripts_count }}</span>
-    <span>HTML report: {{ portal.cwt.report_exists }}</span>
+    <span>Closure items: {{ portal.cwt.item_count }}</span>
+    <span>Pass: {{ portal.cwt.pass_count }}</span>
+    <span>Diagnostic: {{ portal.cwt.diagnostic_count }}</span>
+    <span>Blocked: {{ portal.cwt.blocked_count }}</span>
+    <span>Panels: {{ portal.cwt.panel_count }}</span>
+    <span>All closed: {{ portal.cwt.all_panels_closed }}</span>
   </div>
   <div class="portal-media-grid">
     {% for figure in portal.cwt.figures %}
@@ -161,7 +165,7 @@
   <div class="portal-module__header">
     <span class="portal-module__eyebrow">DailyBrief academic radar</span>
     <h2>Daily academic monitoring snapshot</h2>
-    <p>DailyBrief turns morning monitoring into a reviewable research signal. The public dashboard reports only the local output count, latest report date, link count, and academic keyword distribution.</p>
+    <p>DailyBrief is a supporting research-intelligence feed rather than simulation evidence. This panel reports only the local output count, latest report date, link count, and academic keyword distribution.</p>
   </div>
   <div class="portal-split">
     <figure class="research-figure">

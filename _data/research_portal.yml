@@ -1,13 +1,13 @@
 snapshot:
-  updated: "2026-06-28"
+  updated: "2026-07-11"
   scope: "Public-safe aggregate snapshot from local research artifacts."
   boundary: "No raw Codex chats, local absolute paths, private PDFs, or unreleased simulation files are published."
   refresh_script: "scripts/update_research_portal.py"
 kpis:
   -
-    label: "PCSEL library records"
-    value: 482
-    note: "473 DOI-linked entries; 259 records since 2020."
+    label: "PCSEL indexed records"
+    value: 524
+    note: "102 standardized analyses; 0 auto-promoted design priors."
   -
     label: "HX1-940 sweep rows"
     value: 12
@@ -17,21 +17,24 @@ kpis:
     value: 6
     note: "Target-window COMSOL rows paired with the FDTD credibility report."
   -
-    label: "CWT provenance files"
-    value: 58
-    note: "58 reproduction scripts and 76 report figures."
+    label: "CWT closure items"
+    value: 8
+    note: "1 pass; 6 diagnostic; 1 blocked."
   -
     label: "RLcomsol reports"
     value: 69
     note: "Latest seed panel verdict: pass_three_seed_20step_smoke."
   -
     label: "DailyBrief HTML reports"
-    value: 38
-    note: "Latest local academic radar: 2026-06-28.html."
+    value: 47
+    note: "Latest local academic radar: 2026-07-09.html."
 paper_library:
-  records: 482
-  doi_count: 473
-  recent_2020_plus: 259
+  records: 524
+  doi_count: 503
+  recent_2020_plus: 272
+  standardized_analyses: 102
+  design_priors_auto_promoted: 0
+  promotion_status: "dry-run only"
   year_range: "1977-2026"
   top_years:
     -
@@ -39,51 +42,51 @@ paper_library:
       count: 53
     -
       label: "2021"
-      count: 46
+      count: 50
     -
       label: "2023"
-      count: 41
+      count: 43
+    -
+      label: "2022"
+      count: 40
     -
       label: "2025"
       count: 39
     -
-      label: "2022"
-      count: 36
-    -
       label: "2026"
-      count: 25
+      count: 26
     -
       label: "2019"
-      count: 24
+      count: 25
     -
       label: "2018"
-      count: 21
+      count: 25
   top_groups:
     -
-      label: "Noda Group"
-      count: 94
+      label: "Susumu Noda / \u91ce\u7530\u8fdb - Kyoto PCSEL lineage"
+      count: 101
     -
-      label: "Manual_Desktop_PCSEL_Intake"
+      label: "Manual desktop intake triage"
       count: 90
     -
-      label: "NYCU PCSEL Group"
-      count: 35
+      label: "NYCU/NCTU PCSEL lineage"
+      count: 42
     -
-      label: "Hogg Vector Photonics Group"
-      count: 23
+      label: "Richard Hogg / Vector Photonics lineage"
+      count: 31
     -
-      label: "High_Score_Open_Access_Context"
-      count: 14
+      label: "High_Score_Open_Access_Context - Generic PhC, metasurface, TPV, review, and AI context"
+      count: 20
     -
-      label: "Zotero_NOEL_Imported_Literature"
-      count: 10
+      label: "Graphene / ITO / LED current-spreading context"
+      count: 19
     -
-      label: "Tong Cunzhu Group"
-      count: 9
+      label: "HighScore_Context"
+      count: 17
     -
-      label: "Zhou UTA Group"
-      count: 7
-  exported_at: "20260628-nas-full-sync-v2"
+      label: "Kent D. Choquette / UIUC PC-VCSEL lineage"
+      count: 15
+  exported_at: "20260710-architecture-publication-review"
   redistribution_allowed: false
   year_chart: "/images/research/portal/pcsel_library_year_distribution.svg"
 hx1:
@@ -117,24 +120,30 @@ hx1:
       alt: "HX1-940 wavelength comparison by hole depth"
       caption: "FDTD and COMSOL wavelength trends expose solver-model differences rather than a final accepted device prediction."
 cwt:
-  provenance_count: 58
-  report_figures: 76
-  scripts_count: 58
+  provenance_count: 17
+  report_figures: 12
+  scripts_count: 1
   report_exists: true
+  item_count: 8
+  pass_count: 1
+  diagnostic_count: 6
+  blocked_count: 1
+  panel_count: 17
+  all_panels_closed: false
   figures:
     -
-      src: "/images/research/portal/cwt_fig3_7_c2d_r2_order_pair_audit.png"
-      alt: "CWT Fig. 3.7 R2 order-pair audit"
-      caption: "Computed CWT audit figure for the Fig. 3.7 C2D R2 order-pair reproduction check."
+      src: "/images/research/portal/cwt_fig2i_et_l70_delta_alpha.png"
+      alt: "Computed CWT finite-array spectrum for the ET L equals 70 case"
+      caption: "Computed finite-array spectrum used in the Fig. 2 reproduction audit; mode identity remains diagnostic until the paper-native field basis is fully closed."
     -
-      src: "/images/research/portal/cwt_fig4_5_table42_method_ranking_audit.png"
-      alt: "CWT Fig. 4.5 Table 4.2 method-ranking audit"
-      caption: "Computed CWT audit figure linking method-ranking checks to the reproduction report."
+      src: "/images/research/portal/cwt_fig5_length_dependence_sweep.png"
+      alt: "Computed CWT device-length sweep for coupled-wave mode branches"
+      caption: "Computed device-length sweep used to audit the frequency and threshold trends in Fig. 5; branch identity and strict power-flow closure remain explicit limitations."
   focus:
-    - "Fig. 3.5 truncation-order convergence"
-    - "Fig. 3.6 radiation constant versus filling factor"
-    - "Fig. 3.7 frequency versus filling factor"
-    - "Fig. 4.5 / Table 4.2 method-ranking checks"
+    - "Structure parameters: pass"
+    - "Finite spectra and field identity: diagnostic"
+    - "Far-field and length trends: diagnostic"
+    - "Strict FEM/HH power-flow closure: blocked"
 rlcomsol:
   reports_count: 69
   scripts_count: 104
@@ -157,18 +166,18 @@ rlcomsol:
       caption: "Action trajectory panel showing warmup, restart, and incumbent-refinement actions separately from final design claims."
   public_boundary: "Private COMSOL/RL project; the website exposes aggregate status and selected sanitized figures only."
 dailybrief:
-  html_count: 38
-  date_range: "2026-05-22-2026-06-28"
-  latest: "2026-06-28.html"
-  latest_title: "\u6bcf\u65e5\u7b80\u62a5 \u00b7 2026-06-28"
-  href_count: 139
+  html_count: 47
+  date_range: "2026-05-22-2026-07-09"
+  latest: "2026-07-09.html"
+  latest_title: "\u6bcf\u65e5\u7b80\u62a5 \u00b7 2026-07-09"
+  href_count: 150
   keyword_counts:
-    PCSEL: 59
-    photon: 67
-    laser: 48
-    arxiv: 7
-    paper: 9
+    PCSEL: 70
+    photon: 79
+    laser: 58
+    arxiv: 4
+    paper: 5
     academic: 1
   latest_topics:
-    - "\u7528\u4e8e\u81ea\u7531\u7a7a\u95f4\u5149\u901a\u4fe1\u4e2d\u5149\u675f\u64cd\u63a7\u7684\u8d85\u8868\u9762\u4e0e\u5149\u5b50\u6676\u4f53\u8868\u9762\u53d1\u5c04\u6fc0\u5149\u5668\uff08PCSEL\uff09\u7684\u5355\u7247\u96c6\u6210"
+    - "\u7528\u4e8e\u81ea\u7531\u7a7a\u95f4\u5149\u901a\u4fe1\u4e2d\u5149\u675f\u64cd\u63a7\u7684\u8d85\u8868\u9762\u4e0e\u5149\u5b50\u6676\u4f53\u9762\u53d1\u5c04\u6fc0\u5149\u5668\uff08PCSEL\uff09\u7684\u5355\u7247\u96c6\u6210"
   radar_chart: "/images/research/portal/dailybrief_academic_radar.svg"

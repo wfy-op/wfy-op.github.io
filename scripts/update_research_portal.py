@@ -94,6 +94,9 @@ def load_paper_library(pcsel_dir: Path | None) -> dict[str, Any]:
         "records": 0,
         "doi_count": 0,
         "recent_2020_plus": 0,
+        "standardized_analyses": 0,
+        "design_priors_auto_promoted": 0,
+        "promotion_status": "not available",
         "year_range": "not available",
         "top_years": [],
         "top_groups": [],
@@ -116,6 +119,35 @@ def load_paper_library(pcsel_dir: Path | None) -> dict[str, Any]:
     top_groups = Counter(item.get("source_group") or "Unspecified" for item in records).most_common(8)
     exported = Counter(item.get("exported_at") or "not available" for item in records).most_common(1)
 
+    standardized_analyses = 0
+    analysis_path = pcsel_dir / "knowledge" / "parsed" / "standardized_paper_analysis.json"
+    if analysis_path.exists():
+        try:
+            analysis = json.loads(analysis_path.read_text(encoding="utf-8", errors="replace"))
+            standardized_analyses = int(
+                analysis.get("paper_count") or len(analysis.get("papers", []))
+            )
+        except (json.JSONDecodeError, TypeError, ValueError):
+            standardized_analyses = 0
+
+    design_priors_auto_promoted = 0
+    promotion_status = "not available"
+    imports_root = (
+        pcsel_dir / "knowledge" / "imports" / "nas_pcsel_paper_library"
+    )
+    promotion_files = sorted(imports_root.glob("*/promotion_dry_run.json"))
+    if promotion_files:
+        try:
+            promotion = json.loads(
+                promotion_files[-1].read_text(encoding="utf-8", errors="replace")
+            )
+            design_priors_auto_promoted = int(
+                promotion.get("design_priors_auto_promoted", 0)
+            )
+            promotion_status = "dry-run only"
+        except (json.JSONDecodeError, TypeError, ValueError):
+            promotion_status = "unreadable"
+
     year_chart = write_bar_svg(
         PORTAL_IMAGE_DIR / "pcsel_library_year_distribution.svg",
         "PCSEL library year distribution",
@@ -127,6 +159,9 @@ def load_paper_library(pcsel_dir: Path | None) -> dict[str, Any]:
         "records": len(records),
         "doi_count": sum(1 for item in records if item.get("doi")),
         "recent_2020_plus": sum(1 for year in years if year >= 2020),
+        "standardized_analyses": standardized_analyses,
+        "design_priors_auto_promoted": design_priors_auto_promoted,
+        "promotion_status": promotion_status,
         "year_range": f"{min(years)}-{max(years)}" if years else "not available",
         "top_years": [{"label": str(year), "count": count} for year, count in top_years],
         "top_groups": [{"label": label, "count": count} for label, count in top_groups],
@@ -218,40 +253,76 @@ def load_cwt(cwt_dir: Path | None) -> dict[str, Any]:
         "report_figures": 0,
         "scripts_count": 0,
         "report_exists": False,
+        "item_count": 0,
+        "pass_count": 0,
+        "diagnostic_count": 0,
+        "blocked_count": 0,
+        "panel_count": 0,
+        "all_panels_closed": False,
         "figures": [],
         "focus": [],
     }
     if not cwt_dir:
         return fallback
 
-    provenance = list(cwt_dir.glob("results/*/provenance.json"))
-    assets = cwt_dir / "reports" / "assets"
-    scripts = cwt_dir / "scripts"
+    report_dirs = sorted(
+        (cwt_dir / "report").glob("oe_20_15945_full_figure_reproduction_*")
+    )
+    if not report_dirs:
+        return fallback
+
+    report_dir = report_dirs[-1]
+    manifest_path = report_dir / "manifest.json"
+    if not manifest_path.exists():
+        return fallback
+
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8", errors="replace"))
+    except json.JSONDecodeError:
+        return fallback
+
+    item_summary = manifest.get("item_closure_summary", {})
+    panel_summary = manifest.get("panel_coverage_summary", {})
+    provenance_summary = manifest.get("calculation_provenance_summary", {})
+    figures_dir = report_dir / "current_cwt_figures"
+    scripts = cwt_dir / "src" / "cwt" / "scripts"
 
     copied = [
         {
-            "src": copy_asset(assets / "fig3_7_c2d_r2_order_pair_audit.png", "cwt_fig3_7_c2d_r2_order_pair_audit.png"),
-            "alt": "CWT Fig. 3.7 R2 order-pair audit",
-            "caption": "Computed CWT audit figure for the Fig. 3.7 C2D R2 order-pair reproduction check.",
+            "src": copy_asset(
+                figures_dir / "fig2i_et_l70_delta_alpha.png",
+                "cwt_fig2i_et_l70_delta_alpha.png",
+            ),
+            "alt": "Computed CWT finite-array spectrum for the ET L equals 70 case",
+            "caption": "Computed finite-array spectrum used in the Fig. 2 reproduction audit; mode identity remains diagnostic until the paper-native field basis is fully closed.",
         },
         {
-            "src": copy_asset(assets / "fig4_5_table42_method_ranking_audit.png", "cwt_fig4_5_table42_method_ranking_audit.png"),
-            "alt": "CWT Fig. 4.5 Table 4.2 method-ranking audit",
-            "caption": "Computed CWT audit figure linking method-ranking checks to the reproduction report.",
+            "src": copy_asset(
+                figures_dir / "fig5_length_dependence_sweep.png",
+                "cwt_fig5_length_dependence_sweep.png",
+            ),
+            "alt": "Computed CWT device-length sweep for coupled-wave mode branches",
+            "caption": "Computed device-length sweep used to audit the frequency and threshold trends in Fig. 5; branch identity and strict power-flow closure remain explicit limitations.",
         },
     ]
 
     return {
-        "provenance_count": len(provenance),
-        "report_figures": len(list(assets.glob("*.png"))) if assets.exists() else 0,
+        "provenance_count": int(provenance_summary.get("panel_count", 0)),
+        "report_figures": len(list(figures_dir.glob("*.png"))) if figures_dir.exists() else 0,
         "scripts_count": len(list(scripts.glob("reproduce_*.py"))) if scripts.exists() else 0,
-        "report_exists": (cwt_dir / "reports" / "cwt_reproduction_report.html").exists(),
+        "report_exists": (report_dir / "figure_reproduction_report.html").exists(),
+        "item_count": int(item_summary.get("item_count", 0)),
+        "pass_count": int(item_summary.get("pass_count", 0)),
+        "diagnostic_count": int(item_summary.get("diagnostic_count", 0)),
+        "blocked_count": int(item_summary.get("blocked_count", 0)),
+        "panel_count": int(panel_summary.get("panel_count", 0)),
+        "all_panels_closed": bool(panel_summary.get("all_panels_closed", False)),
         "figures": [item for item in copied if item["src"]],
         "focus": [
-            "Fig. 3.5 truncation-order convergence",
-            "Fig. 3.6 radiation constant versus filling factor",
-            "Fig. 3.7 frequency versus filling factor",
-            "Fig. 4.5 / Table 4.2 method-ranking checks",
+            "Structure parameters: pass",
+            "Finite spectra and field identity: diagnostic",
+            "Far-field and length trends: diagnostic",
+            "Strict FEM/HH power-flow closure: blocked",
         ],
     }
 
@@ -461,10 +532,24 @@ def build_data() -> dict[str, Any]:
             "refresh_script": "scripts/update_research_portal.py",
         },
         "kpis": [
-            {"label": "PCSEL library records", "value": paper["records"], "note": f"{paper['doi_count']} DOI-linked entries; {paper['recent_2020_plus']} records since 2020."},
+            {
+                "label": "PCSEL indexed records",
+                "value": paper["records"],
+                "note": (
+                    f"{paper['standardized_analyses']} standardized analyses; "
+                    f"{paper['design_priors_auto_promoted']} auto-promoted design priors."
+                ),
+            },
             {"label": "HX1-940 sweep rows", "value": hx1["fdtd_rows"], "note": f"FDTD mesh comparison across {len(hx1['depths_nm'])} hole depths."},
             {"label": "COMSOL reference rows", "value": hx1["comsol_rows"], "note": "Target-window COMSOL rows paired with the FDTD credibility report."},
-            {"label": "CWT provenance files", "value": cwt["provenance_count"], "note": f"{cwt['scripts_count']} reproduction scripts and {cwt['report_figures']} report figures."},
+            {
+                "label": "CWT closure items",
+                "value": cwt["item_count"],
+                "note": (
+                    f"{cwt['pass_count']} pass; {cwt['diagnostic_count']} diagnostic; "
+                    f"{cwt['blocked_count']} blocked."
+                ),
+            },
             {"label": "RLcomsol reports", "value": rlcomsol["reports_count"], "note": f"Latest seed panel verdict: {rlcomsol['verdict']}."},
             {"label": "DailyBrief HTML reports", "value": daily["html_count"], "note": f"Latest local academic radar: {daily['latest']}."},
         ],

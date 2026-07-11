@@ -12,16 +12,16 @@ redirect_from:
   <p class="profile-hero__eyebrow">Simulation-guided photonic devices · Semiconductor lasers · Research automation</p>
   <h1>Wu Feiyang (吴飞洋)</h1>
   <p class="profile-hero__lead">
-    I build documented simulation-to-experiment workflows for semiconductor photonic devices. My current focus is GaAs PCSELs: using full-wave modeling, process constraints, and characterization feedback to decide which designs deserve further fabrication or experimental validation.
+    I develop evidence-gated workflows for semiconductor photonic devices. My current focus is GaAs PCSELs, where full-wave modeling, solver validation, process constraints, and characterization feedback are used to distinguish credible design trends from numerical false positives.
   </p>
   <div class="figure-explainer">
-    <p><strong>Research thesis:</strong> my through-line is metric provenance: turning complex device outputs into claims traceable to physical variables, solver settings, process limits, and experiments.</p>
+    <p><strong>Research thesis:</strong> automation is useful only when every result remains traceable to geometry, mode identity, solver settings, process limits, and the evidence needed for the next decision.</p>
   </div>
   <div class="profile-hero__actions">
-    <a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}#pcsel-portal">PCSEL Dashboard</a>
+    <a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}">PCSEL Research</a>
     <a class="btn" href="{{ '/research/' | relative_url }}">Research</a>
-    <a class="btn" href="{{ '/projects/' | relative_url }}">Projects</a>
     <a class="btn" href="{{ '/publications/' | relative_url }}">Publications</a>
+    <a class="btn" href="{{ '/year-archive/' | relative_url }}">Notes</a>
     <a class="btn" href="{{ '/cv/' | relative_url }}">CV</a>
   </div>
 </section>
@@ -30,9 +30,9 @@ redirect_from:
 
 <div class="evidence-snapshot">
   <article class="evidence-snapshot__item">
-    <span class="evidence-snapshot__label">Research portal</span>
-    <strong><a href="{{ '/research/pcsel/' | relative_url }}#pcsel-portal">Live PCSEL evidence dashboard</a></strong>
-    <p>PCSEL library statistics, HX1-940 sweep figures, CWT reproduction progress, COMSOL/FDTD comparison status, RLcomsol optimization validation, and DailyBrief academic radar.</p>
+    <span class="evidence-snapshot__label">Current research</span>
+    <strong><a href="{{ '/research/pcsel/' | relative_url }}#selected-validation">Selected PCSEL validation cases</a></strong>
+    <p>Mode-localization diagnostics, boundary convergence, SCH candidate rejection, fabrication-morphology screening, and a literature-to-solver reproduction ladder.</p>
   </article>
   <article class="evidence-snapshot__item">
     <span class="evidence-snapshot__label">Current role</span>
@@ -52,7 +52,7 @@ redirect_from:
   <article class="evidence-snapshot__item">
     <span class="evidence-snapshot__label">Public artifact</span>
     <strong><a href="https://github.com/wfy-op/PCSELbook">PCSELBook</a></strong>
-    <p>A ~300,000-character technical note on PCSEL theory, simulation, and device physics.</p>
+    <p>A living technical monograph connecting Maxwell/Bloch theory, CWT and full-wave methods, epitaxy, quantum-well gain, and coupled device physics.</p>
   </article>
   <article class="evidence-snapshot__item">
     <span class="evidence-snapshot__label">Device workflow</span>
@@ -128,7 +128,7 @@ redirect_from:
 <div class="highlight-grid">
   <article class="highlight-card">
     <h2>GaAs Photonic Crystal Surface-Emitting Laser</h2>
-    <p>Current core direction: 980 nm GaAs PCSEL modeling and experiment-aware design, including band/mode analysis, Q-factor and wavelength extraction, process gates, optical/electrical testing, SEM-informed feedback, and pcsel-agent automation.</p>
+    <p>Current core direction: 940/980 nm GaAs PCSEL modeling and experiment-aware design, including band/mode analysis, Q-factor and wavelength extraction, process gates, optical/electrical testing, SEM-informed feedback, and pcsel-agent automation.</p>
   </article>
   <article class="highlight-card">
     <h2>Memristor Reservoir Computing</h2>
@@ -151,6 +151,26 @@ redirect_from:
 
 2. F. Nie, H. Fang, J. Wang, L. Zhao, C. Jia, S. Ma, **F. Wu**, et al. *An Adaptive Solid-State Synapse with Bi-Directional Relaxation for Multimodal Recognition and Spatio-Temporal Learning*. Advanced Materials, 2025, 37(17): 2412006. [DOI](https://doi.org/10.1002/adma.202412006)
 
+## Recognition & Community
+
+<div class="recognition-grid">
+  <article class="recognition-item">
+    <span class="recognition-item__label">Selected awards</span>
+    <h2>National physics competition recognition</h2>
+    <p>National Second Prize in the 2023 China Undergraduate Physics Experiment Competition and the 2022 CUPT, plus a CUPT East China Regional Second Prize.</p>
+  </article>
+  <article class="recognition-item">
+    <span class="recognition-item__label">Community building</span>
+    <h2>Student-led academic exchange</h2>
+    <p>Contributed lectures to the Taishan Seminar and co-founded the SDU Physics Innovation Alliance for cross-year exchange, competition training, and outreach.</p>
+  </article>
+  <article class="recognition-item">
+    <span class="recognition-item__label">Public notes</span>
+    <h2>Long-form science communication</h2>
+    <p>Study notes and subject answers on Zhihu have accumulated 50,000+ views and 2,000+ likes/bookmarks.</p>
+  </article>
+</div>
+
 ## Useful Links
 
 <div class="link-list">
@@ -165,6 +185,6 @@ redirect_from:
 <div class="contact-panel">
   <p><strong>Name:</strong> Wu Feiyang 吴飞洋</p>
   <p><strong>Institution:</strong> School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen)</p>
-  <p><strong>E-mail:</strong> <a href="mailto:fywu2003@gmail.com">fywu2003@gmail.com</a> / <a href="mailto:wfy18350221083@outlook.com">wfy18350221083@outlook.com</a></p>
-  <p class="contact-panel__updated">Updated: 2026.06</p>
+  <p><strong>E-mail:</strong> <a href="mailto:fywu2003@gmail.com">fywu2003@gmail.com</a> / <a href="mailto:wfy18350221083@163.com">wfy18350221083@163.com</a></p>
+  <p class="contact-panel__updated">Updated: 2026.07</p>
 </div>

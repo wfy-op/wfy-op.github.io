@@ -87,7 +87,7 @@ author:
   employer         :
   pubmed           :
   googlescholar    :
-  email            : "fywu2003@gmail.com"
+  email            : "wfy18350221083@163.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -145,6 +145,9 @@ exclude:
   - log
   - node_modules
   - package.json
+  - scripts
+  - tests
+  - docs/superpowers
   - files/paper1.pdf
   - files/paper2.pdf
   - files/paper3.pdf

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" role="img" aria-label="GaAs buffer-length convergence sweep for the HX1-940 Q factor">
+<style>.axis{stroke:#64748b;stroke-width:1}.grid{stroke:#dbe3ec;stroke-width:1}.label{font:14px Arial,sans-serif;fill:#334155}.small{font:12px Arial,sans-serif;fill:#475569}.title{font:700 20px Arial,sans-serif;fill:#111827}.legend{font:13px Arial,sans-serif;fill:#1f2937}.line1{fill:none;stroke:#005f73;stroke-width:3}.line2{fill:none;stroke:#c2410c;stroke-width:3}.pt1{fill:#005f73}.pt2{fill:#c2410c}.mark{stroke:#111827;stroke-width:1.5;stroke-dasharray:5 4}</style>
+<rect x="0" y="0" width="920" height="460" fill="#ffffff"/>
+<text x="82" y="34" class="title">HX1-940 boundary audit: Q versus GaAs buffer thickness</text>
+<line x1="82" y1="384.0" x2="884" y2="384.0" class="grid"/>
+<text x="70" y="388.0" text-anchor="end" class="small">10^7.4</text>
+<line x1="82" y1="304.0" x2="884" y2="304.0" class="grid"/>
+<text x="70" y="308.0" text-anchor="end" class="small">10^7.6</text>
+<line x1="82" y1="224.0" x2="884" y2="224.0" class="grid"/>
+<text x="70" y="228.0" text-anchor="end" class="small">10^7.7</text>
+<line x1="82" y1="144.0" x2="884" y2="144.0" class="grid"/>
+<text x="70" y="148.0" text-anchor="end" class="small">10^7.8</text>
+<line x1="82" y1="64.0" x2="884" y2="64.0" class="grid"/>
+<text x="70" y="68.0" text-anchor="end" class="small">10^8.0</text>
+<line x1="82.0" y1="64" x2="82.0" y2="384" class="grid" opacity="0.45"/>
+<text x="82.0" y="416" text-anchor="middle" class="small">0.5</text>
+<line x1="196.6" y1="64" x2="196.6" y2="384" class="grid" opacity="0.45"/>
+<text x="196.6" y="416" text-anchor="middle" class="small">1</text>
+<line x1="311.1" y1="64" x2="311.1" y2="384" class="grid" opacity="0.45"/>
+<text x="311.1" y="416" text-anchor="middle" class="small">1.5</text>
+<line x1="425.7" y1="64" x2="425.7" y2="384" class="grid" opacity="0.45"/>
+<text x="425.7" y="416" text-anchor="middle" class="small">2</text>
+<line x1="540.3" y1="64" x2="540.3" y2="384" class="grid" opacity="0.45"/>
+<text x="540.3" y="416" text-anchor="middle" class="small">2.5</text>
+<line x1="654.9" y1="64" x2="654.9" y2="384" class="grid" opacity="0.45"/>
+<text x="654.9" y="416" text-anchor="middle" class="small">3</text>
+<line x1="884.0" y1="64" x2="884.0" y2="384" class="grid" opacity="0.45"/>
+<text x="884.0" y="416" text-anchor="middle" class="small">4</text>
+<line x1="82" y1="384" x2="884" y2="384" class="axis"/>
+<line x1="82" y1="64" x2="82" y2="384" class="axis"/>
+<text x="483.0" y="444" text-anchor="middle" class="label">GaAs buffer thickness (um)</text>
+<text transform="translate(24 224.0) rotate(-90)" text-anchor="middle" class="label">log10(Q)</text>
+<line x1="425.7" y1="64" x2="425.7" y2="384" class="mark"/>
+<text x="433.7" y="82" class="small">selected</text>
+<path d="M 82.0,206.1 L 196.6,313.2 L 311.1,109.4 L 425.7,123.8 L 540.3,68.9 L 654.9,195.2 L 884.0,170.6" class="line1"/>
+<path d="M 82.0,206.1 L 196.6,350.9 L 311.1,109.4 L 425.7,123.8 L 540.3,68.9 L 654.9,195.2 L 884.0,170.6" class="line2"/>
+<circle cx="82.0" cy="206.1" r="4.5" class="pt1"><title>GaAs buffer thickness (um)=0.5, all Q=5.414567e+07</title></circle>
+<circle cx="82.0" cy="206.1" r="4.5" class="pt2"><title>GaAs buffer thickness (um)=0.5, 940±1 Q=5.414567e+07</title></circle>
+<circle cx="196.6" cy="313.2" r="4.5" class="pt1"><title>GaAs buffer thickness (um)=1.0, all Q=3.409302e+07</title></circle>
+<circle cx="196.6" cy="350.9" r="4.5" class="pt2"><title>GaAs buffer thickness (um)=1.0, 940±1 Q=2.898342e+07</title></circle>
+<circle cx="311.1" cy="109.4" r="4.5" class="pt1"><title>GaAs buffer thickness (um)=1.5, all Q=8.220532e+07</title></circle>
+<circle cx="311.1" cy="109.4" r="4.5" class="pt2"><title>GaAs buffer thickness (um)=1.5, 940±1 Q=8.220532e+07</title></circle>
+<circle cx="425.7" cy="123.8" r="4.5" class="pt1"><title>GaAs buffer thickness (um)=2.0, all Q=7.725288e+07</title></circle>
+<circle cx="425.7" cy="123.8" r="4.5" class="pt2"><title>GaAs buffer thickness (um)=2.0, 940±1 Q=7.725288e+07</title></circle>
+<circle cx="540.3" cy="68.9" r="4.5" class="pt1"><title>GaAs buffer thickness (um)=2.5, all Q=9.789419e+07</title></circle>
+<circle cx="540.3" cy="68.9" r="4.5" class="pt2"><title>GaAs buffer thickness (um)=2.5, 940±1 Q=9.789419e+07</title></circle>
+<circle cx="654.9" cy="195.2" r="4.5" class="pt1"><title>GaAs buffer thickness (um)=3.0, all Q=5.676657e+07</title></circle>
+<circle cx="654.9" cy="195.2" r="4.5" class="pt2"><title>GaAs buffer thickness (um)=3.0, 940±1 Q=5.676657e+07</title></circle>
+<circle cx="884.0" cy="170.6" r="4.5" class="pt1"><title>GaAs buffer thickness (um)=4.0, all Q=6.310662e+07</title></circle>
+<circle cx="884.0" cy="170.6" r="4.5" class="pt2"><title>GaAs buffer thickness (um)=4.0, 940±1 Q=6.310662e+07</title></circle>
+<line x1="660" y1="34" x2="698" y2="34" class="line1"/><circle cx="679" cy="34" r="4" class="pt1"/><text x="706" y="39" class="legend">All-mode maximum Q</text>
+<line x1="660" y1="56" x2="698" y2="56" class="line2"/><circle cx="679" cy="56" r="4" class="pt2"/><text x="706" y="61" class="legend">940±1 nm maximum Q</text>
+</svg>

@@ -26,117 +26,113 @@ redirect_from:
   </div>
 </section>
 
-## Evidence Snapshot
+## At a Glance
 
-<div class="evidence-snapshot">
-  <article class="evidence-snapshot__item">
-    <span class="evidence-snapshot__label">Current research</span>
-    <strong><a href="{{ '/research/pcsel/' | relative_url }}#selected-validation">Selected PCSEL validation cases</a></strong>
-    <p>Mode-localization diagnostics, boundary convergence, SCH candidate rejection, fabrication-morphology screening, and a literature-to-solver reproduction ladder.</p>
+<div class="home-facts" aria-label="Profile highlights">
+  <article class="home-fact">
+    <span>Current role</span>
+    <strong>Research Assistant</strong>
+    <p>CUHK-Shenzhen · Prof. Zhaoyu Zhang</p>
   </article>
-  <article class="evidence-snapshot__item">
-    <span class="evidence-snapshot__label">Current role</span>
-    <strong>Research Assistant at CUHK-Shenzhen</strong>
-    <p>PCSEL research in the School of Science and Engineering, advised by Prof. Zhaoyu Zhang.</p>
+  <article class="home-fact">
+    <span>Primary program</span>
+    <strong>940/980 nm GaAs PCSELs</strong>
+    <p>Full-wave, process, and experiment loop</p>
   </article>
-  <article class="evidence-snapshot__item">
-    <span class="evidence-snapshot__label">Peer-reviewed papers</span>
-    <strong>2 memristor papers</strong>
-    <p>Co-authored Materials Futures 2023 and Advanced Materials 2025 work on neuromorphic devices.</p>
+  <article class="home-fact">
+    <span>Peer-reviewed work</span>
+    <strong>2 journal papers</strong>
+    <p>Materials Futures · Advanced Materials</p>
   </article>
-  <article class="evidence-snapshot__item">
-    <span class="evidence-snapshot__label">Patent application</span>
-    <strong>CN 202610820592.4 accepted</strong>
-    <p>Semiconductor-laser automated design-optimization method; CNIPA application accepted on 2026-06-08, not a granted patent.</p>
-  </article>
-  <article class="evidence-snapshot__item">
-    <span class="evidence-snapshot__label">Public artifact</span>
-    <strong><a href="https://github.com/wfy-op/PCSELbook">PCSELBook</a></strong>
-    <p>A living technical monograph connecting Maxwell/Bloch theory, CWT and full-wave methods, epitaxy, quantum-well gain, and coupled device physics.</p>
-  </article>
-  <article class="evidence-snapshot__item">
-    <span class="evidence-snapshot__label">Device workflow</span>
-    <strong>COMSOL / Lumerical / experiment loop</strong>
-    <p>Modeling, process gates, optical/electrical setup, SEM feedback, and evidence tracking.</p>
+  <article class="home-fact">
+    <span>Patent application</span>
+    <strong>CN 202610820592.4</strong>
+    <p>Accepted by CNIPA · 2026-06-08</p>
   </article>
 </div>
+
+<section id="research-programs" class="home-research" markdown="1">
+## Research Programs
+
+<div class="home-research-grid">
+  <article class="home-research-card home-research-card--primary">
+    <a class="home-research-card__media" href="{{ '/research/pcsel/' | relative_url }}">
+      <img src="{{ '/images/research/pcsel_device_concept.png' | relative_url }}" alt="GaAs PCSEL stack connecting photonic-crystal feedback with vertical emission" loading="lazy" width="1024" height="448">
+    </a>
+    <div class="home-research-card__body">
+      <span class="home-research-card__tag">Primary research program</span>
+      <h2><a href="{{ '/research/pcsel/' | relative_url }}">GaAs photonic crystal surface-emitting lasers</a></h2>
+      <p>Evidence-gated design for 940/980 nm devices, combining mode identity, boundary convergence, fabrication morphology, QW/DBR constraints, and characterization feedback.</p>
+      <p class="home-research-card__meta">COMSOL · Lumerical · pcsel-agent · experiment-aware design</p>
+    </div>
+  </article>
+
+  <article class="home-research-card">
+    <a class="home-research-card__media" href="{{ '/research/memristor/' | relative_url }}">
+      <img src="{{ '/images/research/memristor_reservoir_framework.png' | relative_url }}" alt="Memristor reservoir-computing framework linking pulse input, device state, and readout" loading="lazy" width="406" height="343">
+    </a>
+    <div class="home-research-card__body">
+      <span class="home-research-card__tag">Published device research</span>
+      <h2><a href="{{ '/research/memristor/' | relative_url }}">Memristor reservoir computing</a></h2>
+      <p>Dynamic SrTiO3 devices, pulse encoding, multimodal recognition, and spatio-temporal learning.</p>
+    </div>
+  </article>
+
+  <article class="home-research-card">
+    <a class="home-research-card__media" href="{{ '/research/waveguide/' | relative_url }}">
+      <img src="{{ '/images/research/waveguide_phase_matching_ln_lt.png' | relative_url }}" alt="LN and LT ridge-waveguide phase-matching comparison from COMSOL mode analysis" loading="lazy" width="1357" height="695">
+    </a>
+    <div class="home-research-card__body">
+      <span class="home-research-card__tag">Integrated photonics</span>
+      <h2><a href="{{ '/research/waveguide/' | relative_url }}">LN/LT waveguide mode analysis</a></h2>
+      <p>Work with Prof. Lei Wang on effective-index sweeps, material dispersion, and phase-matching windows.</p>
+    </div>
+  </article>
+</div>
+</section>
+
+## How I Work
+
+<section class="home-feature">
+  <figure class="home-feature__media">
+    <img src="{{ '/images/research/pcsel_agent_architecture.svg' | relative_url }}" alt="pcsel-agent architecture connecting literature, device constraints, solvers, and evidence reports" loading="lazy" width="1360" height="760">
+    <figcaption>pcsel-agent keeps literature priors, solver runs, process checks, and public claims connected to their source artifacts.</figcaption>
+  </figure>
+  <div class="home-feature__body">
+    <span class="home-research-card__tag">Evidence before optimization</span>
+    <h2>From a design variable to a defensible decision</h2>
+    <p>I organize PCSEL research around three gates:</p>
+    <ul class="home-feature__points">
+      <li><strong>Physics:</strong> identify the mode and test mesh, boundary, and solver sensitivity.</li>
+      <li><strong>Fabrication:</strong> check etch depth, QW clearance, morphology, mask, and material constraints.</li>
+      <li><strong>Provenance:</strong> connect every wavelength, Q, field, or optimization score to a documented run and interpretation boundary.</li>
+    </ul>
+    <a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}#selected-validation">See validation cases</a>
+  </div>
+</section>
 
 ## Research Trajectory
 
 <div class="trajectory-grid">
   <article class="trajectory-card">
     <span>2022</span>
-    <h2>Numerical physics training</h2>
-    <p>Early work with ZEUS hydrodynamic simulations and open-ended physics problems shaped my habit of understanding the physical variables before organizing the code workflow.</p>
+    <h2>Numerical physics</h2>
+    <p>ZEUS hydrodynamic simulations established a physics-first approach to variables, solvers, and numerical evidence.</p>
   </article>
   <article class="trajectory-card">
     <span>2022-2023</span>
-    <h2>Dynamic devices and data pipelines</h2>
-    <p>Memristor reservoir-computing work trained my device-to-metric discipline: separating device nonlinearity, pulse encoding, preprocessing, and task-level metrics.</p>
+    <h2>Dynamic devices</h2>
+    <p>Memristor work connected device dynamics and data processing to task-level metrics.</p>
   </article>
   <article class="trajectory-card">
     <span>2024-2025</span>
-    <h2>Integrated photonics waveguides</h2>
-    <p>LN/LT waveguide work with Prof. Lei Wang trained my COMSOL-based mode-analysis workflow: connect geometry sweeps, effective indices, and phase-matching conditions.</p>
+    <h2>Integrated photonics</h2>
+    <p>LN/LT waveguide studies developed a geometry-to-mode-to-phase-matching workflow.</p>
   </article>
   <article class="trajectory-card">
     <span>2025-Present</span>
-    <h2>PCSEL device loop</h2>
-    <p>Current work combines electromagnetic design, solver automation, fabrication support, optical/electrical characterization, and literature-backed decision making.</p>
-  </article>
-</div>
-
-## Current PCSEL Workflow
-
-<section class="home-feature">
-  <figure class="home-feature__media">
-    <img src="{{ '/images/research/pcsel_device_concept.png' | relative_url }}" alt="Schematic PCSEL stack showing how the photonic-crystal layer couples in-plane feedback to surface emission." loading="lazy" width="1024" height="448">
-    <figcaption>PCSEL concept figure: the photonic-crystal layer couples in-plane feedback to surface emission, anchoring the current device-design loop.</figcaption>
-  </figure>
-  <div class="home-feature__body">
-    <span class="recent-work-card__tag">Current focus</span>
-    <h2>From PCSEL design variables to verified device evidence</h2>
-    <p>My current work treats PCSEL research as a loop: literature priors define device questions, COMSOL/Lumerical runs extract wavelength/Q/field metrics, process checks constrain feasible structures, and optical/electrical characterization feeds back into the next design step.</p>
-  </div>
-</section>
-
-<div class="recent-work-grid">
-  <article class="recent-work-card">
-    <span class="recent-work-card__tag">pcsel-agent</span>
-    <h2>Literature, solver, and report pipeline</h2>
-    <p>Built a Python-based workflow that connects paper intake, target specifications, COMSOL/Lumerical execution, syntax memory, artifact checks, and research reports.</p>
-  </article>
-  <article class="recent-work-card">
-    <span class="recent-work-card__tag">Simulation evidence</span>
-    <h2>Parameter sweeps with physical questions</h2>
-    <p>PCSEL sweeps are organized around wavelength, Q, field profile, confinement factor, sensitivity, and process feasibility rather than isolated images.</p>
-  </article>
-  <article class="recent-work-card">
-    <span class="recent-work-card__tag">Experiment loop</span>
-    <h2>Fabrication and characterization feedback</h2>
-    <p>Optical/electrical pumping, L-I-V, spectra, beam profiles, SEM observations, ICP etch tuning, and KLayout mask checks are fed back into design decisions.</p>
-  </article>
-  <article class="recent-work-card">
-    <span class="recent-work-card__tag">Future research direction</span>
-    <h2>Next research questions</h2>
-    <p>I want to extend this workflow toward fabrication-aware inverse design, surrogate-assisted automated search, and electro-thermal-optical coupling for semiconductor photonic devices.</p>
-  </article>
-</div>
-
-## Research Highlights
-
-<div class="highlight-grid">
-  <article class="highlight-card">
-    <h2>GaAs Photonic Crystal Surface-Emitting Laser</h2>
-    <p>Current core direction: 940/980 nm GaAs PCSEL modeling and experiment-aware design, including band/mode analysis, Q-factor and wavelength extraction, process gates, optical/electrical testing, SEM-informed feedback, and pcsel-agent automation.</p>
-  </article>
-  <article class="highlight-card">
-    <h2>Memristor Reservoir Computing</h2>
-    <p>Dynamic SrTiO3-based memristors for reservoir computing, multimodal recognition, and spatio-temporal learning, with contributions to data preprocessing, MATLAB training workflows, and result visualization.</p>
-  </article>
-  <article class="highlight-card">
-    <h2>LN/LT Waveguide Mode Analysis</h2>
-    <p>Thin-film lithium niobate and lithium tantalate ridge-waveguide simulations with COMSOL, focused on geometry-dependent mode indices and phase-matching behavior.</p>
+    <h2>PCSEL research system</h2>
+    <p>Current work integrates electromagnetic design, research automation, process support, and characterization.</p>
   </article>
 </div>
 

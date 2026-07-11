@@ -39,15 +39,12 @@ class FrontendContractTests(unittest.TestCase):
         )
         self.assertIn('class="section-index"', page)
         for target in (
-            "pcsel-question",
-            "pcsel-portal",
-            "public-evidence",
+            "pcsel-overview",
             "selected-validation",
-            "pcsel-projects",
-            "pcsel-agent",
-            "device-loop",
+            "research-threads",
+            "pcsel-portal",
+            "pcsel-system",
             "next-questions",
-            "representative-figures",
         ):
             with self.subTest(target=target):
                 self.assertIn(f'href="#{target}"', page)
@@ -70,6 +67,83 @@ class FrontendContractTests(unittest.TestCase):
         self.assertIn("PCSEL Research", home)
         self.assertNotIn("PCSEL Dashboard", home)
         self.assertNotIn("~300,000-character", home)
+
+    def test_home_uses_a_compact_image_led_research_hierarchy(self):
+        home = read("_pages/about.md")
+
+        self.assertIn('class="home-facts"', home)
+        self.assertEqual(home.count('class="home-fact"'), 4)
+        self.assertIn('id="research-programs"', home)
+        self.assertIn('class="home-research-grid"', home)
+        self.assertEqual(home.count('<article class="home-research-card'), 3)
+        for image in (
+            "pcsel_device_concept.png",
+            "memristor_reservoir_framework.png",
+            "waveguide_phase_matching_ln_lt.png",
+        ):
+            with self.subTest(image=image):
+                self.assertIn(image, home)
+
+        self.assertNotIn("## Evidence Snapshot", home)
+        self.assertNotIn("## Current PCSEL Workflow", home)
+        self.assertNotIn("## Research Highlights", home)
+
+    def test_pcsel_page_uses_six_primary_sections(self):
+        page = read("_pages/research-pcsel.md")
+        rendered_sources = page + read("_includes/research-portal-dashboard.html")
+        index_start = page.index('<nav class="section-index"')
+        index_end = page.index("</nav>", index_start)
+        section_index = page[index_start:index_end]
+        expected_targets = (
+            "pcsel-overview",
+            "selected-validation",
+            "research-threads",
+            "pcsel-portal",
+            "pcsel-system",
+            "next-questions",
+        )
+
+        self.assertEqual(section_index.count('href="#'), len(expected_targets))
+        for target in expected_targets:
+            with self.subTest(target=target):
+                self.assertIn(f'href="#{target}"', section_index)
+                self.assertIn(f'id="{target}"', rendered_sources)
+
+        self.assertNotIn("## Public Evidence Map", page)
+        self.assertNotIn("## Related Project Artifacts", page)
+        self.assertNotIn("## Representative PCSEL Figures", page)
+
+    def test_pcsel_supporting_evidence_uses_disclosures(self):
+        dashboard = read("_includes/research-portal-dashboard.html")
+        page = read("_pages/research-pcsel.md")
+
+        self.assertGreaterEqual(
+            dashboard.count('<details class="evidence-disclosure"'), 4
+        )
+        for target in (
+            "pcsel-library",
+            "rlcomsol",
+            "cwt-reproduction",
+            "dailybrief-radar",
+        ):
+            with self.subTest(target=target):
+                self.assertIn(f'id="{target}"', dashboard)
+        self.assertIn('id="hx1-sweep"', dashboard)
+        self.assertIn("COMSOL / FDTD", dashboard)
+        self.assertIn('class="agent-report-disclosure"', page)
+
+    def test_hierarchy_components_have_responsive_styles(self):
+        stylesheet = read("assets/css/wfy-modern.scss")
+        for selector in (
+            ".home-facts",
+            ".home-research-grid",
+            ".home-research-card",
+            ".pcsel-program-overview",
+            ".evidence-disclosure",
+            ".agent-report-disclosure",
+        ):
+            with self.subTest(selector=selector):
+                self.assertIn(selector, stylesheet)
 
     def test_pcsel_page_contains_evidence_bounded_validation_cases(self):
         page = read("_pages/research-pcsel.md")

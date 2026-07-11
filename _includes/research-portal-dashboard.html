@@ -2,8 +2,8 @@
 
 <section id="pcsel-portal" class="portal-hero">
   <p class="profile-hero__eyebrow">Evidence &amp; progress</p>
-  <h1>Reproducible status for the PCSEL research program</h1>
-  <p class="portal-hero__lead">Aggregate indicators connect literature review, HX1-940 solver comparisons, optimization checks, CWT reproduction, and academic monitoring. They support research review; they are not device-performance claims.</p>
+  <h2>Reproducible status for the PCSEL program</h2>
+  <p class="portal-hero__lead">The visible HX1 panel is the current solver-credibility focus. Literature, optimization, reproduction, and academic-radar details remain one click away so status stays inspectable without overwhelming the research narrative.</p>
   <div class="portal-hero__meta">
     <span>Updated {{ portal.snapshot.updated }}</span>
     <span>{{ portal.snapshot.scope }}</span>
@@ -20,49 +20,20 @@
   {% endfor %}
 </section>
 
-<section class="portal-module" id="pcsel-library">
+<section class="portal-module portal-module--primary" id="hx1-sweep">
   <div class="portal-module__header">
-    <span class="portal-module__eyebrow">PCSEL knowledge base</span>
-    <h2>PCSEL literature library statistics</h2>
-    <p>The private literature workspace is exposed as aggregate review status only. Indexed records, standardized analyses, DOI coverage, and promotion state are kept separate so collection size is not mistaken for validated design knowledge.</p>
-  </div>
-  <div class="portal-split">
-    <figure class="research-figure">
-      <img src="{{ portal.paper_library.year_chart | relative_url }}" alt="PCSEL literature library year distribution chart" loading="lazy">
-      <figcaption>{{ portal.paper_library.records }} indexed records, {{ portal.paper_library.doi_count }} DOI-linked entries, year range {{ portal.paper_library.year_range }}. Snapshot: {{ portal.paper_library.exported_at }}.</figcaption>
-    </figure>
-    <div class="portal-fact-panel">
-      <h3>Coverage signals</h3>
-      <ul class="portal-list">
-        <li>{{ portal.paper_library.standardized_analyses }} standardized analyses are available inside the indexed collection.</li>
-        <li>{{ portal.paper_library.design_priors_auto_promoted }} auto-promoted design priors; promotion status is {{ portal.paper_library.promotion_status }}.</li>
-        <li>{{ portal.paper_library.recent_2020_plus }} records are from 2020 or later.</li>
-        <li>PDF redistribution is {% if portal.paper_library.redistribution_allowed %}enabled{% else %}disabled{% endif %}; public pages show statistics, not PDFs.</li>
-        <li>Top source groups:</li>
-      </ul>
-      <div class="portal-pill-row">
-        {% for group in portal.paper_library.top_groups limit:6 %}
-        <span>{{ group.label }} · {{ group.count }}</span>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="portal-module" id="hx1-sweep">
-  <div class="portal-module__header">
-    <span class="portal-module__eyebrow">HX1-940 sweep</span>
-    <h2>Hole-depth sweep figures and solver-derived metrics</h2>
-    <p>HX1-940 is presented as a credibility and comparison panel: FDTD mesh3/mesh5 runs are checked against COMSOL target-window rows, with quantum-well clearance and detuning kept visible as risk gates.</p>
+    <span class="portal-module__eyebrow">Primary solver evidence · HX1-940</span>
+    <h2>COMSOL / FDTD credibility check across hole depth</h2>
+    <p>The sweep keeps structure, QW clearance, wavelength, Q, and model identity in the same view. Agreement is not assumed: wavelength detuning and Q spread are treated as prompts for mode-tracking and boundary review.</p>
   </div>
   <div class="portal-metric-strip">
     <span>Depths: {{ portal.hx1.depths_nm | join: ", " }} nm</span>
     <span>FDTD rows: {{ portal.hx1.fdtd_rows }}</span>
     <span>COMSOL rows: {{ portal.hx1.comsol_rows }}</span>
-    <span>FDTD Q range: {{ portal.hx1.fdtd_q_minmax }}</span>
-    <span>FDTD detuning: {{ portal.hx1.fdtd_detuning_minmax_nm }} nm</span>
+    <span>FDTD Q: {{ portal.hx1.fdtd_q_minmax }}</span>
+    <span>Detuning: {{ portal.hx1.fdtd_detuning_minmax_nm }} nm</span>
   </div>
-  <div class="portal-media-grid">
+  <div class="portal-media-grid portal-media-grid--primary">
     {% for figure in portal.hx1.figures %}
     <figure class="research-figure">
       <img src="{{ figure.src | relative_url }}" alt="{{ figure.alt }}" loading="lazy">
@@ -70,124 +41,149 @@
     </figure>
     {% endfor %}
   </div>
-</section>
-
-<section class="portal-module" id="comsol-fdtd">
-  <div class="portal-module__header">
-    <span class="portal-module__eyebrow">COMSOL / FDTD comparison</span>
-    <h2>Comparison report status</h2>
-    <p>The comparison separates solver agreement from device claims. COMSOL rows currently provide the high-Q target-window reference; Lumerical FDTD provides a periodic-cell trend model whose wavelength detuning and Q spread still need interpretation before being used as a design conclusion.</p>
-  </div>
   <div class="portal-card-grid">
     <article class="highlight-card">
       <h2>COMSOL reference</h2>
-      <p>{{ portal.hx1.comsol_rows }} depth rows across 100-600 nm, with target-window Q range {{ portal.hx1.comsol_q_minmax }}.</p>
+      <p>{{ portal.hx1.comsol_rows }} target-window rows across 100-600 nm; Q range {{ portal.hx1.comsol_q_minmax }} under the documented model.</p>
     </article>
     <article class="highlight-card">
       <h2>FDTD trend model</h2>
-      <p>{{ portal.hx1.fdtd_rows }} mesh-comparison rows, mesh labels {{ portal.hx1.mesh_labels | join: " / " }}, generated {{ portal.hx1.created_at }}.</p>
+      <p>{{ portal.hx1.fdtd_rows }} rows across {{ portal.hx1.mesh_labels | join: " / " }} meshes, generated {{ portal.hx1.created_at }}.</p>
     </article>
     <article class="highlight-card">
-      <h2>Interpretation boundary</h2>
-      <p>Use this panel to discuss solver-model differences, mode tracking, and process gates; do not present it as a final laser-performance claim.</p>
+      <h2>Claim boundary</h2>
+      <p>This is solver and mode-tracking evidence, not a threshold, far-field, or fabricated-device performance result.</p>
     </article>
   </div>
 </section>
 
-<section class="portal-module" id="rlcomsol">
-  <div class="portal-module__header">
-    <span class="portal-module__eyebrow">RLcomsol</span>
-    <h2>COMSOL-backed optimization validation</h2>
-    <p>RLcomsol is the bridge between the earlier RLcode optimization sandbox and solver-backed PCSEL evidence. It tests whether candidate-search policies can stay tied to COMSOL geometry audits, mode-selection policy, accepted-score guards, and reportable run provenance.</p>
-  </div>
-  <div class="portal-metric-strip">
-    <span>Reports: {{ portal.rlcomsol.reports_count }}</span>
-    <span>Scripts: {{ portal.rlcomsol.scripts_count }}</span>
-    <span>Tests: {{ portal.rlcomsol.tests_count }}</span>
-    <span>Completed runs: {{ portal.rlcomsol.completed_runs }}</span>
-    <span>Verdict: {{ portal.rlcomsol.verdict }}</span>
-    <span>Best accepted score: {{ portal.rlcomsol.best_score }}</span>
-  </div>
-  <div class="portal-card-grid">
-    <article class="highlight-card">
-      <h2>Best smoke-panel point</h2>
-      <p>{{ portal.rlcomsol.best_seed }} step {{ portal.rlcomsol.best_step }} reached accepted score {{ portal.rlcomsol.best_score }} with Q {{ portal.rlcomsol.best_q }} under the fixed radius-guard protocol.</p>
-    </article>
-    <article class="highlight-card">
-      <h2>Interpretation boundary</h2>
-      <p>The three-seed 20-step panel is a repeatability and guard-provenance smoke check. It supports discussion of optimization stability, not a claim of global optimum discovery.</p>
-    </article>
-    <article class="highlight-card">
-      <h2>Public boundary</h2>
-      <p>{{ portal.rlcomsol.public_boundary }}</p>
-    </article>
-  </div>
-  <div class="portal-media-grid">
-    {% for figure in portal.rlcomsol.figures %}
-    <figure class="research-figure">
-      <img src="{{ figure.src | relative_url }}" alt="{{ figure.alt }}" loading="lazy">
-      <figcaption>{{ figure.caption }}</figcaption>
-    </figure>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="portal-module" id="cwt-reproduction">
-  <div class="portal-module__header">
-    <span class="portal-module__eyebrow">CWT reproduction</span>
-    <h2>Reproduction closure, not file volume</h2>
-    <p>The current status follows the reproduction manifest item by item. A structural-parameter check has closed, most spectra/field/trend panels remain diagnostic, and strict FEM/HH power-flow evidence remains blocked.</p>
-  </div>
-  <div class="portal-metric-strip">
-    <span>Closure items: {{ portal.cwt.item_count }}</span>
-    <span>Pass: {{ portal.cwt.pass_count }}</span>
-    <span>Diagnostic: {{ portal.cwt.diagnostic_count }}</span>
-    <span>Blocked: {{ portal.cwt.blocked_count }}</span>
-    <span>Panels: {{ portal.cwt.panel_count }}</span>
-    <span>All closed: {{ portal.cwt.all_panels_closed }}</span>
-  </div>
-  <div class="portal-media-grid">
-    {% for figure in portal.cwt.figures %}
-    <figure class="research-figure">
-      <img src="{{ figure.src | relative_url }}" alt="{{ figure.alt }}" loading="lazy">
-      <figcaption>{{ figure.caption }}</figcaption>
-    </figure>
-    {% endfor %}
-  </div>
-  <div class="portal-pill-row">
-    {% for item in portal.cwt.focus %}
-    <span>{{ item }}</span>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="portal-module" id="dailybrief-radar">
-  <div class="portal-module__header">
-    <span class="portal-module__eyebrow">DailyBrief academic radar</span>
-    <h2>Daily academic monitoring snapshot</h2>
-    <p>DailyBrief is a supporting research-intelligence feed rather than simulation evidence. This panel reports only the local output count, latest report date, link count, and academic keyword distribution.</p>
-  </div>
-  <div class="portal-split">
-    <figure class="research-figure">
-      <img src="{{ portal.dailybrief.radar_chart | relative_url }}" alt="DailyBrief academic radar keyword chart" loading="lazy">
-      <figcaption>{{ portal.dailybrief.html_count }} local DailyBrief HTML reports from {{ portal.dailybrief.date_range }}; latest report {{ portal.dailybrief.latest }} with {{ portal.dailybrief.href_count }} links.</figcaption>
-    </figure>
-    <div class="portal-fact-panel">
-      <h3>Latest academic topics</h3>
-      <ul class="portal-list">
-        {% if portal.dailybrief.latest_topics.size == 0 %}
-        <li>No academic keyword topic was extracted from the latest local brief.</li>
-        {% endif %}
-        {% for topic in portal.dailybrief.latest_topics %}
-        <li>{{ topic }}</li>
-        {% endfor %}
-      </ul>
+<div class="portal-disclosure-list" aria-label="Supporting PCSEL evidence">
+  <details class="evidence-disclosure" id="pcsel-library">
+    <summary>
+      <span>
+        <small>PCSEL knowledge base</small>
+        <strong>Literature library and review coverage</strong>
+      </span>
+      <span class="evidence-disclosure__metric">{{ portal.paper_library.records }} records · {{ portal.paper_library.standardized_analyses }} analyses</span>
+    </summary>
+    <div class="evidence-disclosure__body">
+      <p>Collection size, DOI coverage, standardized analyses, and promotion state are kept separate so an indexed paper is never mistaken for a validated design prior.</p>
+      <div class="portal-split">
+        <figure class="research-figure">
+          <img src="{{ portal.paper_library.year_chart | relative_url }}" alt="PCSEL literature library year distribution chart" loading="lazy">
+          <figcaption>{{ portal.paper_library.records }} indexed records, {{ portal.paper_library.doi_count }} DOI-linked entries, year range {{ portal.paper_library.year_range }}. Snapshot: {{ portal.paper_library.exported_at }}.</figcaption>
+        </figure>
+        <div class="portal-fact-panel">
+          <h3>Coverage signals</h3>
+          <ul class="portal-list">
+            <li>{{ portal.paper_library.standardized_analyses }} standardized analyses inside the indexed collection.</li>
+            <li>{{ portal.paper_library.design_priors_auto_promoted }} auto-promoted design priors; promotion status: {{ portal.paper_library.promotion_status }}.</li>
+            <li>{{ portal.paper_library.recent_2020_plus }} records from 2020 or later.</li>
+            <li>PDF redistribution is {% if portal.paper_library.redistribution_allowed %}enabled{% else %}disabled{% endif %}; the public site exposes statistics only.</li>
+          </ul>
+          <div class="portal-pill-row">
+            {% for group in portal.paper_library.top_groups limit:6 %}
+            <span>{{ group.label }} · {{ group.count }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </details>
+
+  <details class="evidence-disclosure" id="rlcomsol">
+    <summary>
+      <span>
+        <small>COMSOL-backed optimization</small>
+        <strong>RLcomsol repeatability and provenance check</strong>
+      </span>
+      <span class="evidence-disclosure__metric">{{ portal.rlcomsol.completed_runs }} runs · score {{ portal.rlcomsol.best_score }}</span>
+    </summary>
+    <div class="evidence-disclosure__body">
+      <p>RLcomsol tests whether candidate-search policies remain tied to geometry audits, mode-selection policy, accepted-score guards, and reportable run provenance.</p>
+      <div class="portal-metric-strip">
+        <span>Reports: {{ portal.rlcomsol.reports_count }}</span>
+        <span>Scripts: {{ portal.rlcomsol.scripts_count }}</span>
+        <span>Tests: {{ portal.rlcomsol.tests_count }}</span>
+        <span>Verdict: {{ portal.rlcomsol.verdict }}</span>
+        <span>Best accepted Q: {{ portal.rlcomsol.best_q }}</span>
+      </div>
+      <div class="portal-media-grid">
+        {% for figure in portal.rlcomsol.figures %}
+        <figure class="research-figure">
+          <img src="{{ figure.src | relative_url }}" alt="{{ figure.alt }}" loading="lazy">
+          <figcaption>{{ figure.caption }}</figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+      <p class="portal-interpretation"><strong>Boundary:</strong> the three-seed 20-step panel is a repeatability smoke check, not evidence of a global optimum. {{ portal.rlcomsol.public_boundary }}</p>
+    </div>
+  </details>
+
+  <details class="evidence-disclosure" id="cwt-reproduction">
+    <summary>
+      <span>
+        <small>CWT reproduction</small>
+        <strong>Item-level closure rather than file volume</strong>
+      </span>
+      <span class="evidence-disclosure__metric">{{ portal.cwt.pass_count }} pass · {{ portal.cwt.diagnostic_count }} diagnostic · {{ portal.cwt.blocked_count }} blocked</span>
+    </summary>
+    <div class="evidence-disclosure__body">
+      <p>A structural-parameter check has closed, most spectra/field/trend panels remain diagnostic, and strict FEM/HH power-flow evidence remains blocked.</p>
+      <div class="portal-metric-strip">
+        <span>Closure items: {{ portal.cwt.item_count }}</span>
+        <span>Panels: {{ portal.cwt.panel_count }}</span>
+        <span>All closed: {{ portal.cwt.all_panels_closed }}</span>
+      </div>
+      <div class="portal-media-grid">
+        {% for figure in portal.cwt.figures %}
+        <figure class="research-figure">
+          <img src="{{ figure.src | relative_url }}" alt="{{ figure.alt }}" loading="lazy">
+          <figcaption>{{ figure.caption }}</figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+      <div class="portal-pill-row">
+        {% for item in portal.cwt.focus %}
+        <span>{{ item }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </details>
+
+  <details class="evidence-disclosure" id="dailybrief-radar">
+    <summary>
+      <span>
+        <small>Research intelligence</small>
+        <strong>DailyBrief academic radar</strong>
+      </span>
+      <span class="evidence-disclosure__metric">{{ portal.dailybrief.html_count }} reports · through {{ portal.dailybrief.latest }}</span>
+    </summary>
+    <div class="evidence-disclosure__body">
+      <p>DailyBrief is a supporting literature-monitoring feed, not simulation evidence. The public module reports only output count, latest date, link count, and topic distribution.</p>
+      <div class="portal-split">
+        <figure class="research-figure">
+          <img src="{{ portal.dailybrief.radar_chart | relative_url }}" alt="DailyBrief academic radar keyword chart" loading="lazy">
+          <figcaption>{{ portal.dailybrief.html_count }} local reports from {{ portal.dailybrief.date_range }}; the latest report contains {{ portal.dailybrief.href_count }} links.</figcaption>
+        </figure>
+        <div class="portal-fact-panel">
+          <h3>Latest academic topics</h3>
+          <ul class="portal-list">
+            {% if portal.dailybrief.latest_topics.size == 0 %}
+            <li>No academic keyword topic was extracted from the latest local brief.</li>
+            {% endif %}
+            {% for topic in portal.dailybrief.latest_topics %}
+            <li>{{ topic }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </details>
+</div>
 
 <section class="portal-boundary">
-  <h2>Public boundary and refresh path</h2>
+  <h2>Public boundary</h2>
   <p>{{ portal.snapshot.boundary }}</p>
-  <p>Refresh command source: <code>{{ portal.snapshot.refresh_script }}</code>. The generated site keeps the research claims inspectable while preserving private raw artifacts.</p>
+  <p>Aggregate data are refreshed from <code>{{ portal.snapshot.refresh_script }}</code>; the site publishes inspectable status without exposing private raw artifacts.</p>
 </section>

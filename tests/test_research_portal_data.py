@@ -7,9 +7,17 @@ from unittest.mock import patch
 from scripts import update_research_portal
 
 
+ROOT = Path(__file__).resolve().parents[1]
+TEST_TMP = ROOT / "tmp"
+
+
 class ResearchPortalDataTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        TEST_TMP.mkdir(exist_ok=True)
+
     def test_paper_library_separates_indexed_analyzed_and_promoted_counts(self):
-        with TemporaryDirectory() as temp_dir:
+        with TemporaryDirectory(dir=TEST_TMP) as temp_dir:
             root = Path(temp_dir)
             parsed = root / "knowledge" / "parsed"
             parsed.mkdir(parents=True)
@@ -62,7 +70,7 @@ class ResearchPortalDataTests(unittest.TestCase):
         self.assertEqual(result["promotion_status"], "dry-run only")
 
     def test_cwt_uses_closure_manifest_instead_of_file_volume(self):
-        with TemporaryDirectory() as temp_dir:
+        with TemporaryDirectory(dir=TEST_TMP) as temp_dir:
             root = Path(temp_dir)
             report = root / "report" / "oe_20_15945_full_figure_reproduction_20260711"
             figures = report / "current_cwt_figures"

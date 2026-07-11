@@ -76,8 +76,8 @@
 - Consumes: committed source on `main`.
 - Produces: a successful GitHub Pages build and visually verified live home, Research, and PCSEL pages.
 
-- [ ] **Step 1: Run** `C:\ProgramData\anaconda3\envs\AI_group\python.exe -m unittest discover -s tests -v` and require zero failures.
-- [ ] **Step 2: Review** `git diff --check` and `git diff --stat`; stage only intended files.
-- [ ] **Step 3: Commit and push** the hierarchy update to `main` without staging unrelated `.DS_Store` or `.claude/settings.local.json` changes.
-- [ ] **Step 4: Confirm** both the final workflow and GitHub Pages deployment succeed for the pushed SHA.
-- [ ] **Step 5: Inspect** the live home and PCSEL pages at desktop and 390 px mobile widths; verify images load, disclosures work, and `scrollWidth <= clientWidth`.
+- [x] **Step 1: Run** `C:\ProgramData\anaconda3\envs\AI_group\python.exe -m unittest discover -s tests -v` and require zero failures.
+- [x] **Step 2: Review** `git diff --check` and `git diff --stat`; stage only intended files.
+- [x] **Step 3: Commit and push** the hierarchy update to `main` without staging unrelated `.DS_Store` or `.claude/settings.local.json` changes.
+- [x] **Step 4: Confirm** both the final workflow and GitHub Pages deployment succeed for the pushed SHA.
+- [x] **Step 5: Inspect** the live home and PCSEL pages at desktop and 390 px mobile widths; verify images load, disclosures work, and `scrollWidth <= clientWidth`.

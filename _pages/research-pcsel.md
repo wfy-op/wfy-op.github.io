@@ -86,7 +86,7 @@ Can a GaAs PCSEL design loop jointly evaluate optical mode quality, fabrication 
     </div>
   </article>
 
-  <article class="validation-case">
+  <article class="validation-case validation-case--wide">
     <figure class="validation-case__media">
       <img src="{{ '/images/research/validation/hx1_uniformity_morphology_screen.png' | relative_url }}" alt="HX1-940 two-dimensional surrogate comparison of critical disorder morphologies" loading="lazy" width="2048" height="724">
     </figure>

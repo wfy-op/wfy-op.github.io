@@ -102,6 +102,13 @@ class FrontendContractTests(unittest.TestCase):
             with self.subTest(image=image):
                 self.assertTrue((ROOT / "images" / "research" / "validation" / image).exists())
 
+        morphology_marker = "hx1_uniformity_morphology_screen.png"
+        morphology_image = page.index(morphology_marker)
+        morphology_article = page.rfind("<article", 0, morphology_image)
+        self.assertIn(
+            "validation-case--wide", page[morphology_article:morphology_image]
+        )
+
     def test_home_has_compact_recognition_and_community_section(self):
         home = read("_pages/about.md")
         for fragment in (

@@ -19,9 +19,6 @@ redirect_from:
   </div>
   <div class="profile-hero__actions">
     <a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}">PCSEL Research</a>
-    <a class="btn" href="{{ '/research/' | relative_url }}">Research</a>
-    <a class="btn" href="{{ '/publications/' | relative_url }}">Publications</a>
-    <a class="btn" href="{{ '/year-archive/' | relative_url }}">Notes</a>
     <a class="btn" href="{{ '/cv/' | relative_url }}">CV</a>
   </div>
 </section>

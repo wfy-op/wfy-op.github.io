@@ -33,6 +33,32 @@ class FrontendContractTests(unittest.TestCase):
             with self.subTest(fragment=fragment):
                 self.assertIn(fragment, stylesheet)
 
+    def test_editorial_layout_contract_covers_core_site_surfaces(self):
+        stylesheet = read("assets/css/wfy-modern.scss")
+        required_fragments = (
+            "--portal-content-measure",
+            ".page__content > h2",
+            ".publication-card > :not(.publication-card__venue)",
+            ".trajectory-card::before",
+            ".research-direction-card:nth-child(even) .research-direction-card__media",
+            ".archive__item-title",
+            "position: sticky",
+            "overflow-wrap: anywhere",
+        )
+        for fragment in required_fragments:
+            with self.subTest(fragment=fragment):
+                self.assertIn(fragment, stylesheet)
+
+    def test_home_hero_keeps_only_primary_navigation_actions(self):
+        home = read("_pages/about.md")
+        hero_start = home.index('<section class="profile-hero">')
+        hero_end = home.index("</section>", hero_start)
+        hero = home[hero_start:hero_end]
+
+        self.assertEqual(hero.count('class="btn'), 2)
+        self.assertIn("PCSEL Research", hero)
+        self.assertIn("CV", hero)
+
     def test_pcsel_page_has_a_complete_section_index(self):
         page = (
             read("_pages/research-pcsel.md")

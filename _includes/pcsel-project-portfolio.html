@@ -1,8 +1,8 @@
 <section id="local-projects" class="pcsel-project-portfolio" aria-labelledby="local-projects-title">
   <header class="pcsel-project-portfolio__header">
     <span class="pcsel-project-portfolio__eyebrow">Local project map · verified {{ site.data.pcsel_projects.updated }}</span>
-    <h2 id="local-projects-title">Nine projects, one PCSEL evidence chain</h2>
-    <p>Five canonical systems carry the current literature, modeling, optimization, and theory work. Four narrower repositories preserve specialist checks, diagnostic handoffs, and implementation history without blurring their evidence level.</p>
+    <h2 id="local-projects-title">Five projects, one PCSEL evidence chain</h2>
+    <p>Five canonical systems carry the current literature, modeling, optimization, and theory work, with evidence boundaries kept explicit across the workflow.</p>
   </header>
 
   <div class="pcsel-project-grid">
@@ -27,28 +27,4 @@
     {% endfor %}
   </div>
 
-  <div class="pcsel-specialist-projects">
-    <div class="pcsel-specialist-projects__heading">
-      <span>Specialist and reference systems</span>
-      <h3>Useful for a defined question, not interchangeable with the canonical stack</h3>
-    </div>
-    <div class="pcsel-specialist-projects__list">
-      {% for project in site.data.pcsel_projects.specialist %}
-      <article class="pcsel-specialist-project">
-        <figure class="pcsel-specialist-project__media">
-          <img src="{{ project.image | relative_url }}" alt="{{ project.alt }}" loading="lazy">
-        </figure>
-        <div class="pcsel-specialist-project__body">
-          <div class="pcsel-project-card__meta">
-            <span>{{ project.tier }}</span>
-            <small>{{ project.role }}</small>
-          </div>
-          <h4>{{ project.name }}</h4>
-          <p>{{ project.summary }}</p>
-          <p class="pcsel-specialist-project__boundary"><strong>Boundary:</strong> {{ project.boundary }}</p>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
 </section>

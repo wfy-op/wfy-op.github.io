@@ -129,7 +129,7 @@ class FrontendContractTests(unittest.TestCase):
         self.assertIn("pcsel-project-portfolio.html", page)
         self.assertIn('id="local-projects"', include)
         self.assertIn("site.data.pcsel_projects.core", include)
-        self.assertIn("site.data.pcsel_projects.specialist", include)
+        self.assertNotIn("site.data.pcsel_projects.specialist", include)
 
         projects = (
             "PCSEL Paper Library",
@@ -137,19 +137,21 @@ class FrontendContractTests(unittest.TestCase):
             "pcsel-cwt",
             "RLcomsol",
             "PCSELBook",
-            "RLcode0427",
-            "RLcode0427_COMSOL_holes",
-            "FDTD Validation Package",
-            "HH-3D-CWT-inppcsel",
         )
         for project in projects:
             with self.subTest(project=project):
                 self.assertIn(f'name: "{project}"', data)
 
         self.assertEqual(data.count('tier: "Canonical"'), 5)
-        for status in ("Legacy", "Specialist", "Diagnostic handoff", "Source reference"):
-            with self.subTest(status=status):
-                self.assertIn(f'tier: "{status}"', data)
+        for removed_project in (
+            "RLcode0427",
+            "RLcode0427_COMSOL_holes",
+            "FDTD Validation Package",
+            "HH-3D-CWT-inppcsel",
+        ):
+            with self.subTest(removed_project=removed_project):
+                self.assertNotIn(removed_project, data)
+                self.assertNotIn(removed_project, include)
 
         for private_path_marker in ("C:\\\\", "D:\\\\", "\\\\\\\\Z4pro"):
             with self.subTest(private_path_marker=private_path_marker):
@@ -163,7 +165,7 @@ class FrontendContractTests(unittest.TestCase):
             if stripped.startswith('image: "/'):
                 image_paths.append(stripped.removeprefix('image: "/').removesuffix('"'))
 
-        self.assertEqual(len(image_paths), 9)
+        self.assertEqual(len(image_paths), 5)
         for image_path in image_paths:
             with self.subTest(image_path=image_path):
                 self.assertTrue((ROOT / image_path).exists())

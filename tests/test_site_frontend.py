@@ -34,14 +34,17 @@ class FrontendContractTests(unittest.TestCase):
                 self.assertIn(fragment, stylesheet)
 
     def test_pcsel_page_has_a_complete_section_index(self):
-        page = read("_pages/research-pcsel.md") + read(
-            "_includes/research-portal-dashboard.html"
+        page = (
+            read("_pages/research-pcsel.md")
+            + read("_includes/pcsel-project-portfolio.html")
+            + read("_includes/research-portal-dashboard.html")
         )
         self.assertIn('class="section-index"', page)
         for target in (
             "pcsel-overview",
             "selected-validation",
             "research-threads",
+            "local-projects",
             "pcsel-portal",
             "pcsel-system",
             "next-questions",
@@ -88,9 +91,13 @@ class FrontendContractTests(unittest.TestCase):
         self.assertNotIn("## Current PCSEL Workflow", home)
         self.assertNotIn("## Research Highlights", home)
 
-    def test_pcsel_page_uses_six_primary_sections(self):
+    def test_pcsel_page_uses_seven_primary_sections(self):
         page = read("_pages/research-pcsel.md")
-        rendered_sources = page + read("_includes/research-portal-dashboard.html")
+        rendered_sources = (
+            page
+            + read("_includes/pcsel-project-portfolio.html")
+            + read("_includes/research-portal-dashboard.html")
+        )
         index_start = page.index('<nav class="section-index"')
         index_end = page.index("</nav>", index_start)
         section_index = page[index_start:index_end]
@@ -98,6 +105,7 @@ class FrontendContractTests(unittest.TestCase):
             "pcsel-overview",
             "selected-validation",
             "research-threads",
+            "local-projects",
             "pcsel-portal",
             "pcsel-system",
             "next-questions",
@@ -112,6 +120,53 @@ class FrontendContractTests(unittest.TestCase):
         self.assertNotIn("## Public Evidence Map", page)
         self.assertNotIn("## Related Project Artifacts", page)
         self.assertNotIn("## Representative PCSEL Figures", page)
+
+    def test_pcsel_local_project_map_is_complete_and_public_safe(self):
+        page = read("_pages/research-pcsel.md")
+        include = read("_includes/pcsel-project-portfolio.html")
+        data = read("_data/pcsel_projects.yml")
+
+        self.assertIn("pcsel-project-portfolio.html", page)
+        self.assertIn('id="local-projects"', include)
+        self.assertIn("site.data.pcsel_projects.core", include)
+        self.assertIn("site.data.pcsel_projects.specialist", include)
+
+        projects = (
+            "PCSEL Paper Library",
+            "pcsel-agent",
+            "pcsel-cwt",
+            "RLcomsol",
+            "PCSELBook",
+            "RLcode0427",
+            "RLcode0427_COMSOL_holes",
+            "FDTD Validation Package",
+            "HH-3D-CWT-inppcsel",
+        )
+        for project in projects:
+            with self.subTest(project=project):
+                self.assertIn(f'name: "{project}"', data)
+
+        self.assertEqual(data.count('tier: "Canonical"'), 5)
+        for status in ("Legacy", "Specialist", "Diagnostic handoff", "Source reference"):
+            with self.subTest(status=status):
+                self.assertIn(f'tier: "{status}"', data)
+
+        for private_path_marker in ("C:\\\\", "D:\\\\", "\\\\\\\\Z4pro"):
+            with self.subTest(private_path_marker=private_path_marker):
+                self.assertNotIn(private_path_marker, data)
+
+    def test_pcsel_project_map_images_exist(self):
+        data = read("_data/pcsel_projects.yml")
+        image_paths = []
+        for line in data.splitlines():
+            stripped = line.strip()
+            if stripped.startswith('image: "/'):
+                image_paths.append(stripped.removeprefix('image: "/').removesuffix('"'))
+
+        self.assertEqual(len(image_paths), 9)
+        for image_path in image_paths:
+            with self.subTest(image_path=image_path):
+                self.assertTrue((ROOT / image_path).exists())
 
     def test_pcsel_supporting_evidence_uses_disclosures(self):
         dashboard = read("_includes/research-portal-dashboard.html")
@@ -139,6 +194,8 @@ class FrontendContractTests(unittest.TestCase):
             ".home-research-grid",
             ".home-research-card",
             ".pcsel-program-overview",
+            ".pcsel-project-grid",
+            ".pcsel-project-card",
             ".evidence-disclosure",
             ".agent-report-disclosure",
         ):

@@ -69,6 +69,48 @@ class ResearchPortalDataTests(unittest.TestCase):
         self.assertEqual(result["design_priors_auto_promoted"], 0)
         self.assertEqual(result["promotion_status"], "dry-run only")
 
+    def test_nas_inventory_overrides_agent_import_count_but_keeps_analysis_count(self):
+        with TemporaryDirectory(dir=TEST_TMP) as temp_dir:
+            root = Path(temp_dir)
+            agent = root / "agent"
+            parsed = agent / "knowledge" / "parsed"
+            parsed.mkdir(parents=True)
+            (parsed / "external_paper_index.jsonl").write_text(
+                json.dumps(
+                    {
+                        "title": "Imported paper",
+                        "year": 2024,
+                        "doi": "10.1/imported",
+                        "source_group": "Imported group",
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            (parsed / "standardized_paper_analysis.json").write_text(
+                json.dumps({"paper_count": 1}), encoding="utf-8"
+            )
+
+            nas = root / "paper" / "PCSEL_PDF_Papers_by_Research_Group"
+            nas.mkdir(parents=True)
+            (nas / "INDEX.csv").write_text(
+                "title,year,doi,research_group\n"
+                "Paper A,2018,10.1/a,Group A\n"
+                "Paper B,2024,,Group B\n"
+                "Paper C,2026,10.1/c,Group C\n",
+                encoding="utf-8",
+            )
+
+            with patch.object(
+                update_research_portal, "PORTAL_IMAGE_DIR", root / "public-images"
+            ):
+                result = update_research_portal.load_paper_library(agent, root / "paper")
+
+        self.assertEqual(result["records"], 3)
+        self.assertEqual(result["doi_count"], 2)
+        self.assertEqual(result["recent_2020_plus"], 2)
+        self.assertEqual(result["standardized_analyses"], 1)
+
     def test_cwt_uses_closure_manifest_instead_of_file_volume(self):
         with TemporaryDirectory(dir=TEST_TMP) as temp_dir:
             root = Path(temp_dir)

@@ -1,12 +1,12 @@
 snapshot:
-  updated: "2026-07-11"
+  updated: "2026-08-21"
   scope: "Public-safe aggregate snapshot from local research artifacts."
   boundary: "No raw Codex chats, local absolute paths, private PDFs, or unreleased simulation files are published."
   refresh_script: "scripts/update_research_portal.py"
 kpis:
   -
     label: "PCSEL indexed records"
-    value: 524
+    value: 534
     note: "102 standardized analyses; 0 auto-promoted design priors."
   -
     label: "HX1-940 sweep rows"
@@ -29,9 +29,9 @@ kpis:
     value: 47
     note: "Latest local academic radar: 2026-07-09.html."
 paper_library:
-  records: 524
-  doi_count: 503
-  recent_2020_plus: 272
+  records: 534
+  doi_count: 513
+  recent_2020_plus: 282
   standardized_analyses: 102
   design_priors_auto_promoted: 0
   promotion_status: "dry-run only"
@@ -54,7 +54,7 @@ paper_library:
       count: 39
     -
       label: "2026"
-      count: 26
+      count: 36
     -
       label: "2019"
       count: 25
@@ -86,7 +86,7 @@ paper_library:
     -
       label: "Kent D. Choquette / UIUC PC-VCSEL lineage"
       count: 15
-  exported_at: "20260710-architecture-publication-review"
+  exported_at: "2026-08-21 local inventory sync"
   redistribution_allowed: false
   year_chart: "/images/research/portal/pcsel_library_year_distribution.svg"
 hx1:

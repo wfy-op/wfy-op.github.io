@@ -89,7 +89,9 @@ def write_bar_svg(path: Path, title: str, rows: list[tuple[str, int]], x_label: 
     return f"/images/research/portal/{path.name}"
 
 
-def load_paper_library(pcsel_dir: Path | None) -> dict[str, Any]:
+def load_paper_library(
+    pcsel_dir: Path | None, paper_nas_dir: Path | None = None
+) -> dict[str, Any]:
     fallback = {
         "records": 0,
         "doi_count": 0,
@@ -103,16 +105,46 @@ def load_paper_library(pcsel_dir: Path | None) -> dict[str, Any]:
         "exported_at": "not available",
         "redistribution_allowed": False,
     }
-    if not pcsel_dir:
-        return fallback
-    index_path = pcsel_dir / "knowledge" / "parsed" / "external_paper_index.jsonl"
-    if not index_path.exists():
+    if not pcsel_dir and not paper_nas_dir:
         return fallback
 
-    records = []
-    for line in index_path.read_text(encoding="utf-8", errors="replace").splitlines():
-        if line.strip():
-            records.append(json.loads(line))
+    records: list[dict[str, Any]] = []
+    if pcsel_dir:
+        index_path = pcsel_dir / "knowledge" / "parsed" / "external_paper_index.jsonl"
+        if index_path.exists():
+            for line in index_path.read_text(
+                encoding="utf-8", errors="replace"
+            ).splitlines():
+                if line.strip():
+                    records.append(json.loads(line))
+
+    if paper_nas_dir:
+        nas_index_candidates = (
+            paper_nas_dir / "PCSEL_PDF_Papers_by_Research_Group" / "INDEX.csv",
+            paper_nas_dir / "INDEX.csv",
+        )
+        nas_index = next(
+            (candidate for candidate in nas_index_candidates if candidate.exists()),
+            None,
+        )
+        if nas_index:
+            with nas_index.open(encoding="utf-8-sig", errors="replace", newline="") as handle:
+                nas_rows = list(csv.DictReader(handle))
+            if nas_rows:
+                records = [
+                    {
+                        "title": row.get("title", ""),
+                        "year": row.get("year", ""),
+                        "doi": row.get("doi", ""),
+                        "source_group": row.get("research_group") or "Unspecified",
+                        "exported_at": f"{datetime.fromtimestamp(nas_index.stat().st_mtime):%Y-%m-%d} local NAS inventory",
+                        "redistribution_allowed": False,
+                    }
+                    for row in nas_rows
+                ]
+
+    if not records:
+        return fallback
 
     years = [int(item["year"]) for item in records if str(item.get("year", "")).isdigit()]
     top_years = Counter(years).most_common(8)
@@ -120,8 +152,12 @@ def load_paper_library(pcsel_dir: Path | None) -> dict[str, Any]:
     exported = Counter(item.get("exported_at") or "not available" for item in records).most_common(1)
 
     standardized_analyses = 0
-    analysis_path = pcsel_dir / "knowledge" / "parsed" / "standardized_paper_analysis.json"
-    if analysis_path.exists():
+    analysis_path = (
+        pcsel_dir / "knowledge" / "parsed" / "standardized_paper_analysis.json"
+        if pcsel_dir
+        else None
+    )
+    if analysis_path and analysis_path.exists():
         try:
             analysis = json.loads(analysis_path.read_text(encoding="utf-8", errors="replace"))
             standardized_analyses = int(
@@ -132,10 +168,12 @@ def load_paper_library(pcsel_dir: Path | None) -> dict[str, Any]:
 
     design_priors_auto_promoted = 0
     promotion_status = "not available"
-    imports_root = (
-        pcsel_dir / "knowledge" / "imports" / "nas_pcsel_paper_library"
-    )
-    promotion_files = sorted(imports_root.glob("*/promotion_dry_run.json"))
+    promotion_files = []
+    if pcsel_dir:
+        imports_root = (
+            pcsel_dir / "knowledge" / "imports" / "nas_pcsel_paper_library"
+        )
+        promotion_files = sorted(imports_root.glob("*/promotion_dry_run.json"))
     if promotion_files:
         try:
             promotion = json.loads(
@@ -515,10 +553,11 @@ def yaml_dump(value: Any, indent: int = 0) -> list[str]:
 
 def build_data() -> dict[str, Any]:
     pcsel_dir = env_path("PCSEL_AGENT_DIR")
+    paper_nas_dir = env_path("PCSEL_PAPER_NAS_DIR")
     cwt_dir = env_path("CWT_REBUILD_DIR")
     rlcomsol_dir = env_path("RLCOMSOL_DIR")
 
-    paper = load_paper_library(pcsel_dir)
+    paper = load_paper_library(pcsel_dir, paper_nas_dir)
     hx1 = load_hx1(pcsel_dir)
     cwt = load_cwt(cwt_dir)
     rlcomsol = load_rlcomsol(rlcomsol_dir)

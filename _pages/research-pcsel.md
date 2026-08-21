@@ -11,6 +11,7 @@ author_profile: true
   <a href="#pcsel-overview">Overview</a>
   <a href="#selected-validation">Validation</a>
   <a href="#research-threads">Research threads</a>
+  <a href="#local-projects">Local projects</a>
   <a href="#pcsel-portal">Evidence &amp; progress</a>
   <a href="#pcsel-system">Research system</a>
   <a href="#next-questions">Next questions</a>
@@ -208,10 +209,12 @@ author_profile: true
   </div>
 </section>
 
+{% include pcsel-project-portfolio.html %}
+
 {% include research-portal-dashboard.html %}
 
 <section id="pcsel-system" class="pcsel-agent-panel" markdown="1">
-## Research System and Public Artifacts
+## Research System and Public Outputs
 
 <figure class="research-wide-figure">
   <img src="{{ '/images/research/pcsel_agent_architecture.svg' | relative_url }}" alt="Architecture diagram of pcsel-agent connecting paper library, PCSELBook, optimization, experiment feedback, solvers, evidence, and reports" loading="lazy" width="1360" height="760">
@@ -226,22 +229,6 @@ author_profile: true
 </div>
 
 <div class="pcsel-stack-grid">
-  <article class="pcsel-stack-card pcsel-stack-card--primary">
-    <span class="pcsel-stack-card__tag">Core system</span>
-    <h3>pcsel-agent</h3>
-    <p>A Python and agent workflow connecting paper intake, design briefs, COMSOL/Lumerical execution, verified syntax memory, artifact checks, and design-review reports.</p>
-  </article>
-  <article class="pcsel-stack-card">
-    <span class="pcsel-stack-card__tag">Theory backbone</span>
-    <h3>PCSELBook</h3>
-    <p>A living technical monograph spanning Maxwell/Bloch foundations, CWT and full-wave methods, epitaxy, gain, and coupled device physics.</p>
-    <a href="{{ '/posts/2026/04/pcselbook/' | relative_url }}">Read the project note</a>
-  </article>
-  <article class="pcsel-stack-card">
-    <span class="pcsel-stack-card__tag">Knowledge base</span>
-    <h3>PCSEL Paper Library</h3>
-    <p>{{ site.data.research_portal.paper_library.records }} indexed records and {{ site.data.research_portal.paper_library.standardized_analyses }} standardized analyses, with no automatic promotion into design priors.</p>
-  </article>
   <article class="pcsel-stack-card">
     <span class="pcsel-stack-card__tag">Public solver layer</span>
     <h3>codex-for-comsol-lumerical</h3>
@@ -249,10 +236,10 @@ author_profile: true
     <a href="https://github.com/wfy-op/codex-for-comsol-lumerical">Open GitHub repository</a>
   </article>
   <article class="pcsel-stack-card">
-    <span class="pcsel-stack-card__tag">Optimization layer</span>
-    <h3>RLcode and RLcomsol</h3>
-    <p>Exploration code and a COMSOL-backed bridge for testing whether candidate search remains tied to geometry, mode, score, and repeatability checks.</p>
-    <a href="#rlcomsol">Open the RLcomsol evidence module</a>
+    <span class="pcsel-stack-card__tag">Public theory notes</span>
+    <h3>PCSELBook project note</h3>
+    <p>A readable entry point to the broader Chinese technical monograph, numerical examples, and static knowledge site.</p>
+    <a href="{{ '/posts/2026/04/pcselbook/' | relative_url }}">Read the project note</a>
   </article>
   <article class="pcsel-stack-card">
     <span class="pcsel-stack-card__tag">Intellectual property</span>

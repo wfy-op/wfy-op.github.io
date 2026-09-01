@@ -29,8 +29,8 @@ Research Experience
 * **GaAs Photonic Crystal Surface-Emitting Laser (PCSEL)**, 2025.08 -- Present
   * *School of Science and Engineering, CUHK(SZ), advised by Prof. Zhaoyu Zhang*
   * **Simulation**: Built full 3D wave simulation models in Lumerical FDTD and COMSOL Multiphysics for 940/980 nm GaAs PCSEL reference structures; band analysis to identify Gamma-point slow-light modes; systematic parameter sweep of lattice constant, air-hole radius, slab thickness, active-region placement, and etch-depth constraints. Used these simulations to assess design routes toward single-mode, narrow-linewidth, and low-divergence surface emission.
-  * **Automation**: Developed pcsel-agent, a Python-based workflow for organizing literature intake, target specifications, solver runs, metric provenance, and report generation; linked Lumerical and COMSOL through Java/Python APIs; audited optimization outputs through solver-backed metrics.
-  * **Recent technical outputs**: Built finite-array vs. periodic-unit-cell COMSOL comparisons, mode-localization and boundary-convergence audits, QW/SCH process-risk gates, backside-DBR TMM screens, fabrication-morphology surrogate checks, and a searchable PCSEL literature workspace for source-linked review.
+  * **Automation and Inverse Design**: Developed pcsel-agent for literature intake, target specifications, solver runs, metric provenance, and report generation; linked Lumerical and COMSOL through Java/Python APIs; conducted a matched value-based RL study under an 83-call FDTD budget and reliability-aware Bayesian optimization of 1310 nm PCSELs with Q-fit gating.
+  * **Recent technical outputs**: Co-first-authored two 2026 PCSEL inverse-design preprints; built finite-array vs. periodic-unit-cell COMSOL comparisons, mode-localization and boundary-convergence audits, QW/SCH process-risk gates, backside-DBR TMM screens, fabrication-morphology surrogate checks, and a searchable PCSEL literature workspace for source-linked review.
   * **Characterization**: Built photoluminescence setup; optical/electrical pumping; L-I-V, spectral, and beam-profile measurement; correlated device performance with SEM-verified structures.
   * **Fabrication**: Participated in multiple optical-pump PCSEL tapeouts; ICP etching and recipe tuning; mask layout and review with KLayout; SEM analysis of etch deviation and overlay accuracy; maintained design-process-characterization correspondence tables.
   * **Project Support**: Assisted with national/provincial research-grant materials, including technical proposals, progress reports, and final-deliverable documentation.
@@ -60,9 +60,13 @@ Technical Skills
 Publications
 ======
 
-1. F. Nie, J. Wang, H. Fang, S. Ma, **F. Wu**, et al. *Ultrathin SrTiO₃-based oxide memristor with both drift and diffusive dynamics as versatile synaptic emulators for neuromorphic computing*. Materials Futures, 2023, 2(3): 035302. [DOI: 10.1088/2752-5724/ace3dc](https://doi.org/10.1088/2752-5724/ace3dc)
+1. L. Wen*, **F. Wu***, J. Yu*, C. Yuan, R. Li, and Z. Zhang. *When Every Simulation Counts: Value-Based Reinforcement Learning for Accelerated Photonics Inverse Design*. arXiv:2607.23469, 2026. Co-first author. [arXiv](https://arxiv.org/abs/2607.23469)
 
-2. F. Nie, H. Fang, J. Wang, L. Zhao, C. Jia, S. Ma, **F. Wu**, et al. *An Adaptive Solid-State Synapse with Bi-Directional Relaxation for Multimodal Recognition and Spatio-Temporal Learning*. Advanced Materials, 2025, 37(17): 2412006. [DOI: 10.1002/adma.202412006](https://doi.org/10.1002/adma.202412006)
+2. J. Yu*, **F. Wu***, L. Wen*, C. Yuan, R. Li, and Z. Zhang. *Reliability-Aware Bayesian Optimization of 1310 nm PCSELs with FDTD Verification*. arXiv:2607.21772, 2026. Co-first author. [arXiv](https://arxiv.org/abs/2607.21772)
+
+3. F. Nie, H. Fang, J. Wang, L. Zhao, C. Jia, S. Ma, **F. Wu**, et al. *An Adaptive Solid-State Synapse with Bi-Directional Relaxation for Multimodal Recognition and Spatio-Temporal Learning*. Advanced Materials, 2025, 37(17): 2412006. [DOI: 10.1002/adma.202412006](https://doi.org/10.1002/adma.202412006)
+
+4. F. Nie, J. Wang, H. Fang, S. Ma, **F. Wu**, et al. *Ultrathin SrTiO₃-based oxide memristor with both drift and diffusive dynamics as versatile synaptic emulators for neuromorphic computing*. Materials Futures, 2023, 2(3): 035302. [DOI: 10.1088/2752-5724/ace3dc](https://doi.org/10.1088/2752-5724/ace3dc)
 
 Patent Applications
 ======

@@ -12,6 +12,42 @@ author_profile: true
 {% include base_path %}
 
 <section class="research-section" markdown="1">
+## PCSEL Preprints
+
+<div class="publication-card-grid">
+  <article class="publication-card publication-card--preprint">
+    <span class="publication-card__venue">arXiv:2607.23469 · July 2026</span>
+    <h3>When Every Simulation Counts: Value-Based Reinforcement Learning for Accelerated Photonics Inverse Design</h3>
+    <p class="publication-card__authors">Longying Wen*, <strong>Feiyang Wu*</strong>, Jinglin Yu*, Chongxian Yuan, Renjie Li, and Zhaoyu Zhang</p>
+    <p><strong>Authorship:</strong> Co-first author; Longying Wen, Feiyang Wu, and Jinglin Yu contributed equally.</p>
+    <p><strong>Study:</strong> A controlled comparison of baseline DQN and six value-based variants for a seven-variable PCSEL design, using the same simulator, objective, four initializations, and 83-call FDTD budget.</p>
+    <p><strong>Result:</strong> Dueling DQN was the only tested variant to improve all four seeds. Relative to the first evaluated designs, its selected structures increased mean Q from 2.18 × 10<sup>5</sup> to 5.63 × 10<sup>6</sup>, reduced wavelength error by 64%, and increased upward power by 47%.</p>
+    <figure class="publication-card__figure">
+      <img src="{{ '/images/research/preprints/value_rl_matched_comparison.png' | relative_url }}" alt="Matched comparison table for seven value-based reinforcement-learning configurations under an 83-call FDTD budget" loading="lazy" width="1545" height="570">
+      <figcaption>Matched multi-metric comparison from Table 1. Dueling DQN leads the endpoint, efficiency, cross-seed robustness, and mean-Q columns under the shared budget.</figcaption>
+    </figure>
+    <p><strong>Evidence boundary:</strong> arXiv v1 preprint based on numerical FDTD experiments; the optimized PCSELs have not yet been fabricated or optically characterized.</p>
+    <p><a class="btn" href="https://arxiv.org/abs/2607.23469">arXiv</a> <a class="btn" href="https://arxiv.org/pdf/2607.23469">PDF</a> <a class="btn" href="https://github.com/Longying-Wen/PCSEL-RL">Code</a></p>
+  </article>
+
+  <article class="publication-card publication-card--preprint">
+    <span class="publication-card__venue">arXiv:2607.21772 · July 2026</span>
+    <h3>Reliability-Aware Bayesian Optimization of 1310 nm PCSELs with FDTD Verification</h3>
+    <p class="publication-card__authors">Jinglin Yu*, <strong>Feiyang Wu*</strong>, Longying Wen*, Chongxian Yuan, Renjie Li, and Zhaoyu Zhang</p>
+    <p><strong>Authorship:</strong> Co-first author; Jinglin Yu, Feiyang Wu, and Longying Wen contributed equally.</p>
+    <p><strong>Study:</strong> Reliability-aware Bayesian optimization over eight local design variables, with each candidate evaluated by commercial FDTD and ranked using wavelength, beam quality, and a Q-fit reliability-adjusted metric Q<sub>eff</sub>.</p>
+    <p><strong>Result:</strong> Three 80-evaluation runs each produced 5-15 joint-filter candidates. Fresh-model reconstructions retained Q<sub>eff</sub> = 4.33 × 10<sup>6</sup> to 7.76 × 10<sup>6</sup> at 1308.23-1310.90 nm with approximately 0.84° divergence.</p>
+    <figure class="publication-card__figure">
+      <img src="{{ '/images/research/preprints/bo_reliability_workflow.png' | relative_url }}" alt="Reliability-aware PCSEL candidate-selection workflow linking scripted offsets to resonance, Q-fit reliability, and far-field divergence" loading="lazy" width="1611" height="420">
+      <figcaption>Physical map from Fig. 2. Candidate selection couples resonance placement, Q-fit reliability, and far-field width instead of maximizing raw Q alone.</figcaption>
+    </figure>
+    <p><strong>Evidence boundary:</strong> arXiv v1 preprint reporting reconstructed full-wave simulations; the results are a verified numerical candidate pool, not measured laser performance.</p>
+    <p><a class="btn" href="https://arxiv.org/abs/2607.21772">arXiv</a> <a class="btn" href="https://arxiv.org/pdf/2607.21772">PDF</a></p>
+  </article>
+</div>
+</section>
+
+<section class="research-section" markdown="1">
 ## Journal Articles
 
 <div class="publication-card-grid">

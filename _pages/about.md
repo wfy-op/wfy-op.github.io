@@ -37,9 +37,9 @@ redirect_from:
     <p>Full-wave, process, and experiment loop</p>
   </article>
   <article class="home-fact">
-    <span>Peer-reviewed work</span>
-    <strong>2 journal papers</strong>
-    <p>Materials Futures · Advanced Materials</p>
+    <span>Research outputs</span>
+    <strong>2 journal papers + 2 preprints</strong>
+    <p>Memristor devices · PCSEL inverse design</p>
   </article>
   <article class="home-fact">
     <span>Patent application</span>
@@ -140,9 +140,13 @@ redirect_from:
 
 ## Selected Publications
 
-1. F. Nie, J. Wang, H. Fang, S. Ma, **F. Wu**, et al. *Ultrathin SrTiO₃-based oxide memristor with both drift and diffusive dynamics as versatile synaptic emulators for neuromorphic computing*. Materials Futures, 2023, 2(3): 035302. [DOI](https://doi.org/10.1088/2752-5724/ace3dc)
+1. L. Wen*, **F. Wu***, J. Yu*, C. Yuan, R. Li, and Z. Zhang. *When Every Simulation Counts: Value-Based Reinforcement Learning for Accelerated Photonics Inverse Design*. arXiv:2607.23469, 2026. Co-first author. [arXiv](https://arxiv.org/abs/2607.23469)
 
-2. F. Nie, H. Fang, J. Wang, L. Zhao, C. Jia, S. Ma, **F. Wu**, et al. *An Adaptive Solid-State Synapse with Bi-Directional Relaxation for Multimodal Recognition and Spatio-Temporal Learning*. Advanced Materials, 2025, 37(17): 2412006. [DOI](https://doi.org/10.1002/adma.202412006)
+2. J. Yu*, **F. Wu***, L. Wen*, C. Yuan, R. Li, and Z. Zhang. *Reliability-Aware Bayesian Optimization of 1310 nm PCSELs with FDTD Verification*. arXiv:2607.21772, 2026. Co-first author. [arXiv](https://arxiv.org/abs/2607.21772)
+
+3. F. Nie, H. Fang, J. Wang, L. Zhao, C. Jia, S. Ma, **F. Wu**, et al. *An Adaptive Solid-State Synapse with Bi-Directional Relaxation for Multimodal Recognition and Spatio-Temporal Learning*. Advanced Materials, 2025, 37(17): 2412006. [DOI](https://doi.org/10.1002/adma.202412006)
+
+4. F. Nie, J. Wang, H. Fang, S. Ma, **F. Wu**, et al. *Ultrathin SrTiO₃-based oxide memristor with both drift and diffusive dynamics as versatile synaptic emulators for neuromorphic computing*. Materials Futures, 2023, 2(3): 035302. [DOI](https://doi.org/10.1088/2752-5724/ace3dc)
 
 ## Recognition & Community
 

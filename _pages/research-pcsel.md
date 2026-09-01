@@ -188,9 +188,11 @@ author_profile: true
       </figure>
       <div class="workstream-card__body">
         <span class="workstream-card__tag">Optimization trust</span>
-        <h3>From RLcode experiments to RLcomsol validation</h3>
-        <p>RLcode is the exploration sandbox; RLcomsol connects candidate search to geometry checks, mode-selection policy, accepted-score guards, and multi-seed COMSOL smoke panels.</p>
-        <p><strong>Decision evidence:</strong> solver-derived metrics, action history, repeatability, constraint status, and bounded optimization claims.</p>
+        <h3>Simulation-budget-aware inverse design</h3>
+        <p>RLcode and the wider solver workflow now support two complementary 2026 preprints: a matched 83-call comparison of seven value-based RL configurations, and reliability-aware Bayesian optimization of a 1310 nm PCSEL under repeated 80-evaluation budgets.</p>
+        <p><strong>Decision evidence:</strong> Dueling DQN was the only tested RL variant to improve all four matched seeds; the BO study retained independently reconstructed candidates only after wavelength, beam-divergence, and Q-fit reliability checks.</p>
+        <p><a href="https://arxiv.org/abs/2607.23469">Value-based RL preprint</a> · <a href="https://arxiv.org/abs/2607.21772">Reliability-aware BO preprint</a></p>
+        <p><strong>Boundary:</strong> both studies report full-wave simulation evidence, not fabricated-device performance.</p>
       </div>
     </article>
 

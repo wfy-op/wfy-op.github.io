@@ -299,6 +299,34 @@ class FrontendContractTests(unittest.TestCase):
         config = read("_config.yml")
         self.assertIn('email            : "wfy18350221083@163.com"', config)
 
+    def test_pcsel_preprints_are_source_linked_and_evidence_bounded(self):
+        publications = read("_pages/publications.md")
+        pcsel = read("_pages/research-pcsel.md")
+        home = read("_pages/about.md")
+        cv = read("_pages/cv.md")
+
+        for arxiv_id in ("2607.23469", "2607.21772"):
+            with self.subTest(arxiv_id=arxiv_id):
+                self.assertIn(arxiv_id, publications)
+                self.assertIn(arxiv_id, pcsel)
+                self.assertIn(arxiv_id, home)
+                self.assertIn(arxiv_id, cv)
+
+        self.assertEqual(publications.count("Co-first author"), 2)
+        self.assertIn("have not yet been fabricated", publications)
+        self.assertIn("not measured laser performance", publications)
+        self.assertIn("2 journal papers + 2 preprints", home)
+
+    def test_pcsel_preprint_figures_exist(self):
+        for image in (
+            "value_rl_matched_comparison.png",
+            "bo_reliability_workflow.png",
+        ):
+            with self.subTest(image=image):
+                self.assertTrue(
+                    (ROOT / "images" / "research" / "preprints" / image).exists()
+                )
+
     def test_internal_build_files_are_excluded_from_public_site(self):
         config = read("_config.yml")
         for path in ("scripts", "tests", "docs/superpowers"):

@@ -14,12 +14,8 @@ author_profile: true
     <div class="research-direction-card__body">
       <span class="research-direction-card__tag">Primary research program</span>
       <h2>GaAs Photonic Crystal Surface-Emitting Lasers</h2>
-      <p>Design and simulation of 940/980 nm GaAs PCSELs, with full-wave modeling, mode-localization and convergence gates, process-aware screening, fabrication/characterization feedback, and pcsel-agent evidence tracking.</p>
-      <ul>
-        <li>COMSOL and Lumerical FDTD modeling</li>
-        <li>Validation cases for mode identity, boundary sensitivity, SCH design, and morphology risk</li>
-        <li>QW etch-depth, DBR, fabrication tolerance, and experimental feedback gates</li>
-      </ul>
+      <p>Design and simulation of 940/980 nm GaAs PCSELs, integrating full-wave validation, process-aware screening, inverse design, and pcsel-agent evidence tracking.</p>
+      <p class="research-direction-card__meta">Mode identity · COMSOL/FDTD · QW/DBR · fabrication feedback</p>
       <a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}">Open PCSEL research</a>
     </div>
   </article>
@@ -32,12 +28,8 @@ author_profile: true
     <div class="research-direction-card__body">
       <span class="research-direction-card__tag">Earlier device-to-metric training</span>
       <h2>Memristor-Based Reservoir Computing</h2>
-      <p>Work on dynamic SrTiO3-based memristors for neuromorphic computing, multimodal recognition, and spatio-temporal learning, connecting device dynamics, pulse encoding, and task-level performance.</p>
-      <ul>
-        <li>Pulse encoding for image and audio tasks</li>
-        <li>MATLAB RC/ANN workflow implementation</li>
-        <li>Co-authored Materials Futures 2023 and Advanced Materials 2025 papers</li>
-      </ul>
+      <p>Dynamic SrTiO3-based memristors for neuromorphic computing, connecting pulse encoding and device relaxation to multimodal and spatio-temporal learning.</p>
+      <p class="research-direction-card__meta">Materials Futures 2023 · Advanced Materials 2025</p>
       <a class="btn btn--primary" href="{{ '/research/memristor/' | relative_url }}">Open memristor research</a>
     </div>
   </article>
@@ -50,55 +42,19 @@ author_profile: true
     <div class="research-direction-card__body">
       <span class="research-direction-card__tag">Integrated photonics training</span>
       <h2>LN/LT Waveguide Mode Analysis</h2>
-      <p>COMSOL-based work on thin-film lithium niobate and lithium tantalate ridge waveguides, comparing geometry-dependent effective indices and phase-matching behavior.</p>
-      <ul>
-        <li>Ridge-waveguide mode analysis and geometry sweeps</li>
-        <li>LN/LT material-platform comparison for phase matching</li>
-        <li>Simulation discipline transferred into later PCSEL modeling</li>
-      </ul>
+      <p>COMSOL-based thin-film lithium niobate and lithium tantalate ridge-waveguide studies, comparing geometry-dependent effective indices and phase-matching windows.</p>
+      <p class="research-direction-card__meta">Mode analysis · geometry sweeps · material dispersion</p>
       <a class="btn btn--primary" href="{{ '/research/waveguide/' | relative_url }}">Open waveguide research</a>
     </div>
   </article>
 </section>
 
 <section class="research-section" markdown="1">
-## Current Research Questions
+## Research Throughline
 
-<div class="highlight-grid">
-  <article class="highlight-card">
-    <h2>How can fabrication tolerance enter design directly?</h2>
-    <p>I want PCSEL optimization to include etch-depth limits, SEM-observed deviations, mask/layout constraints, and QW clearance before treating a design as a candidate for fabrication or experimental validation.</p>
-  </article>
-  <article class="highlight-card">
-    <h2>How can automated search remain physically interpretable?</h2>
-    <p>The goal is not just faster sweeps, but solver-backed optimization with clear metric provenance: wavelength, Q, mode identity, confinement, process risk, and convergence history.</p>
-  </article>
-  <article class="highlight-card">
-    <h2>How can experiments close the simulation loop?</h2>
-    <p>Optical/electrical pumping, L-I-V, spectra, beam profiles, SEM, ICP process tuning, and KLayout review should feed back into the next device model rather than remain separate records.</p>
-  </article>
-</div>
-</section>
-
-<section class="research-section" markdown="1">
-## Method Transfer
-
-<div class="highlight-grid">
-  <article class="highlight-card">
-    <h2>From numerical models to device variables</h2>
-    <p>Early numerical-physics training taught me to identify the physical variables first, then choose the solver, mesh, parameter sweep, and metric extraction strategy.</p>
-  </article>
-  <article class="highlight-card">
-    <h2>From device dynamics to task-level evidence</h2>
-    <p>Memristor work connected nonlinear device behavior to image, audio, multimodal recognition, and spatio-temporal learning tasks, making metric provenance and data processing part of the research question.</p>
-  </article>
-  <article class="highlight-card">
-    <h2>From waveguide modes to phase matching</h2>
-    <p>LN/LT waveguide work with Prof. Lei Wang trained my integrated-photonics simulation workflow: connect geometry sweeps, effective indices, material dispersion, and phase-matching windows.</p>
-  </article>
-  <article class="highlight-card">
-    <h2>From PCSEL simulation to research automation</h2>
-    <p>Current PCSEL work combines literature priors, COMSOL/Lumerical runs, process gates, optical/electrical tests, SEM feedback, and source-linked reporting into a documented workflow.</p>
-  </article>
+<div class="research-throughline">
+  <article><span>01</span><h2>Establish model credibility</h2><p>Identify the physical variable and mode first, then test solver, mesh, boundary, and metric sensitivity.</p></article>
+  <article><span>02</span><h2>Bring constraints into the model</h2><p>Translate material dispersion, device dynamics, etch windows, morphology, and mask limits into measurable design gates.</p></article>
+  <article><span>03</span><h2>Close the evidence loop</h2><p>Connect simulation outputs to task metrics, fabrication observations, and characterization data without losing provenance.</p></article>
 </div>
 </section>

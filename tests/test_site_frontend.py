@@ -117,6 +117,43 @@ class FrontendContractTests(unittest.TestCase):
         self.assertNotIn("## Current PCSEL Workflow", home)
         self.assertNotIn("## Research Highlights", home)
 
+    def test_home_removes_repeated_cv_and_workflow_sections(self):
+        home = read("_pages/about.md")
+
+        for fragment in (
+            "## Selected Outputs",
+            "## Research Approach",
+            'class="home-output-list"',
+            'class="home-community-strip"',
+        ):
+            with self.subTest(fragment=fragment):
+                self.assertIn(fragment, home)
+
+        for removed_section in (
+            "## How I Work",
+            "## Research Trajectory",
+            "## Education",
+            "## Useful Links",
+        ):
+            with self.subTest(removed_section=removed_section):
+                self.assertNotIn(removed_section, home)
+
+    def test_research_index_is_a_concise_three_direction_map(self):
+        research = read("_pages/research.md")
+
+        self.assertEqual(research.count('<article class="research-direction-card">'), 3)
+        self.assertIn("## Research Throughline", research)
+        self.assertIn('class="research-throughline"', research)
+        self.assertNotIn("## Method Transfer", research)
+        self.assertNotIn("## Current Research Questions", research)
+
+    def test_preprint_details_use_progressive_disclosure(self):
+        publications = read("_pages/publications.md")
+
+        self.assertEqual(publications.count('<details class="publication-detail">'), 2)
+        self.assertEqual(publications.count("Result and evidence boundary"), 2)
+        self.assertNotIn("## Software and Research Artifacts", publications)
+
     def test_pcsel_page_uses_seven_primary_sections(self):
         page = read("_pages/research-pcsel.md")
         rendered_sources = (

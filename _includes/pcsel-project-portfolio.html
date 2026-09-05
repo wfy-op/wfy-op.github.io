@@ -18,10 +18,13 @@
         </div>
         <h3>{{ project.name }}</h3>
         <p>{{ project.summary }}</p>
-        <dl>
-          <div><dt>Current evidence</dt><dd>{{ project.evidence }}</dd></div>
-          <div><dt>Claim boundary</dt><dd>{{ project.boundary }}</dd></div>
-        </dl>
+        <details class="pcsel-project-card__detail">
+          <summary>Evidence and claim boundary</summary>
+          <dl>
+            <div><dt>Current evidence</dt><dd>{{ project.evidence }}</dd></div>
+            <div><dt>Claim boundary</dt><dd>{{ project.boundary }}</dd></div>
+          </dl>
+        </details>
       </div>
     </article>
     {% endfor %}

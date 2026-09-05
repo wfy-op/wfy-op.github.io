@@ -12,11 +12,8 @@ redirect_from:
   <p class="profile-hero__eyebrow">Simulation-guided photonic devices · Semiconductor lasers · Research automation</p>
   <h1>Wu Feiyang (吴飞洋)</h1>
   <p class="profile-hero__lead">
-    I develop evidence-gated workflows for semiconductor photonic devices. My current focus is GaAs PCSELs, where full-wave modeling, solver validation, process constraints, and characterization feedback are used to distinguish credible design trends from numerical false positives.
+    I develop simulation-guided semiconductor photonic devices. My current work centers on GaAs PCSELs and traceable workflows that connect full-wave modeling, fabrication constraints, and experimental feedback.
   </p>
-  <div class="figure-explainer">
-    <p><strong>Research thesis:</strong> automation is useful only when every result remains traceable to geometry, mode identity, solver settings, process limits, and the evidence needed for the next decision.</p>
-  </div>
   <div class="profile-hero__actions">
     <a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}">PCSEL Research</a>
     <a class="btn" href="{{ '/cv/' | relative_url }}">CV</a>
@@ -59,8 +56,8 @@ redirect_from:
     <div class="home-research-card__body">
       <span class="home-research-card__tag">Primary research program</span>
       <h2><a href="{{ '/research/pcsel/' | relative_url }}">GaAs photonic crystal surface-emitting lasers</a></h2>
-      <p>Evidence-gated design for 940/980 nm devices, combining mode identity, boundary convergence, fabrication morphology, QW/DBR constraints, and characterization feedback.</p>
-      <p class="home-research-card__meta">COMSOL · Lumerical · pcsel-agent · experiment-aware design</p>
+      <p>Evidence-gated 940/980 nm device design across mode validation, process tolerance, QW/DBR constraints, and characterization feedback.</p>
+      <p class="home-research-card__meta">COMSOL · Lumerical · pcsel-agent</p>
     </div>
   </article>
 
@@ -88,100 +85,50 @@ redirect_from:
 </div>
 </section>
 
-## How I Work
+## Selected Outputs
 
-<section class="home-feature">
-  <figure class="home-feature__media">
-    <img src="{{ '/images/research/pcsel_agent_architecture.svg' | relative_url }}" alt="pcsel-agent architecture connecting literature, device constraints, solvers, and evidence reports" loading="lazy" width="1360" height="760">
-    <figcaption>pcsel-agent keeps literature priors, solver runs, process checks, and public claims connected to their source artifacts.</figcaption>
-  </figure>
-  <div class="home-feature__body">
-    <span class="home-research-card__tag">Evidence before optimization</span>
-    <h2>From a design variable to a defensible decision</h2>
-    <p>I organize PCSEL research around three gates:</p>
-    <ul class="home-feature__points">
-      <li><strong>Physics:</strong> identify the mode and test mesh, boundary, and solver sensitivity.</li>
-      <li><strong>Fabrication:</strong> check etch depth, QW clearance, morphology, mask, and material constraints.</li>
-      <li><strong>Provenance:</strong> connect every wavelength, Q, field, or optimization score to a documented run and interpretation boundary.</li>
-    </ul>
-    <a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}#selected-validation">See validation cases</a>
-  </div>
-</section>
-
-## Research Trajectory
-
-<div class="trajectory-grid">
-  <article class="trajectory-card">
-    <span>2022</span>
-    <h2>Numerical physics</h2>
-    <p>ZEUS hydrodynamic simulations established a physics-first approach to variables, solvers, and numerical evidence.</p>
+<div class="home-output-list">
+  <article class="home-output">
+    <span>2026 · PCSEL inverse design · Co-first author</span>
+    <h2><a href="https://arxiv.org/abs/2607.23469">When Every Simulation Counts</a></h2>
+    <p>Matched evaluation of value-based RL methods under an 83-call FDTD budget.</p>
   </article>
-  <article class="trajectory-card">
-    <span>2022-2023</span>
-    <h2>Dynamic devices</h2>
-    <p>Memristor work connected device dynamics and data processing to task-level metrics.</p>
+  <article class="home-output">
+    <span>2026 · PCSEL inverse design · Co-first author</span>
+    <h2><a href="https://arxiv.org/abs/2607.21772">Reliability-Aware Bayesian Optimization of 1310 nm PCSELs</a></h2>
+    <p>Candidate selection combines wavelength, beam quality, and Q-fit reliability.</p>
   </article>
-  <article class="trajectory-card">
-    <span>2024-2025</span>
-    <h2>Integrated photonics</h2>
-    <p>LN/LT waveguide studies developed a geometry-to-mode-to-phase-matching workflow.</p>
+  <article class="home-output">
+    <span>2025 · Advanced Materials</span>
+    <h2><a href="https://doi.org/10.1002/adma.202412006">Adaptive solid-state synapse for multimodal learning</a></h2>
+    <p>Device dynamics connected to multimodal recognition and spatio-temporal tasks.</p>
   </article>
-  <article class="trajectory-card">
-    <span>2025-Present</span>
-    <h2>PCSEL research system</h2>
-    <p>Current work integrates electromagnetic design, research automation, process support, and characterization.</p>
+  <article class="home-output">
+    <span>2023 · Materials Futures</span>
+    <h2><a href="https://doi.org/10.1088/2752-5724/ace3dc">Ultrathin SrTiO3 memristor as a synaptic emulator</a></h2>
+    <p>Drift and diffusive dynamics used for neuromorphic computing.</p>
   </article>
 </div>
 
-## Education
+<p class="home-section-link"><a href="{{ '/publications/' | relative_url }}">View publications and evidence notes</a></p>
 
-- 2021.09 -- 2025.06, B.S. in Physics, Taishan College, Shandong University
-- 2025.08 -- Present, Research Assistant, School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen), supervised by Prof. Zhaoyu Zhang
+## Research Approach
 
-## Selected Publications
-
-1. L. Wen*, **F. Wu***, J. Yu*, C. Yuan, R. Li, and Z. Zhang. *When Every Simulation Counts: Value-Based Reinforcement Learning for Accelerated Photonics Inverse Design*. arXiv:2607.23469, 2026. Co-first author. [arXiv](https://arxiv.org/abs/2607.23469)
-
-2. J. Yu*, **F. Wu***, L. Wen*, C. Yuan, R. Li, and Z. Zhang. *Reliability-Aware Bayesian Optimization of 1310 nm PCSELs with FDTD Verification*. arXiv:2607.21772, 2026. Co-first author. [arXiv](https://arxiv.org/abs/2607.21772)
-
-3. F. Nie, H. Fang, J. Wang, L. Zhao, C. Jia, S. Ma, **F. Wu**, et al. *An Adaptive Solid-State Synapse with Bi-Directional Relaxation for Multimodal Recognition and Spatio-Temporal Learning*. Advanced Materials, 2025, 37(17): 2412006. [DOI](https://doi.org/10.1002/adma.202412006)
-
-4. F. Nie, J. Wang, H. Fang, S. Ma, **F. Wu**, et al. *Ultrathin SrTiO₃-based oxide memristor with both drift and diffusive dynamics as versatile synaptic emulators for neuromorphic computing*. Materials Futures, 2023, 2(3): 035302. [DOI](https://doi.org/10.1088/2752-5724/ace3dc)
+<div class="home-approach" aria-label="Research approach">
+  <article><strong>Model credibility</strong><p>Check mode identity, mesh, boundaries, and cross-solver consistency.</p></article>
+  <article><strong>Process relevance</strong><p>Bring etch, morphology, mask, material, and QW constraints into design decisions.</p></article>
+  <article><strong>Traceable evidence</strong><p>Keep figures, metrics, limitations, and source artifacts connected.</p></article>
+</div>
 
 ## Recognition & Community
 
-<div class="recognition-grid">
-  <article class="recognition-item">
-    <span class="recognition-item__label">Selected awards</span>
-    <h2>National physics competition recognition</h2>
-    <p>National Second Prize in the 2023 China Undergraduate Physics Experiment Competition and the 2022 CUPT, plus a CUPT East China Regional Second Prize.</p>
-  </article>
-  <article class="recognition-item">
-    <span class="recognition-item__label">Community building</span>
-    <h2>Student-led academic exchange</h2>
-    <p>Contributed lectures to the Taishan Seminar and co-founded the SDU Physics Innovation Alliance for cross-year exchange, competition training, and outreach.</p>
-  </article>
-  <article class="recognition-item">
-    <span class="recognition-item__label">Public notes</span>
-    <h2>Long-form science communication</h2>
-    <p>Study notes and subject answers on Zhihu have accumulated 50,000+ views and 2,000+ likes/bookmarks.</p>
-  </article>
-</div>
-
-## Useful Links
-
-<div class="link-list">
-  <a href="https://github.com/wfy-op/PCSELbook">PCSELBook - PCSEL Theory, Simulation & Device Physics</a>
-  <a href="https://github.com/wfy-op/codex-for-comsol-lumerical">codex-for-comsol-lumerical - COMSOL / Lumerical solver skills</a>
-  <a href="https://space.bilibili.com/1601830564">Taishan Seminar (Bilibili)</a>
-  <a href="https://www.zhihu.com/people/fei-yu-33-8">Zhihu Profile</a>
+<div class="home-community-strip">
+  <p><strong>National Second Prize</strong><span>Physics competitions · 2022/2023</span></p>
+  <p><strong>Taishan Seminar</strong><span>Student-led academic exchange</span></p>
+  <p><strong>Physics Innovation Alliance</strong><span>Co-founder · Shandong University</span></p>
+  <p><strong>50,000+ views</strong><span>Long-form study notes on Zhihu</span></p>
 </div>
 
 ## Contact
 
-<div class="contact-panel">
-  <p><strong>Name:</strong> Wu Feiyang 吴飞洋</p>
-  <p><strong>Institution:</strong> School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen)</p>
-  <p><strong>E-mail:</strong> <a href="mailto:fywu2003@gmail.com">fywu2003@gmail.com</a> / <a href="mailto:wfy18350221083@163.com">wfy18350221083@163.com</a></p>
-  <p class="contact-panel__updated">Updated: 2026.07</p>
-</div>
+<p class="home-contact-line">School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen) · <a href="mailto:wfy18350221083@163.com">wfy18350221083@163.com</a> · <a href="https://github.com/wfy-op">GitHub</a> · <a href="https://www.zhihu.com/people/fei-yu-33-8">Zhihu</a></p>

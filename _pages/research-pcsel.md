@@ -95,7 +95,14 @@ author_profile: true
       </dl>
     </div>
   </article>
+</div>
 
+<details class="case-disclosure">
+  <summary>
+    <span><strong>Additional validation cases</strong><small>Fabrication morphology and literature reproduction</small></span>
+    <span class="disclosure-state" aria-hidden="true"></span>
+  </summary>
+  <div class="validation-case-grid validation-case-grid--secondary">
   <article class="validation-case validation-case--wide">
     <figure class="validation-case__media">
       <img src="{{ '/images/research/validation/hx1_uniformity_morphology_screen.png' | relative_url }}" alt="HX1-940 two-dimensional surrogate comparison of critical disorder morphologies" loading="lazy" width="2048" height="724">
@@ -131,7 +138,8 @@ author_profile: true
       </dl>
     </div>
   </article>
-</div>
+  </div>
+</details>
 </section>
 
 <section id="research-threads" class="workstream-showcase" aria-label="pcsel-agent research points">

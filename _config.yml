@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Wu Feiyang / 吴飞洋"
 title_separator          : "-"
 name                     : &name "Wu Feiyang"
-description              : &description "Wu Feiyang is a photonics researcher working on GaAs PCSELs, LN/LT integrated-photonics waveguides, memristor-based reservoir computing, and reproducible simulation workflows."
+description              : &description "Wu Feiyang's research, projects, and learning notes: semiconductor photonics, PCSEL modeling, scientific computing, and research software."
 url                      : "https://wfy-op.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "wfy-op/wfy-op.github.io"
@@ -148,6 +148,7 @@ exclude:
   - scripts
   - tests
   - docs/superpowers
+  - docs/local-project-sources.md
   - files/paper1.pdf
   - files/paper2.pdf
   - files/paper3.pdf

@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "About me"
-excerpt: "Wu Feiyang - photonics researcher"
+excerpt: "Wu Feiyang — photonics research, computational tools, and project notes"
 author_profile: true
 redirect_from:
   - /about/
@@ -9,10 +9,10 @@ redirect_from:
 ---
 
 <section class="profile-hero">
-  <p class="profile-hero__eyebrow">Simulation-guided photonic devices · Semiconductor lasers · Research automation</p>
   <h1>Wu Feiyang (吴飞洋)</h1>
+  <p class="profile-hero__role">Research Assistant · CUHK-Shenzhen</p>
   <p class="profile-hero__lead">
-    I develop simulation-guided semiconductor photonic devices. My current work centers on GaAs PCSELs and traceable workflows that connect full-wave modeling, fabrication constraints, and experimental feedback.
+    I work on semiconductor photonics, with a current focus on GaAs photonic crystal surface-emitting lasers (PCSELs). I build computational models and research tools to connect device design, simulation, and experimental data. This site collects my research, projects, and learning notes.
   </p>
   <div class="profile-hero__actions">
     <a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}">PCSEL Research</a>
@@ -31,7 +31,7 @@ redirect_from:
   <article class="home-fact">
     <span>Primary program</span>
     <strong>940/980 nm GaAs PCSELs</strong>
-    <p>Full-wave, process, and experiment loop</p>
+    <p>Modeling, fabrication, and characterization</p>
   </article>
   <article class="home-fact">
     <span>Research outputs</span>
@@ -56,8 +56,8 @@ redirect_from:
     <div class="home-research-card__body">
       <span class="home-research-card__tag">Primary research program</span>
       <h2><a href="{{ '/research/pcsel/' | relative_url }}">GaAs photonic crystal surface-emitting lasers</a></h2>
-      <p>Evidence-gated 940/980 nm device design across mode validation, process tolerance, QW/DBR constraints, and characterization feedback.</p>
-      <p class="home-research-card__meta">COMSOL · Lumerical · pcsel-agent</p>
+      <p>940/980 nm device studies connecting electromagnetic models, fabrication constraints, and characterization, with CWT and full-wave calculations used to examine mode behavior.</p>
+      <p class="home-research-card__meta">COMSOL · Lumerical · Python · Coupled-wave theory</p>
     </div>
   </article>
 
@@ -89,12 +89,12 @@ redirect_from:
 
 <div class="home-output-list">
   <article class="home-output">
-    <span>2026 · PCSEL inverse design · Co-first author</span>
+    <span>2026 · arXiv preprint · Co-first author</span>
     <h2><a href="https://arxiv.org/abs/2607.23469">When Every Simulation Counts</a></h2>
     <p>Matched evaluation of value-based RL methods under an 83-call FDTD budget.</p>
   </article>
   <article class="home-output">
-    <span>2026 · PCSEL inverse design · Co-first author</span>
+    <span>2026 · arXiv preprint · Co-first author</span>
     <h2><a href="https://arxiv.org/abs/2607.21772">Reliability-Aware Bayesian Optimization of 1310 nm PCSELs</a></h2>
     <p>Candidate selection combines wavelength, beam quality, and Q-fit reliability.</p>
   </article>
@@ -111,6 +111,14 @@ redirect_from:
 </div>
 
 <p class="home-section-link"><a href="{{ '/publications/' | relative_url }}">View publications and evidence notes</a></p>
+
+## Projects & Tools
+
+<p>Alongside device research, I work on scientific computing, experimental data workflows, and interactive teaching tools.</p>
+
+{% include software-list.html compact=true %}
+
+<p class="home-section-link"><a href="{{ '/projects/' | relative_url }}">Browse all projects and tools</a></p>
 
 ## Research Approach
 

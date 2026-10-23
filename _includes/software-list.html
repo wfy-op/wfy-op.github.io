@@ -1,0 +1,24 @@
+<div class="software-list{% if include.compact %} software-list--compact{% endif %}">
+  {% for project in site.data.software.projects %}
+    {% if include.compact != true or project.home %}
+    <article class="software-entry" id="{% if include.compact %}home-{% endif %}{{ project.id }}">
+      <div class="software-entry__heading">
+        <h3>{% if include.compact %}<a href="{{ '/projects/' | relative_url }}#{{ project.id }}">{{ project.name }}</a>{% else %}{{ project.name }}{% endif %}</h3>
+        <p class="software-entry__status">{{ project.status }}</p>
+      </div>
+      <div class="software-entry__body">
+        <p>{{ project.summary }}</p>
+        {% unless include.compact %}<p class="software-entry__tools">{{ project.tools }}</p>{% endunless %}
+        {% if project.links %}
+        <ul class="software-entry__links" aria-label="{{ project.name | escape }} links">
+          {% for link in project.links %}
+          <li><a href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}">{{ link.label }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% unless include.compact %}{% if project.note %}<p class="software-entry__note">{{ project.note }}</p>{% endif %}{% endunless %}
+      </div>
+    </article>
+    {% endif %}
+  {% endfor %}
+</div>

@@ -8,7 +8,7 @@ Website: [https://wfy-op.github.io](https://wfy-op.github.io)
 
 This site is built with Jekyll and deployed to GitHub Pages through GitHub Actions.
 
-The public structure is `Home · Research · Publications · Notes · CV`. PCSEL remains the primary program inside Research, with selected validation cases, research software, and reproducible evidence/progress metrics kept on the PCSEL page.
+The public structure is `Home · Research · Publications · Software · Notes · CV`. This is a personal introduction and project record. PCSEL remains the primary program inside Research; Software gives a concise overview of computing, data, and learning tools.
 
 - Push changes to `main` to trigger a production deployment.
 - Use the Actions tab to run `Deploy Jekyll site to GitHub Pages` manually when needed.
@@ -29,4 +29,11 @@ Static content and data checks can run without Ruby:
 python -m unittest discover -s tests -v
 ```
 
-Update: Jul. 2026
+## Updating profile content
+
+- `_data/software.yml` supplies the project list and selected homepage entries; use public descriptions and links only.
+- Keep the two arXiv preprints separate from journal articles in Publications and both CV languages.
+- CV source lives in the adjacent `CODE_Latex/wfy-cv` project. Compile both languages and sync the two small final PDFs into `files/Feiyang-Wu-CV-EN.pdf` and `files/Feiyang-Wu-CV-ZH.pdf`.
+- Local provenance notes in `docs/local-project-sources.md` stay out of Git and the public build. Existing research evidence snapshots retain their own dates.
+
+Update: Oct. 2026

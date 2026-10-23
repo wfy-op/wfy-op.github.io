@@ -11,6 +11,8 @@ author_profile: true
 
 {% include base_path %}
 
+<p class="page-intro">Two PCSEL preprints and two journal articles from my work on photonics and memristor-based computing. The arXiv papers below are preprints; their results are numerical.</p>
+
 <section class="research-section" markdown="1">
 ## PCSEL Preprints
 
@@ -99,7 +101,7 @@ author_profile: true
     <span class="publication-card__venue">Technical note · ongoing</span>
     <h3>PCSELBook: PCSEL Theory, Simulation, and Device Physics</h3>
     <p>A living technical monograph connecting PCSEL electromagnetic theory, numerical methods, epitaxy, quantum-well gain, coupled device physics, and practical validation cases.</p>
-    <p><a class="btn" href="https://github.com/wfy-op/PCSELbook">GitHub</a> <a class="btn" href="{{ '/posts/2026/04/pcselbook/' | relative_url }}">Project note</a></p>
+    <p><a class="btn" href="https://pcsel-knowledge-site.pages.dev/">Knowledge site</a> <a class="btn" href="https://github.com/wfy-op/PCSELbook">GitHub</a> <a class="btn" href="{{ '/posts/2026/04/pcselbook/' | relative_url }}">Project note</a></p>
   </article>
 </div>
   <p class="publication-support-link"><a href="{{ '/projects/' | relative_url }}">Browse research software and public artifacts</a></p>

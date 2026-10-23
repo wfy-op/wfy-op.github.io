@@ -1,0 +1,68 @@
+updated: "2026-10-23"
+projects:
+  - id: cwt
+    name: "PCSEL coupled-wave modeling"
+    status: "Research code · ongoing"
+    summary: "Python tools for finite and infinite PCSEL arrays, eigenmode analysis, mode identification, and convergence checks. Batch workflows keep COMSOL and CWT parameters, units, diagnostics, and original-result indexes together."
+    tools: "Python · Scientific computing · COMSOL · CWT"
+    note: "Model comparisons remain work in progress; individual validation cases have their own limitations."
+    home: true
+    links:
+      - label: "Research notes"
+        url: "/research/pcsel/#local-projects"
+
+  - id: agent
+    name: "pcsel-agent"
+    status: "Internal research workflow"
+    summary: "A PCSEL simulation workflow connecting design parameters, COMSOL/Lumerical adapters, mode and geometry checks, result analysis, and report generation. Solver API notes and failure records support repeated studies."
+    tools: "Python · COMSOL Java API · Lumerical lumapi"
+    links:
+      - label: "PCSEL workflow"
+        url: "/research/pcsel/#pcsel-system"
+
+  - id: datasystem
+    name: "NOEL experimental data system"
+    status: "Internal research software"
+    summary: "A data-management and analysis tool for semiconductor-device research. It organizes process records, optical and electrical tests, characterization, and simulation sources, with incremental imports, batch comparisons, and traceable reports."
+    tools: "Node.js · Python · SQLite · Data pipelines"
+    note: "Project overview only; laboratory records and datasets remain private."
+    home: true
+
+  - id: studio
+    name: "PCSEL Research Studio"
+    status: "Internal preview · ongoing"
+    summary: "A workspace for source-linked research questions, batch comparisons, notes, and review records. Typed tools provide read-only access to research sources, while source snapshots and citation checks keep answers connected to the underlying records."
+    tools: "Python · Flask · SQLite · LLM tool calling"
+    note: "A working preview with human review; it does not execute solvers or approve device designs."
+
+  - id: book
+    name: "PCSELBook & knowledge site"
+    status: "Public learning resource"
+    summary: "An evolving Chinese set of notes on PCSEL theory, simulation, and device physics. The LaTeX manuscript, equations, figures, and numerical teaching examples feed a searchable knowledge site."
+    tools: "LaTeX · Python · TypeScript · KaTeX"
+    home: true
+    links:
+      - label: "Read the knowledge site"
+        url: "https://pcsel-knowledge-site.pages.dev/"
+      - label: "Source on GitHub"
+        url: "https://github.com/wfy-op/PCSELbook"
+
+  - id: optical-lab
+    name: "Optical Lab"
+    status: "Public interactive tool"
+    summary: "A browser-based optical workbench for learning and exploring light paths. Interactive components, geometric ray tracing, paraxial beam propagation, detector views, and guided challenges connect calculations with hands-on learning."
+    tools: "React · TypeScript · Vite · Computational optics"
+    note: "Geometric and paraxial models; intended for teaching and exploration."
+    home: true
+    links:
+      - label: "Open Optical Lab"
+        url: "https://optical-lab-feiyang.pages.dev/"
+
+  - id: solver-skills
+    name: "codex-for-comsol-lumerical"
+    status: "Public repository"
+    summary: "Reusable solver-connection skills for local COMSOL and Lumerical workflows: installation discovery, minimal API/CLI probes, syntax lookup, and solver memory. These provide connection infrastructure rather than a device-design template."
+    tools: "Python · Java API · CLI automation"
+    links:
+      - label: "Source on GitHub"
+        url: "https://github.com/wfy-op/codex-for-comsol-lumerical"

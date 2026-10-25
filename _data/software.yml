@@ -53,15 +53,15 @@ projects:
     name: "PCSEL Paper Library"
     preview: "Search and explore source-linked literature records and paper metadata."
     status: "Internal literature workspace"
-    summary: "A searchable literature workspace for PCSEL research, with filters, paper metadata, and source-linked evidence notes. Public bibliographic information is shown here; private library locations and annotations are hidden."
+    summary: "A searchable literature workspace for PCSEL research, with filters, paper metadata, reading cards, and source-linked evidence notes. Literature fields and library statistics are visible; only local file paths and private AI history are hidden in these captures."
     tools: "Python · Literature search · Structured metadata"
     screenshots:
       - src: "/images/software/library-home.png"
-        alt: "PCSEL literature search homepage with internal library data masked"
-        caption: "Literature search and filters. Internal library data are masked."
+        alt: "PCSEL literature search with paper titles, filters, metadata, and library statistics"
+        caption: "Literature search with filters, paper metadata, and library statistics."
       - src: "/images/software/library-detail.png"
-        alt: "Public paper metadata detail with private notes and internal locations masked"
-        caption: "Paper metadata and detail view. Private notes and locations are masked."
+        alt: "Paper detail and reading card showing literature parameters with local file paths hidden"
+        caption: "Paper details and reading card. Only local file paths are hidden."
 
   - id: process
     name: "PCSEL process records"

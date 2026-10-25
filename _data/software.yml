@@ -36,10 +36,18 @@ projects:
 
   - id: studio
     name: "PCSEL Research Studio"
+    preview: "Source-linked research questions, evidence records, and batch comparisons."
     status: "Internal preview · ongoing"
     summary: "A workspace for source-linked research questions, batch comparisons, notes, and review records. Typed tools provide read-only access to research sources, while source snapshots and citation checks keep answers connected to the underlying records."
     tools: "Python · Flask · SQLite · LLM tool calling"
     note: "A working preview with human review; it does not execute solvers or approve device designs."
+    screenshots:
+      - src: "/images/software/studio-home.png"
+        alt: "Research Studio homepage with private conversations, sources, and records masked"
+        caption: "Research workspace homepage. Private conversations and source details are masked."
+      - src: "/images/software/studio-compare.png"
+        alt: "Research Studio comparison interface with batch identifiers and research values masked"
+        caption: "Batch-comparison workspace. Identifiers and research data are masked."
 
   - id: library
     name: "PCSEL Paper Library"

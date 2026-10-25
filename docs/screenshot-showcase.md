@@ -7,12 +7,11 @@ The homepage shows one preview per illustrated project. The Software page uses t
 | Project | Captures | Privacy treatment |
 | --- | --- | --- |
 | Experimental data system | Homepage; multi-batch analysis | Opaque masks cover record identifiers, laboratory statistics, measurement images/results, source locations, and status details. |
+| PCSEL Research Studio | Homepage; batch comparison | Opaque masks cover private conversations, source records, batch identifiers, research values, progress, and internal connection details. |
 | PCSEL Paper Library | Search; paper-detail reading card | Public paper titles are retained. Private library locations, identifiers, counts, annotations, and extracted research values are covered. No full-text PDF page is reproduced. |
 | PCSEL process records | Standard run-sheet page; process overview | Opaque masks cover identity, sample and recipe-specific details, process parameters, actual progress, metrics, and connection information. |
 | PCSELBook knowledge site | Homepage; teaching chapter | Publicly available teaching content only. |
 | Optical Lab | Homepage; interactive workbench | Public interface and a teaching example only. |
-
-PCSEL Research Studio currently requires authentication and is retained as a text description pending accessible, reviewed screenshots.
 
 Masks were applied in the browser before each capture. There is no hidden original beneath a mask in the PNG, and no unmasked screenshot is supplied with the site. Capture scripts and private route/selector audits stay under ignored `tmp/`; do not add them to Git or the public build.
 

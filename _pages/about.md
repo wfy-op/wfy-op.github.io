@@ -114,7 +114,7 @@ redirect_from:
 
 ## Projects & Tools
 
-<p>Alongside device research, I work on scientific computing, experimental data workflows, and interactive teaching tools.</p>
+<p>A few interfaces from my research and teaching projects. Open a project to see its homepage and key screens; sensitive laboratory data are masked.</p>
 
 {% include software-list.html compact=true %}
 

@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 <p class="page-intro">A record of the computational tools, research software, and learning resources I work on alongside my photonics research.</p>
-<p class="content-updated">Updated {{ site.data.software.updated | date: "%B %Y" }}. Public resources are linked below; internal projects are described here without laboratory data.</p>
+<p class="content-updated">Interface captures: October 2026. Sensitive laboratory records, parameters, results, and internal paths are covered with opaque masks. Click a screenshot to view it at full size.</p>
 
 {% include software-list.html %}
 

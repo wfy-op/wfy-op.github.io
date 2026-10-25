@@ -2420,18 +2420,18 @@ code {
   scroll-margin-top: 6rem;
 }
 
-.software-entry__heading h3 {
+.software-entry__heading h2 {
   margin: 0 0 0.45rem;
   font-size: 1.06rem;
   line-height: 1.4;
   overflow-wrap: anywhere;
 }
 
-.software-entry__heading h3 a {
+.software-entry__heading h2 a {
   color: var(--portal-ink);
 }
 
-.software-entry__heading h3 a:hover {
+.software-entry__heading h2 a:hover {
   color: var(--portal-accent);
 }
 
@@ -2468,8 +2468,79 @@ code {
   font-size: 0.88rem;
 }
 
-.software-list--compact .software-entry {
-  padding: 1.15rem 0;
+.software-showcase,
+.software-entry__screens {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.software-showcase {
+  margin: 1.5rem 0 1rem;
+  row-gap: 2rem;
+}
+
+.software-preview,
+.software-screenshot {
+  min-width: 0;
+  margin: 0;
+}
+
+.software-preview__image,
+.software-screenshot > a {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--portal-line);
+  background: var(--portal-surface-soft);
+}
+
+.software-preview img,
+.software-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  aspect-ratio: 36 / 25;
+  object-fit: contain;
+}
+
+.software-preview__image:hover,
+.software-screenshot > a:hover {
+  border-color: var(--portal-accent);
+}
+
+.software-preview h3 {
+  margin: 0.8rem 0 0.35rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.software-preview h3 a {
+  color: var(--portal-ink);
+}
+
+.software-preview p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.software-entry__screens {
+  grid-column: 1 / -1;
+}
+
+.software-screenshot figcaption {
+  margin: 0.65rem 0 0;
+  color: var(--portal-text);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.software-screenshot figcaption a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-left: 0.4rem;
 }
 
 .cv-downloads {
@@ -2490,6 +2561,11 @@ code {
     grid-template-columns: 1fr;
     gap: 0.7rem;
     padding: 1.25rem 0;
+  }
+
+  .software-showcase,
+  .software-entry__screens {
+    grid-template-columns: 1fr;
   }
 
   .cv-downloads .btn {

@@ -1,4 +1,4 @@
-updated: "2026-10-23"
+updated: "2026-10-25"
 projects:
   - id: cwt
     name: "PCSEL coupled-wave modeling"
@@ -6,7 +6,6 @@ projects:
     summary: "Python tools for finite and infinite PCSEL arrays, eigenmode analysis, mode identification, and convergence checks. Batch workflows keep COMSOL and CWT parameters, units, diagnostics, and original-result indexes together."
     tools: "Python · Scientific computing · COMSOL · CWT"
     note: "Model comparisons remain work in progress; individual validation cases have their own limitations."
-    home: true
     links:
       - label: "Research notes"
         url: "/research/pcsel/#local-projects"
@@ -22,11 +21,18 @@ projects:
 
   - id: datasystem
     name: "NOEL experimental data system"
+    preview: "Experimental records, batch comparisons, and optical/electrical analysis in one workspace."
     status: "Internal research software"
     summary: "A data-management and analysis tool for semiconductor-device research. It organizes process records, optical and electrical tests, characterization, and simulation sources, with incremental imports, batch comparisons, and traceable reports."
     tools: "Node.js · Python · SQLite · Data pipelines"
     note: "Project overview only; laboratory records and datasets remain private."
-    home: true
+    screenshots:
+      - src: "/images/software/datasystem-home.png"
+        alt: "Experimental data system homepage with sensitive records and values masked"
+        caption: "Homepage and batch overview. Laboratory data are masked."
+      - src: "/images/software/datasystem-analysis.png"
+        alt: "Multi-batch analysis interface with sensitive results and sample identifiers masked"
+        caption: "Multi-batch analysis workspace. Results and identifiers are masked."
 
   - id: studio
     name: "PCSEL Research Studio"
@@ -35,12 +41,47 @@ projects:
     tools: "Python · Flask · SQLite · LLM tool calling"
     note: "A working preview with human review; it does not execute solvers or approve device designs."
 
+  - id: library
+    name: "PCSEL Paper Library"
+    preview: "Search and explore source-linked literature records and paper metadata."
+    status: "Internal literature workspace"
+    summary: "A searchable literature workspace for PCSEL research, with filters, paper metadata, and source-linked evidence notes. Public bibliographic information is shown here; private library locations and annotations are hidden."
+    tools: "Python · Literature search · Structured metadata"
+    screenshots:
+      - src: "/images/software/library-home.png"
+        alt: "PCSEL literature search homepage with internal library data masked"
+        caption: "Literature search and filters. Internal library data are masked."
+      - src: "/images/software/library-detail.png"
+        alt: "Public paper metadata detail with private notes and internal locations masked"
+        caption: "Paper metadata and detail view. Private notes and locations are masked."
+
+  - id: process
+    name: "PCSEL process records"
+    preview: "A web workspace for fabrication batches, process steps, and recipe records."
+    status: "Internal process-management tool"
+    summary: "A web interface for organizing fabrication batches and process records. It keeps process steps and recipe fields together so the workflow can be reviewed without relying on scattered files."
+    tools: "Web interface · Process records · Batch workflows"
+    screenshots:
+      - src: "/images/software/process-home.png"
+        alt: "Process-management homepage with batch identifiers and recipe data masked"
+        caption: "Process-management homepage. Batch records and parameters are masked."
+      - src: "/images/software/process-workflow.png"
+        alt: "Process workflow interface with private fabrication records masked"
+        caption: "Process overview and workflow view. Fabrication data are masked."
+
   - id: book
     name: "PCSELBook & knowledge site"
+    preview: "Searchable chapters, equations, and numerical examples for learning PCSEL physics."
     status: "Public learning resource"
     summary: "An evolving Chinese set of notes on PCSEL theory, simulation, and device physics. The LaTeX manuscript, equations, figures, and numerical teaching examples feed a searchable knowledge site."
     tools: "LaTeX · Python · TypeScript · KaTeX"
-    home: true
+    screenshots:
+      - src: "/images/software/knowledge-home.png"
+        alt: "Public PCSEL knowledge site homepage with chapter navigation"
+        caption: "Public knowledge-site homepage and chapter navigation."
+      - src: "/images/software/knowledge-chapter.png"
+        alt: "Public PCSEL teaching chapter with equations and explanatory figures"
+        caption: "A teaching chapter with equations and explanatory figures."
     links:
       - label: "Read the knowledge site"
         url: "https://pcsel-knowledge-site.pages.dev/"
@@ -49,11 +90,18 @@ projects:
 
   - id: optical-lab
     name: "Optical Lab"
+    preview: "Interactive light paths, optical components, and geometric/paraxial calculations."
     status: "Public interactive tool"
     summary: "A browser-based optical workbench for learning and exploring light paths. Interactive components, geometric ray tracing, paraxial beam propagation, detector views, and guided challenges connect calculations with hands-on learning."
     tools: "React · TypeScript · Vite · Computational optics"
     note: "Geometric and paraxial models; intended for teaching and exploration."
-    home: true
+    screenshots:
+      - src: "/images/software/optical-home.png"
+        alt: "Public Optical Lab homepage with learning and design tools"
+        caption: "Optical Lab homepage and learning tools."
+      - src: "/images/software/optical-workbench.png"
+        alt: "Interactive optical workbench with a teaching light-path example"
+        caption: "Interactive workbench using a teaching example."
     links:
       - label: "Open Optical Lab"
         url: "https://optical-lab-feiyang.pages.dev/"

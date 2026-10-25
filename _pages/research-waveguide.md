@@ -2,7 +2,7 @@
 layout: archive
 title: "LN/LT Waveguide Research"
 permalink: /research/waveguide/
-author_profile: true
+author_profile: false
 ---
 
 <p class="research-backlink"><a href="{{ '/research/' | relative_url }}">Back to all research directions</a></p>

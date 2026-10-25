@@ -2,22 +2,34 @@
 permalink: /
 title: "About me"
 excerpt: "Wu Feiyang — photonics research, computational tools, and project notes"
-author_profile: true
+author_profile: false
 redirect_from:
   - /about/
   - /about.html
 ---
 
-<section class="profile-hero">
-  <h1>Wu Feiyang (吴飞洋)</h1>
-  <p class="profile-hero__role">Research Assistant · CUHK-Shenzhen</p>
-  <p class="profile-hero__lead">
-    I work on semiconductor photonics, with a current focus on GaAs photonic crystal surface-emitting lasers (PCSELs). I build computational models and research tools to connect device design, simulation, and experimental data. This site collects my research, projects, and learning notes.
-  </p>
-  <div class="profile-hero__actions">
-    <a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}">PCSEL Research</a>
-    <a class="btn" href="{{ '/cv/' | relative_url }}">CV</a>
+<section class="profile-hero" aria-labelledby="profile-name">
+  <div class="profile-hero__text">
+    <p class="profile-hero__eyebrow">Semiconductor photonics · PCSEL modeling · research software</p>
+    <h1 id="profile-name">Wu Feiyang <span lang="zh">吴飞洋</span></h1>
+    <p class="profile-hero__role">Research Assistant · CUHK-Shenzhen</p>
+    <p class="profile-hero__lead">
+      I work on semiconductor photonics, with a current focus on GaAs photonic crystal surface-emitting lasers (PCSELs). I build computational models and research tools to connect device design, simulation, and experimental data. This site collects my research, projects, and learning notes.
+    </p>
+    <div class="profile-hero__actions">
+      <a class="btn btn--primary" href="{{ '/research/pcsel/' | relative_url }}">PCSEL Research</a>
+      <a class="btn" href="{{ '/cv/' | relative_url }}">CV</a>
+    </div>
+    <ul class="profile-hero__contact" aria-label="Contact">
+      <li><a href="mailto:wfy18350221083@163.com">wfy18350221083@163.com</a></li>
+      <li><a href="https://github.com/wfy-op">GitHub</a></li>
+      <li><a href="https://www.zhihu.com/people/fei-yu-33-8">Zhihu</a></li>
+    </ul>
   </div>
+  <figure class="profile-hero__portrait">
+    <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Portrait of Wu Feiyang" width="1279" height="2275" fetchpriority="high">
+    <figcaption>Shenzhen · School of Science and Engineering, CUHK-Shenzhen</figcaption>
+  </figure>
 </section>
 
 ## At a Glance
@@ -114,7 +126,7 @@ redirect_from:
 
 ## Projects & Tools
 
-<p>A few interfaces from my research and teaching projects. Open a project to see its homepage and key screens; sensitive laboratory data are masked.</p>
+<p class="home-section-intro">Interfaces from my research and teaching projects. Open a project to see its homepage and key screens; sensitive laboratory data are masked.</p>
 
 {% include software-list.html compact=true %}
 

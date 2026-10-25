@@ -2,7 +2,7 @@
 layout: archive
 title: "GaAs PCSEL Research"
 permalink: /research/pcsel/
-author_profile: true
+author_profile: false
 ---
 
 <p class="research-backlink"><a href="{{ '/research/' | relative_url }}">Back to all research directions</a> · <a href="#pcsel-portal">Open evidence &amp; progress</a></p>

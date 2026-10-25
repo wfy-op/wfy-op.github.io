@@ -4,9 +4,11 @@
     {% if project.screenshots %}
     {% assign preview = project.screenshots | first %}
     <article class="software-preview">
-      <a class="software-preview__image" href="{{ '/projects/' | relative_url }}#{{ project.id }}" aria-label="View {{ project.name | escape }} screenshots">
+      <a class="software-preview__image screen-frame" href="{{ '/projects/' | relative_url }}#{{ project.id }}" aria-label="View {{ project.name | escape }} screenshots">
+        <span class="screen-frame__bar" aria-hidden="true"><i></i><i></i><i></i></span>
         <img src="{{ preview.src | relative_url }}" alt="{{ preview.alt | escape }}" width="1440" height="1000" loading="lazy" decoding="async">
       </a>
+      <p class="software-preview__status">{{ project.status }}</p>
       <h3><a href="{{ '/projects/' | relative_url }}#{{ project.id }}">{{ project.name }}</a></h3>
       <p>{{ project.preview }}</p>
     </article>
@@ -14,16 +16,21 @@
   {% endfor %}
 </div>
 {% else %}
+<nav class="software-index" aria-label="Projects on this page">
+  {% for project in site.data.software.projects %}
+  <a href="#{{ project.id }}">{{ project.name }}</a>
+  {% endfor %}
+</nav>
 <div class="software-list">
   {% for project in site.data.software.projects %}
-    <article class="software-entry" id="{{ project.id }}">
+    <article class="software-entry{% unless project.screenshots %} software-entry--text{% endunless %}" id="{{ project.id }}">
       <div class="software-entry__heading">
-        <h2>{{ project.name }}</h2>
         <p class="software-entry__status">{{ project.status }}</p>
+        <h2>{{ project.name }}</h2>
+        <p class="software-entry__tools">{{ project.tools }}</p>
       </div>
       <div class="software-entry__body">
         <p>{{ project.summary }}</p>
-        <p class="software-entry__tools">{{ project.tools }}</p>
         {% if project.links %}
         <ul class="software-entry__links" aria-label="{{ project.name | escape }} links">
           {% for link in project.links %}
@@ -37,7 +44,8 @@
       <div class="software-entry__screens" aria-label="{{ project.name | escape }} interface screenshots">
         {% for shot in project.screenshots %}
         <figure class="software-screenshot">
-          <a href="{{ shot.src | relative_url }}" target="_blank" rel="noopener" aria-label="{{ shot.alt | escape }} — open full-size image">
+          <a class="screen-frame" href="{{ shot.src | relative_url }}" target="_blank" rel="noopener" data-lightbox="{{ project.id }}" data-caption="{{ project.name | escape }} — {{ shot.caption | escape }}" aria-label="{{ shot.alt | escape }} — open full-size image">
+            <span class="screen-frame__bar" aria-hidden="true"><i></i><i></i><i></i></span>
             <img src="{{ shot.src | relative_url }}" alt="{{ shot.alt | escape }}" width="1440" height="1000" loading="lazy" decoding="async">
           </a>
           <figcaption>{{ shot.caption }} <a href="{{ shot.src | relative_url }}" target="_blank" rel="noopener">View full size</a></figcaption>
@@ -48,4 +56,59 @@
     </article>
   {% endfor %}
 </div>
+
+<dialog class="lightbox" id="screen-lightbox" aria-label="Screenshot viewer">
+  <div class="lightbox__inner">
+    <img class="lightbox__image" alt="">
+    <p class="lightbox__caption"></p>
+    <div class="lightbox__controls">
+      <button type="button" class="lightbox__prev" aria-label="Previous screenshot">← Prev</button>
+      <button type="button" class="lightbox__next" aria-label="Next screenshot">Next →</button>
+      <a class="lightbox__open" href="" target="_blank" rel="noopener">Open original</a>
+      <button type="button" class="lightbox__close" aria-label="Close viewer">Close</button>
+    </div>
+  </div>
+</dialog>
+<script>
+(function () {
+  var box = document.getElementById('screen-lightbox');
+  if (!box || typeof box.showModal !== 'function') return; // fall back to plain links
+  var links = Array.prototype.slice.call(document.querySelectorAll('a[data-lightbox]'));
+  var img = box.querySelector('.lightbox__image');
+  var cap = box.querySelector('.lightbox__caption');
+  var open = box.querySelector('.lightbox__open');
+  var index = 0;
+
+  function show(i) {
+    index = (i + links.length) % links.length;
+    var link = links[index];
+    var thumb = link.querySelector('img');
+    img.src = link.getAttribute('href');
+    img.alt = thumb ? thumb.alt : '';
+    cap.textContent = link.getAttribute('data-caption') + ' (' + (index + 1) + ' / ' + links.length + ')';
+    open.href = link.getAttribute('href');
+  }
+
+  links.forEach(function (link, i) {
+    // capture phase so the theme's legacy image popup does not also fire
+    link.addEventListener('click', function (event) {
+      if (event.metaKey || event.ctrlKey || event.shiftKey) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      show(i);
+      box.showModal();
+    }, true);
+  });
+
+  box.querySelector('.lightbox__prev').addEventListener('click', function () { show(index - 1); });
+  box.querySelector('.lightbox__next').addEventListener('click', function () { show(index + 1); });
+  box.querySelector('.lightbox__close').addEventListener('click', function () { box.close(); });
+  box.addEventListener('click', function (event) { if (event.target === box) box.close(); });
+  box.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowLeft') show(index - 1);
+    if (event.key === 'ArrowRight') show(index + 1);
+  });
+  box.addEventListener('close', function () { img.removeAttribute('src'); });
+})();
+</script>
 {% endif %}

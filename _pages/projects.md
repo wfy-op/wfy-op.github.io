@@ -2,11 +2,11 @@
 layout: archive
 title: "Projects & Tools"
 permalink: /projects/
-author_profile: true
+author_profile: false
 ---
 
 <p class="page-intro">A record of the computational tools, research software, and learning resources I work on alongside my photonics research.</p>
-<p class="content-updated">Interface captures: October 2026. Sensitive laboratory records, parameters, results, and internal paths are covered with opaque masks. Click a screenshot to view it at full size.</p>
+<p class="content-updated">Interface captures: October 2026. Private laboratory data and local paths are masked; public literature details, parameters, and library statistics remain visible. Click a screenshot to view it at full size.</p>
 
 {% include software-list.html %}
 

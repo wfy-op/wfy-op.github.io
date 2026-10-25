@@ -33,6 +33,8 @@ python -m unittest discover -s tests -v
 
 - `_data/software.yml` supplies the project list and selected homepage entries; use public descriptions and links only.
 - Project screenshots use the same data source. Only flattened, reviewed captures belong in `images/software/`; see [capture and privacy notes](docs/screenshot-showcase.md). Never commit unmasked originals or private capture scripts.
+- The visual system lives in `assets/css/wfy-modern.scss`, loaded after the legacy theme. The profile is part of the homepage; shared navigation and contact links live in the masthead and footer.
+- The project gallery uses native dialog enlargement with keyboard controls and ordinary image links as its JavaScript-free fallback.
 - Keep the two arXiv preprints separate from journal articles in Publications and both CV languages.
 - CV source lives in the adjacent `CODE_Latex/wfy-cv` project. Compile both languages and sync the two small final PDFs into `files/Feiyang-Wu-CV-EN.pdf` and `files/Feiyang-Wu-CV-ZH.pdf`.
 - Local provenance notes in `docs/local-project-sources.md` stay out of Git and the public build. Existing research evidence snapshots retain their own dates.

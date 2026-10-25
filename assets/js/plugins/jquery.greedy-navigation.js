@@ -13,6 +13,9 @@ var $hlinks = $('#site-nav .hidden-links');
 var breaks = [];
 
 function updateNav() {
+  // The current masthead uses a responsive CSS navigation. Only run this
+  // legacy overflow menu when its complete markup is present.
+  if (!$nav.length || !$btn.length || !$vlinks.length || !$hlinks.length) return;
 
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 

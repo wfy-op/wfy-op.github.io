@@ -2,7 +2,7 @@
 layout: archive
 title: "Daily Paper"
 permalink: /daily-paper/
-author_profile: true
+author_profile: false
 sitemap: false
 ---
 

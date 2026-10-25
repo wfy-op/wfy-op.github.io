@@ -39,7 +39,8 @@ class FrontendContractTests(unittest.TestCase):
             "--portal-content-measure",
             ".page__content > h2",
             ".publication-card > :not(.publication-card__venue)",
-            ".trajectory-card::before",
+            ".screen-frame",
+            ".lightbox",
             ".research-direction-card:nth-child(even) .research-direction-card__media",
             ".archive__item-title",
             "position: sticky",
@@ -51,7 +52,7 @@ class FrontendContractTests(unittest.TestCase):
 
     def test_home_hero_keeps_only_primary_navigation_actions(self):
         home = read("_pages/about.md")
-        hero_start = home.index('<section class="profile-hero">')
+        hero_start = home.index('<section class="profile-hero"')
         hero_end = home.index("</section>", hero_start)
         hero = home[hero_start:hero_end]
 

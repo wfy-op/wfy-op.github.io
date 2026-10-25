@@ -5,7 +5,7 @@ permalink: /research/portal/
 redirect_to:
   - /research/pcsel/#pcsel-portal
 sitemap: false
-author_profile: true
+author_profile: false
 ---
 
 Evidence and progress now live inside the PCSEL research page:

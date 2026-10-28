@@ -13,6 +13,7 @@ The public structure is `Home · Research · Publications · Software · Notes �
 - Push changes to `main` to trigger a production deployment.
 - Use the Actions tab to run `Deploy Jekyll site to GitHub Pages` manually when needed.
 - The build command is `bundle exec jekyll build`, and the published artifact is `_site`.
+- The build runner is pinned to Ubuntu 24.04 for the existing Ruby 3.1 toolchain; Ubuntu 26.04 has no prebuilt Ruby 3.1 package in `ruby/setup-ruby`.
 
 ## Local Preview
 

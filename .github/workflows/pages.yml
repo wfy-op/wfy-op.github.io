@@ -17,7 +17,8 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Ruby 3.1 has no prebuilt package for Ubuntu 26.04 (the newer latest image).
+    runs-on: ubuntu-24.04
     env:
       JEKYLL_ENV: production
     steps:

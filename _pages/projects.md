@@ -6,6 +6,7 @@ author_profile: false
 ---
 
 <p class="page-intro">A record of the computational tools, research software, and learning resources I work on alongside my photonics research.</p>
+<p>Each project includes a workflow from input to result. Expand its architecture notes to see the main components, how they connect, and the reasons behind the development approach.</p>
 <p class="content-updated">Interface captures: October 2026. Private laboratory data and local paths are masked; public literature details, parameters, and library statistics remain visible. Click a screenshot to view it at full size.</p>
 
 {% include software-list.html %}

@@ -1,10 +1,24 @@
-updated: "2026-10-25"
+updated: "2026-10-28"
 projects:
   - id: cwt
     name: "PCSEL coupled-wave modeling"
     status: "Research code · ongoing"
     summary: "Python tools for finite and infinite PCSEL arrays, eigenmode analysis, mode identification, and convergence checks. Batch workflows keep COMSOL and CWT parameters, units, diagnostics, and original-result indexes together."
     tools: "Python · Scientific computing · COMSOL · CWT"
+    architecture:
+      - component: "Physical inputs"
+        description: "Configuration files describe the layer stack, materials, lattice, hole geometry, and numerical settings. Geometry and material modules turn these inputs into Fourier coefficients and vertical fields."
+      - component: "Numerical solvers"
+        description: "Coupling-matrix modules feed infinite-array, finite-array, and time-domain solvers. Independent Maxwell, PWEM, and RCWA calculations provide reference paths for selected cases."
+      - component: "Diagnostics and exports"
+        description: "Mode-analysis modules inspect field symmetry, branch continuity, physical powers, and convergence. Reports retain the settings, units, diagnostics, and original-result references."
+    workflow:
+      - "Define a device and its calculation settings."
+      - "Construct the coupling problem and solve for fields and modes."
+      - "Check mode identity and convergence before comparing or exporting results."
+    development: >-
+      The code separates physical equations from batch scheduling and plotting, so a numerical method can be tested without running an entire study.
+      Mode comparisons use field identity and numerical checks alongside eigenvalues; each report records the conditions under which its results apply.
     note: "Model comparisons remain work in progress; individual validation cases have their own limitations."
     links:
       - label: "Research notes"
@@ -15,6 +29,20 @@ projects:
     status: "Internal research workflow"
     summary: "A PCSEL simulation workflow connecting design parameters, COMSOL/Lumerical adapters, mode and geometry checks, result analysis, and report generation. Solver API notes and failure records support repeated studies."
     tools: "Python · COMSOL Java API · Lumerical lumapi"
+    architecture:
+      - component: "Research orchestration"
+        description: "A Python orchestrator passes requirement, candidate-design, and simulation-result records between literature, optimization, analysis, and reporting modules."
+      - component: "Solver adapters"
+        description: "Separate COMSOL and Lumerical adapters handle the backend calls. Connection probes and error classification help distinguish environment, session, syntax, and export failures."
+      - component: "Run artifacts and memory"
+        description: "Each run keeps its configuration, solver outputs, analysis, and evidence records. Reusable API notes and repair records support later work on the same tools."
+    workflow:
+      - "Translate a research requirement into candidate parameters."
+      - "Probe the backend, execute the selected solver path, and collect outputs."
+      - "Check the evidence, analyze candidates, and save a traceable report."
+    development: >-
+      Solver invocation stays separate from candidate generation and analysis, which makes backend-specific failures easier to locate.
+      Small API probes come before larger runs, and failed attempts remain in the run history so a repaired workflow can be inspected.
     links:
       - label: "PCSEL workflow"
         url: "/research/pcsel/#pcsel-system"
@@ -25,6 +53,20 @@ projects:
     status: "Internal research software"
     summary: "A data-management and analysis tool for semiconductor-device research. It organizes process records, optical and electrical tests, characterization, and simulation sources, with incremental imports, batch comparisons, and traceable reports."
     tools: "Node.js · Python · SQLite · Data pipelines"
+    architecture:
+      - component: "Import and storage"
+        description: "Node.js pipelines parse measurement files and register sessions, device locations, process links, and source fingerprints in SQLite. Original files remain the source evidence."
+      - component: "Scientific analysis"
+        description: "Python workers support numerical processing, beam-spot metrics, and layout previews. Derived figures, summaries, and quality records retain their source and method information."
+      - component: "Reports and browser interface"
+        description: "The Node.js service assembles batch reports and comparisons. A bounded worker pool handles expensive reads and report generation outside the HTTP main thread."
+    workflow:
+      - "Detect changed source files and parse their acquisition conditions."
+      - "Import structured measurements and connect the relevant process records."
+      - "Review curves, batch comparisons, and reports with source references."
+    development: >-
+      Ingestion and dashboard queries follow separate paths so file parsing and scientific work do not block ordinary browsing.
+      File fingerprints and dependency-aware caches allow unchanged results to be reused, while readers can still trace a displayed result back to its original measurement.
     note: "Project overview only; laboratory records and datasets remain private."
     screenshots:
       - src: "/images/software/datasystem-home.png"
@@ -40,6 +82,20 @@ projects:
     status: "Internal preview · ongoing"
     summary: "A workspace for source-linked research questions, batch comparisons, notes, and review records. Typed tools provide read-only access to research sources, while source snapshots and citation checks keep answers connected to the underlying records."
     tools: "Python · Flask · SQLite · LLM tool calling"
+    architecture:
+      - component: "Browser workspace and Flask API"
+        description: "The interface groups research questions, batch comparisons, notes, and review records. Flask handles requests and persists jobs, drafts, archives, and their links in SQLite stores."
+      - component: "Controlled research tools"
+        description: "Typed tools read experimental records, saved simulations, process data, papers, and teaching material. Source adapters preserve the selected scope, units, and evidence locators."
+      - component: "Model and evidence checks"
+        description: "Provider adapters connect the job worker to a model service or CLI. The host checks answer structure, citation eligibility, and numerical field bindings before saving the response."
+    workflow:
+      - "Ask a research question and choose the records or comparison scope."
+      - "Let the host execute validated, read-only tool requests."
+      - "Review a source-linked answer and save notes or a frozen comparison."
+    development: >-
+      The application controls tool execution and evidence selection; the model supplies a plan and an answer within that contract.
+      Saved snapshots and versioned notes let a researcher distinguish the records used in an earlier answer from the sources available today.
     note: "A working preview with human review; it does not execute solvers or approve device designs."
     screenshots:
       - src: "/images/software/studio-home.png"
@@ -54,7 +110,21 @@ projects:
     preview: "Search and explore source-linked literature records and paper metadata."
     status: "Internal literature workspace"
     summary: "A searchable literature workspace for PCSEL research, with filters, paper metadata, reading cards, and source-linked evidence notes. Literature fields and library statistics are visible; only local file paths and private AI history are hidden in these captures."
-    tools: "Python · Literature search · Structured metadata"
+    tools: "Python · Flask · SQLite FTS5 · Structured metadata"
+    architecture:
+      - component: "Library sources"
+        description: "The survey workbook, CSV index, Markdown reading cards, and original PDFs remain the editable source collection. The application keeps the existing paper-folder organization."
+      - component: "Search read model"
+        description: "A Python build pipeline creates a SQLite library and FTS5 index. Flask combines indexed lookup with field matching, filters, and sorting to produce the final results."
+      - component: "Paper views and query planning"
+        description: "The browser connects search, comparison, and paper details. An optional natural-language planner produces structured filters that the application applies to indexed records."
+    workflow:
+      - "Normalize source records and rebuild the derived search index."
+      - "Search by title, device fields, or a structured natural-language query."
+      - "Inspect matching evidence and open the paper, reading card, or selected bundle."
+    development: >-
+      Search acceleration is separate from the final matching rules, so unsupported query forms can still be evaluated against complete records.
+      Index rebuilds preserve saved searches and query history, while the source workbook, cards, and PDFs remain independently readable.
     screenshots:
       - src: "/images/software/library-home.png"
         alt: "PCSEL literature search with paper titles, filters, metadata, and library statistics"
@@ -68,7 +138,21 @@ projects:
     preview: "A web workspace for fabrication batches, process steps, and recipe records."
     status: "Internal process-management tool"
     summary: "A web interface for organizing fabrication batches and process records. It keeps process steps and recipe fields together so the workflow can be reviewed without relying on scattered files."
-    tools: "Web interface · Process records · Batch workflows"
+    tools: "React · TypeScript · Drizzle · D1/R2 · Capacitor"
+    architecture:
+      - component: "Web and Android clients"
+        description: "React and TypeScript provide the recording and traceability screens. The Capacitor Android client keeps an offline operation queue and photo cache for work away from the server."
+      - component: "Shared recording rules"
+        description: "The API validates process fields, route versions, record revisions, and synchronization requests. Browser and mobile clients share the field definitions and validation rules."
+      - component: "Records, images, and history"
+        description: "Drizzle connects structured records to D1 in the local Cloudflare runtime, while R2 stores original images. Route and recipe snapshots, revision history, and audit events preserve the context of an operation."
+    workflow:
+      - "Select a sample and its saved process route."
+      - "Record actual parameters, operator, time, and photographic evidence."
+      - "Synchronize queued work and inspect the traceability view or export."
+    development: >-
+      Recipes describe intended settings, while field records describe actual execution.
+      Shared validation, version checks, and repeat-safe requests keep web and offline operations compatible. Operators can amend a record while its earlier content remains available in the history.
     screenshots:
       - src: "/images/software/process-home.png"
         alt: "Process-management homepage with batch identifiers and recipe data masked"
@@ -83,6 +167,20 @@ projects:
     status: "Public learning resource"
     summary: "An evolving Chinese set of notes on PCSEL theory, simulation, and device physics. The LaTeX manuscript, equations, figures, and numerical teaching examples feed a searchable knowledge site."
     tools: "LaTeX · Python · TypeScript · KaTeX"
+    architecture:
+      - component: "LaTeX content source"
+        description: "The manuscript supplies chapters, equations, figures, symbols, and references. The book and website therefore draw their teaching content from the same source."
+      - component: "Build and synchronization pipeline"
+        description: "Python and Node.js tools produce chapter data, a search index, web figures, and font subsets. KaTeX renders formulas with MathML during the build."
+      - component: "Static reader"
+        description: "A React and TypeScript interface provides chapter navigation, search, and local reading progress. Generated static fallback pages give individual chapters their own direct URLs."
+    workflow:
+      - "Edit the manuscript or its original figure sources."
+      - "Regenerate the affected chapters, equations, figures, and search data."
+      - "Read the static site and resume from progress saved in the browser."
+    development: >-
+      The manuscript is edited directly; generated chapter files are rebuilt from it.
+      Dependency checks limit unnecessary regeneration, and the static reader can serve the finished material without a database or account service.
     screenshots:
       - src: "/images/software/knowledge-home.png"
         alt: "Public PCSEL knowledge site homepage with chapter navigation"
@@ -102,6 +200,20 @@ projects:
     status: "Public interactive tool"
     summary: "A browser-based optical workbench for learning and exploring light paths. Interactive components, geometric ray tracing, paraxial beam propagation, detector views, and guided challenges connect calculations with hands-on learning."
     tools: "React · TypeScript · Vite · Computational optics"
+    architecture:
+      - component: "Interactive project state"
+        description: "React and TypeScript manage the component library, optical layout, parameter controls, undo history, and project import/export."
+      - component: "Independent calculation modules"
+        description: "Pure calculation modules handle spatial ray tracing, sequential ABCD/Gaussian propagation, detector sampling, scans, and teaching checks. These modules are separate from the interface handlers."
+      - component: "Browser visualization"
+        description: "The workbench displays computed light paths, beam estimates, and detector views. Projects and learning records use browser storage and JSON transfer; there is no server-side database."
+    workflow:
+      - "Place optical components and adjust positions, angles, or lens parameters."
+      - "Recompute the paths and beam propagation with the relevant optical model."
+      - "Inspect detector output, test a learning task, or save the project."
+    development: >-
+      Teaching controls and the free-design workbench use the same calculation modules, so an interaction can be checked against a numerical test.
+      Students can change one parameter and inspect its effect immediately, within the stated geometric and paraxial model assumptions.
     note: "Geometric and paraxial models; intended for teaching and exploration."
     screenshots:
       - src: "/images/software/optical-home.png"
@@ -119,6 +231,20 @@ projects:
     status: "Public repository"
     summary: "Reusable solver-connection skills for local COMSOL and Lumerical workflows: installation discovery, minimal API/CLI probes, syntax lookup, and solver memory. These provide connection infrastructure rather than a device-design template."
     tools: "Python · Java API · CLI automation"
+    architecture:
+      - component: "Two independent skills"
+        description: "The COMSOL skill covers CLI, Java API, and Python mph connections. The Lumerical FDTD skill uses lumapi with a CLI fallback. Each can be installed separately."
+      - component: "Discovery and probes"
+        description: "Small scripts identify the local installation, check sessions, and test output generation before work proceeds to a real model."
+      - component: "Reusable reference notes"
+        description: "Solver-specific syntax and failure classifications help distinguish path, environment, license, session, API, and export problems."
+    workflow:
+      - "Locate the installation and a compatible runtime."
+      - "Run a minimal connection and output probe."
+      - "Use the relevant API notes when entering a project workflow."
+    development: >-
+      The two packages isolate connection infrastructure from device-specific modeling.
+      Installation paths are discovered on each machine, while geometry, materials, and study assumptions remain in the project repository.
     links:
       - label: "Source on GitHub"
         url: "https://github.com/wfy-op/codex-for-comsol-lumerical"

@@ -40,6 +40,36 @@
         {% endif %}
         {% if project.note %}<p class="software-entry__note">{{ project.note }}</p>{% endif %}
       </div>
+      {% if project.architecture %}
+      <div class="software-entry__implementation">
+        <section class="software-workflow" aria-labelledby="{{ project.id }}-workflow">
+          <h3 id="{{ project.id }}-workflow">From input to result</h3>
+          <ol>
+            {% for step in project.workflow %}<li>{{ step | escape }}</li>{% endfor %}
+          </ol>
+        </section>
+        <details class="software-implementation">
+          <summary aria-label="Architecture and development approach for {{ project.name | escape }}">Architecture &amp; development approach</summary>
+          <div class="software-implementation__content">
+            <section aria-labelledby="{{ project.id }}-architecture">
+              <h3 id="{{ project.id }}-architecture">Main components</h3>
+              <dl class="software-architecture">
+                {% for part in project.architecture %}
+                <div>
+                  <dt>{{ part.component | escape }}</dt>
+                  <dd>{{ part.description | escape }}</dd>
+                </div>
+                {% endfor %}
+              </dl>
+            </section>
+            <section class="software-development" aria-labelledby="{{ project.id }}-development">
+              <h3 id="{{ project.id }}-development">Development approach</h3>
+              <p>{{ project.development | escape }}</p>
+            </section>
+          </div>
+        </details>
+      </div>
+      {% endif %}
       {% if project.screenshots %}
       <div class="software-entry__screens" aria-label="{{ project.name | escape }} interface screenshots">
         {% for shot in project.screenshots %}

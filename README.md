@@ -32,6 +32,7 @@ python -m unittest discover -s tests -v
 ## Updating profile content
 
 - `_data/software.yml` supplies the project list and selected homepage entries; use public descriptions and links only.
+- The same records hold the architecture, workflow, and development notes. The project page shows the workflow and uses native disclosures for implementation details; keep these descriptions tied to the current project code or architecture documentation.
 - Project screenshots use the same data source. Only flattened, reviewed captures belong in `images/software/`; see [capture and privacy notes](docs/screenshot-showcase.md). Never commit unmasked originals or private capture scripts.
 - The visual system lives in `assets/css/wfy-modern.scss`, loaded after the legacy theme. The profile is part of the homepage; shared navigation and contact links live in the masthead and footer.
 - The project gallery uses native dialog enlargement with keyboard controls and ordinary image links as its JavaScript-free fallback.

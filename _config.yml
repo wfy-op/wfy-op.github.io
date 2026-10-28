@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Wu Feiyang / 吴飞洋"
 title_separator          : "-"
 name                     : &name "Wu Feiyang"
-description              : &description "Wu Feiyang's research, projects, and learning notes: semiconductor photonics, PCSEL modeling, scientific computing, and research software."
+description              : &description "Wu Feiyang is a Ph.D. student at The Chinese University of Hong Kong, Shenzhen. Research and project notes on semiconductor photonics, PCSEL modeling, and scientific computing."
 url                      : "https://wfy-op.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "wfy-op/wfy-op.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Wu Feiyang"
   avatar           : "profile.jpg"
-  bio              : "School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen"
+  bio              : "Ph.D. Student, The Chinese University of Hong Kong, Shenzhen"
   location         : "Shenzhen, China"
   employer         :
   pubmed           :
   googlescholar    :
-  email            : "wfy18350221083@163.com"
+  email            : "fywu2003@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

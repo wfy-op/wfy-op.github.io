@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "About me"
-excerpt: "Wu Feiyang — photonics research, computational tools, and project notes"
+excerpt: "Wu Feiyang — Ph.D. student at CUHK-Shenzhen; photonics research, computational tools, and project notes"
 author_profile: false
 redirect_from:
   - /about/
@@ -12,7 +12,7 @@ redirect_from:
   <div class="profile-hero__text">
     <p class="profile-hero__eyebrow">Semiconductor photonics · PCSEL modeling · research software</p>
     <h1 id="profile-name">Wu Feiyang <span lang="zh">吴飞洋</span></h1>
-    <p class="profile-hero__role">Research Assistant · CUHK-Shenzhen</p>
+    <p class="profile-hero__role">Ph.D. Student · CUHK-Shenzhen</p>
     <p class="profile-hero__lead">
       I work on semiconductor photonics, with a current focus on GaAs photonic crystal surface-emitting lasers (PCSELs). I build computational models and research tools to connect device design, simulation, and experimental data. This site collects my research, projects, and learning notes.
     </p>
@@ -21,14 +21,14 @@ redirect_from:
       <a class="btn" href="{{ '/cv/' | relative_url }}">CV</a>
     </div>
     <ul class="profile-hero__contact" aria-label="Contact">
-      <li><a href="mailto:wfy18350221083@163.com">wfy18350221083@163.com</a></li>
+      <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
       <li><a href="https://github.com/wfy-op">GitHub</a></li>
       <li><a href="https://www.zhihu.com/people/fei-yu-33-8">Zhihu</a></li>
     </ul>
   </div>
   <figure class="profile-hero__portrait">
     <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Portrait of Wu Feiyang" width="1279" height="2275" fetchpriority="high">
-    <figcaption>Shenzhen · School of Science and Engineering, CUHK-Shenzhen</figcaption>
+    <figcaption>Shenzhen · The Chinese University of Hong Kong, Shenzhen</figcaption>
   </figure>
 </section>
 
@@ -37,8 +37,8 @@ redirect_from:
 <div class="home-facts" aria-label="Profile highlights">
   <article class="home-fact">
     <span>Current role</span>
-    <strong>Research Assistant</strong>
-    <p>CUHK-Shenzhen · Prof. Zhaoyu Zhang</p>
+    <strong>Ph.D. Student</strong>
+    <p>CUHK-Shenzhen</p>
   </article>
   <article class="home-fact">
     <span>Primary program</span>
@@ -151,4 +151,4 @@ redirect_from:
 
 ## Contact
 
-<p class="home-contact-line">School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen) · <a href="mailto:wfy18350221083@163.com">wfy18350221083@163.com</a> · <a href="https://github.com/wfy-op">GitHub</a> · <a href="https://www.zhihu.com/people/fei-yu-33-8">Zhihu</a></p>
+<p class="home-contact-line">The Chinese University of Hong Kong, Shenzhen · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="https://github.com/wfy-op">GitHub</a> · <a href="https://www.zhihu.com/people/fei-yu-33-8">Zhihu</a></p>

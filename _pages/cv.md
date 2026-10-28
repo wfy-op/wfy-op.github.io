@@ -17,11 +17,13 @@ redirect_from:
 
 ## Current Position
 
-**Research Assistant**, School of Science and Engineering, The Chinese University of Hong Kong (Shenzhen) · August 2025–present. Supervised by Prof. Zhaoyu Zhang.
+**Ph.D. Student**, The Chinese University of Hong Kong, Shenzhen.
 
 I work on semiconductor photonics, especially PCSEL device modeling, numerical verification, and automated design workflows.
 
 ## Education
+
+**Ph.D. studies**, The Chinese University of Hong Kong, Shenzhen · Ongoing.
 
 **B.Sc. in Physics**, Taishan College, Shandong University · September 2021–June 2025. Taishan College honors physics track. GPA: 82.9/100.
 

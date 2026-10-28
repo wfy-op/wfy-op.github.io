@@ -335,7 +335,7 @@ class FrontendContractTests(unittest.TestCase):
 
     def test_sidebar_uses_confirmed_contact_email(self):
         config = read("_config.yml")
-        self.assertIn('email            : "wfy18350221083@163.com"', config)
+        self.assertIn('email            : "fywu2003@gmail.com"', config)
 
     def test_pcsel_preprints_are_source_linked_and_evidence_bounded(self):
         publications = read("_pages/publications.md")

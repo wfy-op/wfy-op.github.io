@@ -28,7 +28,7 @@ redirect_from:
   </div>
   <figure class="profile-hero__portrait">
     <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Portrait of Wu Feiyang" width="1279" height="2275" fetchpriority="high">
-    <figcaption>Shenzhen · The Chinese University of Hong Kong, Shenzhen</figcaption>
+    <figcaption>Shenzhen · School of Science and Engineering, CUHK-Shenzhen</figcaption>
   </figure>
 </section>
 
@@ -38,7 +38,7 @@ redirect_from:
   <article class="home-fact">
     <span>Current role</span>
     <strong>Ph.D. Student</strong>
-    <p>CUHK-Shenzhen</p>
+    <p>CUHK-Shenzhen · Prof. Zhaoyu Zhang</p>
   </article>
   <article class="home-fact">
     <span>Primary program</span>
@@ -151,4 +151,4 @@ redirect_from:
 
 ## Contact
 
-<p class="home-contact-line">The Chinese University of Hong Kong, Shenzhen · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="https://github.com/wfy-op">GitHub</a> · <a href="https://www.zhihu.com/people/fei-yu-33-8">Zhihu</a></p>
+<p class="home-contact-line">School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="https://github.com/wfy-op">GitHub</a> · <a href="https://www.zhihu.com/people/fei-yu-33-8">Zhihu</a></p>

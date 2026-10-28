@@ -17,19 +17,21 @@ redirect_from:
 
 ## Current Position
 
-**Ph.D. Student**, The Chinese University of Hong Kong, Shenzhen.
+**Ph.D. Student**, School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen · September 2026–present. Supervised by Prof. Zhaoyu Zhang.
 
 I work on semiconductor photonics, especially PCSEL device modeling, numerical verification, and automated design workflows.
 
 ## Education
 
-**Ph.D. studies**, The Chinese University of Hong Kong, Shenzhen · Ongoing.
+**Ph.D. studies**, School of Science and Engineering, The Chinese University of Hong Kong, Shenzhen · September 2026–present.
 
 **B.Sc. in Physics**, Taishan College, Shandong University · September 2021–June 2025. Taishan College honors physics track. GPA: 82.9/100.
 
 ## Research Experience
 
 **PCSEL device research and computational modeling** · CUHK-Shenzhen · August 2025–present
+
+I joined the group as a research assistant in August 2025 and began my doctoral studies in September 2026.
 
 - Build GaAs PCSEL models in COMSOL and Lumerical FDTD; analyze band structures, cavity modes, and geometry and epitaxial parameter sweeps.
 - Develop Python coupled-wave calculations and examine mode identity, numerical convergence, and agreement with independent implementations. Organize COMSOL–CWT batch results with consistent parameters, units, diagnostics, and source indexes.
